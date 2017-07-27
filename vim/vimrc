@@ -1,0 +1,37 @@
+" Check whether Vundle is already installed, and if not, install it
+let vundleJustInstalled=0 
+let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
+if !filereadable(vundle_readme)
+     silent !mkdir -p ~/.vim/bundle/
+     silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
+     let vundleJustInstalled=1
+endif
+
+" Initialise Vundle
+filetype off
+set rtp+=~/.vim/bundle/vundle
+call vundle#rc()
+
+" Define plugins for Vundle to manage
+Plugin 'gmarik/vundle'
+Plugin 'altercation/vim-colors-solarized.git'
+
+" If we've just installed Vundle, fetch the plugins above
+" To update in the future, run :PluginUpdate from Vim
+" And you can install from Vim with PluginSearch <name>
+if vundleJustInstalled == 1
+     :PluginInstall
+endif
+
+" Now we can turn our filetype functionality back on
+filetype plugin indent on
+
+" Line numbers are important
+set number
+set nocompatible
+
+" Set the colour scheme to Solarized
+syntax enable
+set background=dark
+colorscheme solarized
+

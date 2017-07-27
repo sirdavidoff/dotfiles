@@ -1,0 +1,4 @@
+# Ignore vim/bundle as this will be managed by Vundle
+vim/bundle/
+*.swp
+*.swo
