@@ -1,0 +1,952 @@
+<?xml version="1.0"?>
+<root>
+  <replacementdef>
+    <replacementname>HYPER</replacementname>
+    <replacementvalue>COMMAND_R, ModifierFlag::OPTION_R | ModifierFlag::SHIFT_R | ModifierFlag::CONTROL_R | ModifierFlag::NONE</replacementvalue>
+  </replacementdef>
+
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_invalid_key</name>
+    <url>hammerspoon://invalid_key</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hypercmdspace</name>
+    <url>hammerspoon://hypercmdspace</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hypercmda</name>
+    <url>hammerspoon://hypercmda</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hypercmda</name>
+    <url>hammerspoon://hypercmda</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hypercmdb</name>
+    <url>hammerspoon://hypercmdb</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hypercmdc</name>
+    <url>hammerspoon://hypercmdc</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hypercmdd</name>
+    <url>hammerspoon://hypercmdd</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hypercmde</name>
+    <url>hammerspoon://hypercmde</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hypercmdf</name>
+    <url>hammerspoon://hypercmdf</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hypercmdg</name>
+    <url>hammerspoon://hypercmdg</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hypercmdh</name>
+    <url>hammerspoon://hypercmdh</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hypercmdi</name>
+    <url>hammerspoon://hypercmdi</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hypercmdj</name>
+    <url>hammerspoon://hypercmdj</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hypercmdk</name>
+    <url>hammerspoon://hypercmdk</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hypercmdl</name>
+    <url>hammerspoon://hypercmdl</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hypercmdm</name>
+    <url>hammerspoon://hypercmdm</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hypercmdn</name>
+    <url>hammerspoon://hypercmdn</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hypercmdo</name>
+    <url>hammerspoon://hypercmdo</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hypercmdp</name>
+    <url>hammerspoon://hypercmdp</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hypercmdq</name>
+    <url>hammerspoon://hypercmdq</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hypercmdr</name>
+    <url>hammerspoon://hypercmdr</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hypercmds</name>
+    <url>hammerspoon://hypercmds</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hypercmdt</name>
+    <url>hammerspoon://hypercmdt</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hypercmdu</name>
+    <url>hammerspoon://hypercmdu</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hypercmdv</name>
+    <url>hammerspoon://hypercmdv</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hypercmdw</name>
+    <url>hammerspoon://hypercmdw</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hypercmdx</name>
+    <url>hammerspoon://hypercmdx</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hypercmdy</name>
+    <url>hammerspoon://hypercmdy</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hypercmdz</name>
+    <url>hammerspoon://hypercmdz</url>
+    <background/>
+  </vkopenurldef>
+
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hyperalta</name>
+    <url>hammerspoon://hyperalta</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hyperaltb</name>
+    <url>hammerspoon://hyperaltb</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hyperaltc</name>
+    <url>hammerspoon://hyperaltc</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hyperaltd</name>
+    <url>hammerspoon://hyperaltd</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hyperalte</name>
+    <url>hammerspoon://hyperalte</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hyperaltf</name>
+    <url>hammerspoon://hyperaltf</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hyperaltg</name>
+    <url>hammerspoon://hyperaltg</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hyperalth</name>
+    <url>hammerspoon://hyperalth</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hyperalti</name>
+    <url>hammerspoon://hyperalti</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hyperaltj</name>
+    <url>hammerspoon://hyperaltj</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hyperaltk</name>
+    <url>hammerspoon://hyperaltk</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hyperaltl</name>
+    <url>hammerspoon://hyperaltl</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hyperaltm</name>
+    <url>hammerspoon://hyperaltm</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hyperaltn</name>
+    <url>hammerspoon://hyperaltn</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hyperalto</name>
+    <url>hammerspoon://hyperalto</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hyperaltp</name>
+    <url>hammerspoon://hyperaltp</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hyperaltq</name>
+    <url>hammerspoon://hyperaltq</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hyperaltr</name>
+    <url>hammerspoon://hyperaltr</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hyperalts</name>
+    <url>hammerspoon://hyperalts</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hyperaltt</name>
+    <url>hammerspoon://hyperaltt</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hyperaltu</name>
+    <url>hammerspoon://hyperaltu</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hyperaltv</name>
+    <url>hammerspoon://hyperaltv</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hyperaltw</name>
+    <url>hammerspoon://hyperaltw</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hyperaltx</name>
+    <url>hammerspoon://hyperaltx</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hyperalty</name>
+    <url>hammerspoon://hyperalty</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hyperaltz</name>
+    <url>hammerspoon://hyperaltz</url>
+    <background/>
+  </vkopenurldef>
+
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hypershifta</name>
+    <url>hammerspoon://hypershifta</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hypershiftb</name>
+    <url>hammerspoon://hypershiftb</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hypershiftc</name>
+    <url>hammerspoon://hypershiftc</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hypershiftd</name>
+    <url>hammerspoon://hypershiftd</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hypershifte</name>
+    <url>hammerspoon://hypershifte</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hypershiftf</name>
+    <url>hammerspoon://hypershiftf</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hypershiftg</name>
+    <url>hammerspoon://hypershiftg</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hypershifth</name>
+    <url>hammerspoon://hypershifth</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hypershifti</name>
+    <url>hammerspoon://hypershifti</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hypershiftj</name>
+    <url>hammerspoon://hypershiftj</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hypershiftk</name>
+    <url>hammerspoon://hypershiftk</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hypershiftl</name>
+    <url>hammerspoon://hypershiftl</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hypershiftm</name>
+    <url>hammerspoon://hypershiftm</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hypershiftn</name>
+    <url>hammerspoon://hypershiftn</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hypershifto</name>
+    <url>hammerspoon://hypershifto</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hypershiftp</name>
+    <url>hammerspoon://hypershiftp</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hypershiftq</name>
+    <url>hammerspoon://hypershiftq</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hypershiftr</name>
+    <url>hammerspoon://hypershiftr</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hypershifts</name>
+    <url>hammerspoon://hypershifts</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hypershiftt</name>
+    <url>hammerspoon://hypershiftt</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hypershiftu</name>
+    <url>hammerspoon://hypershiftu</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hypershiftv</name>
+    <url>hammerspoon://hypershiftv</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hypershiftw</name>
+    <url>hammerspoon://hypershiftw</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hypershiftx</name>
+    <url>hammerspoon://hypershiftx</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hypershifty</name>
+    <url>hammerspoon://hypershifty</url>
+    <background/>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hypershiftz</name>
+    <url>hammerspoon://hypershiftz</url>
+    <background/>
+  </vkopenurldef>
+
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hyperslash</name>
+    <url>hammerspoon://hyperslash</url>
+    <background/>
+  </vkopenurldef>
+
+  <item>
+    <name>Remap CapsLock to Hyper</name>
+    <appendix>* Note: Remap CapsLock to F19 in Seil</appendix>
+    <appendix>* Hyper isn't a real modifier, we actually emit Command + Option + Shift + Control</appendix>
+    <identifier>cmsj.f19_to_hyper</identifier>
+    <autogen>
+        --KeyOverlaidModifier--
+        KeyCode::F19,
+        KeyCode::{{ HYPER }},
+        KeyCode::ESCAPE
+    </autogen>
+  </item>
+  
+  <item>
+    <name>Remap Hyper-Cmd keys to Hammerspoon events</name>
+    <appendix>Call specific Hammerspoon URLs for given key combinations</appendix>
+    <identifier>hammerspoon.hyper_cmd_events</identifier>
+    <autogen>
+        --KeyToKey--
+        KeyCode::SPACE, ModifierFlag::{{ HYPER }} | ModifierFlag::COMMAND_L,
+        KeyCode::VK_OPEN_URL_HS_hypercmdspace
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::A, ModifierFlag::{{ HYPER }} | ModifierFlag::COMMAND_L,
+        KeyCode::VK_OPEN_URL_HS_hypercmda
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::B, ModifierFlag::{{ HYPER }} | ModifierFlag::COMMAND_L,
+        KeyCode::VK_OPEN_URL_HS_hypercmdb
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::C, ModifierFlag::{{ HYPER }} | ModifierFlag::COMMAND_L,
+        KeyCode::VK_OPEN_URL_HS_hypercmdc
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::D, ModifierFlag::{{ HYPER }} | ModifierFlag::COMMAND_L,
+        KeyCode::VK_OPEN_URL_HS_hypercmdd
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::E, ModifierFlag::{{ HYPER }} | ModifierFlag::COMMAND_L,
+        KeyCode::VK_OPEN_URL_HS_hypercmde
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::F, ModifierFlag::{{ HYPER }} | ModifierFlag::COMMAND_L,
+        KeyCode::VK_OPEN_URL_HS_hypercmdf
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::G, ModifierFlag::{{ HYPER }} | ModifierFlag::COMMAND_L,
+        KeyCode::VK_OPEN_URL_HS_hypercmdg
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::H, ModifierFlag::{{ HYPER }} | ModifierFlag::COMMAND_L,
+        KeyCode::VK_OPEN_URL_HS_hypercmdh
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::I, ModifierFlag::{{ HYPER }} | ModifierFlag::COMMAND_L,
+        KeyCode::VK_OPEN_URL_HS_hypercmdi
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::J, ModifierFlag::{{ HYPER }} | ModifierFlag::COMMAND_L,
+        KeyCode::VK_OPEN_URL_HS_hypercmdj
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::K, ModifierFlag::{{ HYPER }} | ModifierFlag::COMMAND_L,
+        KeyCode::VK_OPEN_URL_HS_hypercmdk
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::L, ModifierFlag::{{ HYPER }} | ModifierFlag::COMMAND_L,
+        KeyCode::VK_OPEN_URL_HS_hypercmdl
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::M, ModifierFlag::{{ HYPER }} | ModifierFlag::COMMAND_L,
+        KeyCode::VK_OPEN_URL_HS_hypercmdm
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::N, ModifierFlag::{{ HYPER }} | ModifierFlag::COMMAND_L,
+        KeyCode::VK_OPEN_URL_HS_hypercmdn
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::O, ModifierFlag::{{ HYPER }} | ModifierFlag::COMMAND_L,
+        KeyCode::VK_OPEN_URL_HS_hypercmdo
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::P, ModifierFlag::{{ HYPER }} | ModifierFlag::COMMAND_L,
+        KeyCode::VK_OPEN_URL_HS_hypercmdp
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::Q, ModifierFlag::{{ HYPER }} | ModifierFlag::COMMAND_L,
+        KeyCode::VK_OPEN_URL_HS_hypercmdq
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::R, ModifierFlag::{{ HYPER }} | ModifierFlag::COMMAND_L,
+        KeyCode::VK_OPEN_URL_HS_hypercmdr
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::S, ModifierFlag::{{ HYPER }} | ModifierFlag::COMMAND_L,
+        KeyCode::VK_OPEN_URL_HS_hypercmds
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::T, ModifierFlag::{{ HYPER }} | ModifierFlag::COMMAND_L,
+        KeyCode::VK_OPEN_URL_HS_hypercmdt
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::U, ModifierFlag::{{ HYPER }} | ModifierFlag::COMMAND_L,
+        KeyCode::VK_OPEN_URL_HS_hypercmdu
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::V, ModifierFlag::{{ HYPER }} | ModifierFlag::COMMAND_L,
+        KeyCode::VK_OPEN_URL_HS_hypercmdv
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::W, ModifierFlag::{{ HYPER }} | ModifierFlag::COMMAND_L,
+        KeyCode::VK_OPEN_URL_HS_hypercmdw
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::X, ModifierFlag::{{ HYPER }} | ModifierFlag::COMMAND_L,
+        KeyCode::VK_OPEN_URL_HS_hypercmdx
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::Y, ModifierFlag::{{ HYPER }} | ModifierFlag::COMMAND_L,
+        KeyCode::VK_OPEN_URL_HS_hypercmdy
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::Z, ModifierFlag::{{ HYPER }} | ModifierFlag::COMMAND_L,
+        KeyCode::VK_OPEN_URL_HS_hypercmdz
+    </autogen>
+  </item>
+
+  <item>
+    <name>Remap Hyper-Alt keys to Hammerspoon events</name>
+    <appendix>Call specific Hammerspoon URLs for given key combinations</appendix>
+    <identifier>hammerspoon.hyper_alt_events</identifier>
+    <autogen>
+        --KeyToKey--
+        KeyCode::A, ModifierFlag::{{ HYPER }} | ModifierFlag::OPTION_L,
+        KeyCode::VK_OPEN_URL_HS_hyperalta
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::B, ModifierFlag::{{ HYPER }} | ModifierFlag::OPTION_L,
+        KeyCode::VK_OPEN_URL_HS_hyperaltb
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::C, ModifierFlag::{{ HYPER }} | ModifierFlag::OPTION_L,
+        KeyCode::VK_OPEN_URL_HS_hyperaltc
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::D, ModifierFlag::{{ HYPER }} | ModifierFlag::OPTION_L,
+        KeyCode::VK_OPEN_URL_HS_hyperaltd
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::E, ModifierFlag::{{ HYPER }} | ModifierFlag::OPTION_L,
+        KeyCode::VK_OPEN_URL_HS_hyperalte
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::F, ModifierFlag::{{ HYPER }} | ModifierFlag::OPTION_L,
+        KeyCode::VK_OPEN_URL_HS_hyperaltf
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::G, ModifierFlag::{{ HYPER }} | ModifierFlag::OPTION_L,
+        KeyCode::VK_OPEN_URL_HS_hyperaltg
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::H, ModifierFlag::{{ HYPER }} | ModifierFlag::OPTION_L,
+        KeyCode::VK_OPEN_URL_HS_hyperalth
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::I, ModifierFlag::{{ HYPER }} | ModifierFlag::OPTION_L,
+        KeyCode::VK_OPEN_URL_HS_hyperalti
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::J, ModifierFlag::{{ HYPER }} | ModifierFlag::OPTION_L,
+        KeyCode::VK_OPEN_URL_HS_hyperaltj
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::K, ModifierFlag::{{ HYPER }} | ModifierFlag::OPTION_L,
+        KeyCode::VK_OPEN_URL_HS_hyperaltk
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::L, ModifierFlag::{{ HYPER }} | ModifierFlag::OPTION_L,
+        KeyCode::VK_OPEN_URL_HS_hyperaltl
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::M, ModifierFlag::{{ HYPER }} | ModifierFlag::OPTION_L,
+        KeyCode::VK_OPEN_URL_HS_hyperaltm
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::N, ModifierFlag::{{ HYPER }} | ModifierFlag::OPTION_L,
+        KeyCode::VK_OPEN_URL_HS_hyperaltn
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::O, ModifierFlag::{{ HYPER }} | ModifierFlag::OPTION_L,
+        KeyCode::VK_OPEN_URL_HS_hyperalto
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::P, ModifierFlag::{{ HYPER }} | ModifierFlag::OPTION_L,
+        KeyCode::VK_OPEN_URL_HS_hyperaltp
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::Q, ModifierFlag::{{ HYPER }} | ModifierFlag::OPTION_L,
+        KeyCode::VK_OPEN_URL_HS_hyperaltq
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::R, ModifierFlag::{{ HYPER }} | ModifierFlag::OPTION_L,
+        KeyCode::VK_OPEN_URL_HS_hyperaltr
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::S, ModifierFlag::{{ HYPER }} | ModifierFlag::OPTION_L,
+        KeyCode::VK_OPEN_URL_HS_hyperalts
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::T, ModifierFlag::{{ HYPER }} | ModifierFlag::OPTION_L,
+        KeyCode::VK_OPEN_URL_HS_hyperaltt
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::U, ModifierFlag::{{ HYPER }} | ModifierFlag::OPTION_L,
+        KeyCode::VK_OPEN_URL_HS_hyperaltu
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::V, ModifierFlag::{{ HYPER }} | ModifierFlag::OPTION_L,
+        KeyCode::VK_OPEN_URL_HS_hyperaltv
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::W, ModifierFlag::{{ HYPER }} | ModifierFlag::OPTION_L,
+        KeyCode::VK_OPEN_URL_HS_hyperaltw
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::X, ModifierFlag::{{ HYPER }} | ModifierFlag::OPTION_L,
+        KeyCode::VK_OPEN_URL_HS_hyperaltx
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::Y, ModifierFlag::{{ HYPER }} | ModifierFlag::OPTION_L,
+        KeyCode::VK_OPEN_URL_HS_hyperalty
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::Z, ModifierFlag::{{ HYPER }} | ModifierFlag::OPTION_L,
+        KeyCode::VK_OPEN_URL_HS_hyperaltz
+    </autogen>
+  </item>
+
+  <item>
+    <name>Remap Hyper-Shift keys to Hammerspoon events</name>
+    <appendix>Call specific Hammerspoon URLs for given key combinations</appendix>
+    <identifier>hammerspoon.hyper_shift_events</identifier>
+    <autogen>
+        --KeyToKey--
+        KeyCode::A, ModifierFlag::{{ HYPER }} | ModifierFlag::SHIFT_L,
+        KeyCode::VK_OPEN_URL_HS_hypershifta
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::B, ModifierFlag::{{ HYPER }} | ModifierFlag::SHIFT_L,
+        KeyCode::VK_OPEN_URL_HS_hypershiftb
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::C, ModifierFlag::{{ HYPER }} | ModifierFlag::SHIFT_L,
+        KeyCode::VK_OPEN_URL_HS_hypershiftc
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::D, ModifierFlag::{{ HYPER }} | ModifierFlag::SHIFT_L,
+        KeyCode::VK_OPEN_URL_HS_hypershiftd
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::E, ModifierFlag::{{ HYPER }} | ModifierFlag::SHIFT_L,
+        KeyCode::VK_OPEN_URL_HS_hypershifte
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::F, ModifierFlag::{{ HYPER }} | ModifierFlag::SHIFT_L,
+        KeyCode::VK_OPEN_URL_HS_hypershiftf
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::G, ModifierFlag::{{ HYPER }} | ModifierFlag::SHIFT_L,
+        KeyCode::VK_OPEN_URL_HS_hypershiftg
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::H, ModifierFlag::{{ HYPER }} | ModifierFlag::SHIFT_L,
+        KeyCode::VK_OPEN_URL_HS_hypershifth
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::I, ModifierFlag::{{ HYPER }} | ModifierFlag::SHIFT_L,
+        KeyCode::VK_OPEN_URL_HS_hypershifti
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::J, ModifierFlag::{{ HYPER }} | ModifierFlag::SHIFT_L,
+        KeyCode::VK_OPEN_URL_HS_hypershiftj
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::K, ModifierFlag::{{ HYPER }} | ModifierFlag::SHIFT_L,
+        KeyCode::VK_OPEN_URL_HS_hypershiftk
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::L, ModifierFlag::{{ HYPER }} | ModifierFlag::SHIFT_L,
+        KeyCode::VK_OPEN_URL_HS_hypershiftl
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::M, ModifierFlag::{{ HYPER }} | ModifierFlag::SHIFT_L,
+        KeyCode::VK_OPEN_URL_HS_hypershiftm
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::N, ModifierFlag::{{ HYPER }} | ModifierFlag::SHIFT_L,
+        KeyCode::VK_OPEN_URL_HS_hypershiftn
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::O, ModifierFlag::{{ HYPER }} | ModifierFlag::SHIFT_L,
+        KeyCode::VK_OPEN_URL_HS_hypershifto
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::P, ModifierFlag::{{ HYPER }} | ModifierFlag::SHIFT_L,
+        KeyCode::VK_OPEN_URL_HS_hypershiftp
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::Q, ModifierFlag::{{ HYPER }} | ModifierFlag::SHIFT_L,
+        KeyCode::VK_OPEN_URL_HS_hypershiftq
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::R, ModifierFlag::{{ HYPER }} | ModifierFlag::SHIFT_L,
+        KeyCode::VK_OPEN_URL_HS_hypershiftr
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::S, ModifierFlag::{{ HYPER }} | ModifierFlag::SHIFT_L,
+        KeyCode::VK_OPEN_URL_HS_hypershifts
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::T, ModifierFlag::{{ HYPER }} | ModifierFlag::SHIFT_L,
+        KeyCode::VK_OPEN_URL_HS_hypershiftt
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::U, ModifierFlag::{{ HYPER }} | ModifierFlag::SHIFT_L,
+        KeyCode::VK_OPEN_URL_HS_hypershiftu
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::V, ModifierFlag::{{ HYPER }} | ModifierFlag::SHIFT_L,
+        KeyCode::VK_OPEN_URL_HS_hypershiftv
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::W, ModifierFlag::{{ HYPER }} | ModifierFlag::SHIFT_L,
+        KeyCode::VK_OPEN_URL_HS_hypershiftw
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::X, ModifierFlag::{{ HYPER }} | ModifierFlag::SHIFT_L,
+        KeyCode::VK_OPEN_URL_HS_hypershiftx
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::Y, ModifierFlag::{{ HYPER }} | ModifierFlag::SHIFT_L,
+        KeyCode::VK_OPEN_URL_HS_hypershifty
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::Z, ModifierFlag::{{ HYPER }} | ModifierFlag::SHIFT_L,
+        KeyCode::VK_OPEN_URL_HS_hypershiftz
+    </autogen>
+  </item>
+
+  <item>
+    <name>Reamp sysdiagnose SLASH key</name>
+    <appendix>Hyper-/ triggers Hammerspoon instead of Sysdiagnose</appendix>
+    <identifier>private.remap_sysdiagnose_slash_key</identifier>
+    <autogen>
+      --KeyToKey--
+      KeyCode::SLASH,
+      ModifierFlag::{{ HYPER }},
+      KeyCode::VK_OPEN_URL_HS_hyperslash
+    </autogen>
+  </item>
+  <item>
+    <name>Disable sysdiagnose DOT key</name>
+    <appendix>Hyper-. does nothing</appendix>
+    <identifier>private.remap_sysdiagnose_dot_key</identifier>
+    <autogen>
+      --KeyToKey--
+      KeyCode::DOT,
+      ModifierFlag::{{ HYPER }},
+      KeyCode::VK_NONE
+    </autogen>
+  </item>
+  
+  <item>
+    <name>Use the correct shift keys</name>
+    <identifier>private.correct_shift_keys</identifier>
+
+    <autogen>--KeyToKey-- KeyCode::Q, ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+    <autogen>--KeyToKey-- KeyCode::W, ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+    <autogen>--KeyToKey-- KeyCode::E, ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+    <autogen>--KeyToKey-- KeyCode::R, ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+    <autogen>--KeyToKey-- KeyCode::T, ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+    <autogen>--KeyToKey-- KeyCode::A, ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+    <autogen>--KeyToKey-- KeyCode::S, ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+    <autogen>--KeyToKey-- KeyCode::D, ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+    <autogen>--KeyToKey-- KeyCode::F, ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+    <autogen>--KeyToKey-- KeyCode::G, ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+    <autogen>--KeyToKey-- KeyCode::Z, ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+    <autogen>--KeyToKey-- KeyCode::X, ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+    <autogen>--KeyToKey-- KeyCode::C, ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+    <autogen>--KeyToKey-- KeyCode::V, ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+
+    <autogen>--KeyToKey-- KeyCode::Y,         ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+    <autogen>--KeyToKey-- KeyCode::U,         ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+    <autogen>--KeyToKey-- KeyCode::I,         ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+    <autogen>--KeyToKey-- KeyCode::O,         ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+    <autogen>--KeyToKey-- KeyCode::P,         ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+    <autogen>--KeyToKey-- KeyCode::H,         ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+    <autogen>--KeyToKey-- KeyCode::J,         ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+    <autogen>--KeyToKey-- KeyCode::K,         ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+    <autogen>--KeyToKey-- KeyCode::L,         ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+    <autogen>--KeyToKey-- KeyCode::SEMICOLON, ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+    <autogen>--KeyToKey-- KeyCode::N,         ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+    <autogen>--KeyToKey-- KeyCode::M,         ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+    <autogen>--KeyToKey-- KeyCode::COMMA,     ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+    <autogen>--KeyToKey-- KeyCode::DOT,       ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+    <autogen>--KeyToKey-- KeyCode::QUOTE,     ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+  </item>
+
+  <item>
+    <name>Use the correct command keys</name>
+    <identifier>private.correct_command_keys</identifier>
+
+    <autogen>--KeyToKey-- KeyCode::Q, ModifierFlag::COMMAND_L | ModifierFlag::NONE, KeyCode::VK_OPEN_URL_HS_invalid_key</autogen>
+    <autogen>--KeyToKey-- KeyCode::W, ModifierFlag::COMMAND_L | ModifierFlag::NONE, KeyCode::VK_OPEN_URL_HS_invalid_key</autogen>
+    <autogen>--KeyToKey-- KeyCode::E, ModifierFlag::COMMAND_L | ModifierFlag::NONE, KeyCode::VK_OPEN_URL_HS_invalid_key</autogen>
+    <autogen>--KeyToKey-- KeyCode::R, ModifierFlag::COMMAND_L | ModifierFlag::NONE, KeyCode::VK_OPEN_URL_HS_invalid_key</autogen>
+    <autogen>--KeyToKey-- KeyCode::T, ModifierFlag::COMMAND_L | ModifierFlag::NONE, KeyCode::VK_OPEN_URL_HS_invalid_key</autogen>
+    <autogen>--KeyToKey-- KeyCode::A, ModifierFlag::COMMAND_L | ModifierFlag::NONE, KeyCode::VK_OPEN_URL_HS_invalid_key</autogen>
+    <autogen>--KeyToKey-- KeyCode::S, ModifierFlag::COMMAND_L | ModifierFlag::NONE, KeyCode::VK_OPEN_URL_HS_invalid_key</autogen>
+    <autogen>--KeyToKey-- KeyCode::D, ModifierFlag::COMMAND_L | ModifierFlag::NONE, KeyCode::VK_OPEN_URL_HS_invalid_key</autogen>
+    <autogen>--KeyToKey-- KeyCode::F, ModifierFlag::COMMAND_L | ModifierFlag::NONE, KeyCode::VK_OPEN_URL_HS_invalid_key</autogen>
+    <autogen>--KeyToKey-- KeyCode::G, ModifierFlag::COMMAND_L | ModifierFlag::NONE, KeyCode::VK_OPEN_URL_HS_invalid_key</autogen>
+    <autogen>--KeyToKey-- KeyCode::Z, ModifierFlag::COMMAND_L | ModifierFlag::NONE, KeyCode::VK_OPEN_URL_HS_invalid_key</autogen>
+    <autogen>--KeyToKey-- KeyCode::X, ModifierFlag::COMMAND_L | ModifierFlag::NONE, KeyCode::VK_OPEN_URL_HS_invalid_key</autogen>
+    <autogen>--KeyToKey-- KeyCode::C, ModifierFlag::COMMAND_L | ModifierFlag::NONE, KeyCode::VK_OPEN_URL_HS_invalid_key</autogen>
+    <autogen>--KeyToKey-- KeyCode::V, ModifierFlag::COMMAND_L | ModifierFlag::NONE, KeyCode::VK_OPEN_URL_HS_invalid_key</autogen>
+
+    <autogen>--KeyToKey-- KeyCode::Y,         ModifierFlag::COMMAND_R | ModifierFlag::NONE, KeyCode::VK_OPEN_URL_HS_invalid_key</autogen>
+    <autogen>--KeyToKey-- KeyCode::U,         ModifierFlag::COMMAND_R | ModifierFlag::NONE, KeyCode::VK_OPEN_URL_HS_invalid_key</autogen>
+    <autogen>--KeyToKey-- KeyCode::I,         ModifierFlag::COMMAND_R | ModifierFlag::NONE, KeyCode::VK_OPEN_URL_HS_invalid_key</autogen>
+    <autogen>--KeyToKey-- KeyCode::O,         ModifierFlag::COMMAND_R | ModifierFlag::NONE, KeyCode::VK_OPEN_URL_HS_invalid_key</autogen>
+    <autogen>--KeyToKey-- KeyCode::P,         ModifierFlag::COMMAND_R | ModifierFlag::NONE, KeyCode::VK_OPEN_URL_HS_invalid_key</autogen>
+    <autogen>--KeyToKey-- KeyCode::H,         ModifierFlag::COMMAND_R | ModifierFlag::NONE, KeyCode::VK_OPEN_URL_HS_invalid_key</autogen>
+    <autogen>--KeyToKey-- KeyCode::J,         ModifierFlag::COMMAND_R | ModifierFlag::NONE, KeyCode::VK_OPEN_URL_HS_invalid_key</autogen>
+    <autogen>--KeyToKey-- KeyCode::K,         ModifierFlag::COMMAND_R | ModifierFlag::NONE, KeyCode::VK_OPEN_URL_HS_invalid_key</autogen>
+    <autogen>--KeyToKey-- KeyCode::L,         ModifierFlag::COMMAND_R | ModifierFlag::NONE, KeyCode::VK_OPEN_URL_HS_invalid_key</autogen>
+    <autogen>--KeyToKey-- KeyCode::SEMICOLON, ModifierFlag::COMMAND_R | ModifierFlag::NONE, KeyCode::VK_OPEN_URL_HS_invalid_key</autogen>
+    <autogen>--KeyToKey-- KeyCode::N,         ModifierFlag::COMMAND_R | ModifierFlag::NONE, KeyCode::VK_OPEN_URL_HS_invalid_key</autogen>
+    <autogen>--KeyToKey-- KeyCode::M,         ModifierFlag::COMMAND_R | ModifierFlag::NONE, KeyCode::VK_OPEN_URL_HS_invalid_key</autogen>
+    <autogen>--KeyToKey-- KeyCode::COMMA,     ModifierFlag::COMMAND_R | ModifierFlag::NONE, KeyCode::VK_OPEN_URL_HS_invalid_key</autogen>
+    <autogen>--KeyToKey-- KeyCode::DOT,       ModifierFlag::COMMAND_R | ModifierFlag::NONE, KeyCode::VK_OPEN_URL_HS_invalid_key</autogen>
+    <autogen>--KeyToKey-- KeyCode::QUOTE,     ModifierFlag::COMMAND_R | ModifierFlag::NONE, KeyCode::VK_OPEN_URL_HS_invalid_key</autogen>
+  </item>
+  <item>
+    <name>Disable arrow keys</name>
+    <identifier>private.disable_arrow_keys</identifier>
+
+    <autogen>--KeyToKey-- KeyCode::CURSOR_UP, ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+    <autogen>--KeyToKey-- KeyCode::CURSOR_DOWN, ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+    <autogen>--KeyToKey-- KeyCode::CURSOR_LEFT, ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+    <autogen>--KeyToKey-- KeyCode::CURSOR_RIGHT, ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+  </item>
+</root>
+

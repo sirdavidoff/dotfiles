@@ -2,3 +2,4 @@
 vim/bundle/
 *.swp
 *.swo
+.DS_Store

@@ -16,9 +16,9 @@ call vundle#rc()
 Plugin 'gmarik/vundle'
 Plugin 'altercation/vim-colors-solarized.git'
 
-" If we've just installed Vundle, fetch the plugins above
+" If we've just installed Vundle, fetch the plugins above.
 " To update in the future, run :PluginUpdate from Vim
-" And you can install from Vim with PluginSearch <name>
+" And you can install from Vim with :PluginSearch <name>
 if vundleJustInstalled == 1
      :PluginInstall
 endif
