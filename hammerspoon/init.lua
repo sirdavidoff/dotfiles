@@ -19,8 +19,7 @@ local log = hs.logger.new('mymodule','debug')
 local keyDelay = 0
 
 -- Load the application-specific hotkey library
-dofile "/Users/marina/Documents/Applescripts/hammerspoon_app_hotkey.lua"
--- dofile "/Users/marina/Documents/Applescripts/hammerspoon_keylogger.lua"
+dofile (os.getenv("HOME") .. "/dotfiles/hammerspoon/app_hotkey.lua")
 
 hs.window.animationDuration = 0
 
@@ -303,7 +302,7 @@ hs.urlevent.bind('hypercmdh', function()
     hs.eventtap.keyStroke({'cmd'}, 'left', keyDelay)
   else
     -- Open Hubspot
-    os.execute('osascript "/Users/marina/Documents/Applescripts/Activate Chrome for Hubspot.scpt"')
+    os.execute('osascript "' .. os.getenv("HOME") .. '/dotfiles/scripts/Activate Chrome for Hubspot.scpt"')
   end
 end)
 hs.urlevent.bind('hypercmdl', function() 
@@ -313,7 +312,7 @@ hs.urlevent.bind('hypercmdl', function()
     hs.eventtap.keyStroke({'cmd'}, 'right', keyDelay)
   else
     -- Open Lever
-    os.execute('osascript "/Users/marina/Documents/Applescripts/Activate Chrome for Lever.scpt"')
+    os.execute('osascript "' .. os.getenv("HOME") .. '/dotfiles/scripts/Activate Chrome for Lever.scpt"')
   end
 end)
 
@@ -368,7 +367,7 @@ hs.urlevent.bind('hypershiftl', function() hs.eventtap.keyStroke({'shift'}, 'rig
 -- Paste without formatting
 hs.urlevent.bind('hypercmdv', function() 
   hs.alert.show("Pasting without formatting")
-  os.execute('osascript "/Users/marina/Documents/Applescripts/Paste without formatting.scpt"')
+  os.execute('osascript "' .. os.getenv("HOME") .. '/dotfiles/scripts/Paste without formatting.scpt"')
 end)
 
 -- Show the clipboard history from Alfred
@@ -393,27 +392,27 @@ end)
 
 -- Activate todo list in Google Docs
 hs.hotkey.bind(hyper, 'u', function()
-  os.execute('osascript "/Users/marina/Documents/Applescripts/Activate Chrome for Google Docs todo.scpt"')
+  os.execute('osascript "' .. os.getenv("HOME") .. '/dotfiles/scripts/Activate Chrome for Google Docs todo.scpt"')
 end)
 
 -- Activate Gmail
 hs.hotkey.bind(hyper, 'g', function()
-  os.execute('osascript "/Users/marina/Documents/Applescripts/Activate Chrome for Gmail.scpt"')
+  os.execute('osascript "' .. os.getenv("HOME") .. '/dotfiles/scripts/Activate Chrome for Gmail.scpt"')
 end)
 
 -- Activate Google Calendar
 hs.hotkey.bind(hyper, 'c', function()
-  os.execute('osascript "/Users/marina/Documents/Applescripts/Activate Chrome for Google Calendar.scpt"')
+  os.execute('osascript "' .. os.getenv("HOME") .. '/dotfiles/scripts/Activate Chrome for Google Calendar.scpt"')
 end)
 
 -- Activate Facebook Messenger
 hs.hotkey.bind(hyper, 'm', function()
-  os.execute('osascript "/Users/marina/Documents/Applescripts/Activate Chrome for Messenger.scpt"')
+  os.execute('osascript "' .. os.getenv("HOME") .. '/dotfiles/scripts/Activate Chrome for Messenger.scpt"')
 end)
 
 -- Activate Facebook Messenger
 hs.hotkey.bind(hyper, 'q', function()
-  os.execute('osascript "/Users/marina/Documents/Applescripts/Activate Pointwise Jira.scpt"')
+  os.execute('osascript "' .. os.getenv("HOME") .. '/dotfiles/scripts/Activate Pointwise Jira.scpt"')
 end)
 
 -- Activate IDEA
@@ -427,25 +426,18 @@ end)
 
 -- Open work mail
 hs.hotkey.bind(hyper, 'x', function()
-  os.execute('osascript "/Users/marina/Documents/Applescripts/Activate Chrome for Gmail (PointWise).scpt"')
-  --hs.application.launchOrFocus("firefox")
+  os.execute('osascript "' .. os.getenv("HOME") .. '/dotfiles/scripts/Activate Chrome for Gmail (PointWise).scpt"')
 end)
 
 -- Activate Chrome (going to last tab if we're already in Chrome)
 hs.hotkey.bind(hyper, 'space', function()
-  os.execute('osascript "/Users/marina/Documents/Applescripts/Activate Chrome or go to last tab.scpt"')
+  os.execute('osascript "' .. os.getenv("HOME") .. '/dotfiles/scripts/Activate Chrome or go to last tab.scpt"')
 end)
 
 -- Name active application
 hs.urlevent.bind('hypercmda', function()
-  os.execute('osascript "/Users/marina/Documents/Applescripts/Name active application.scpt"')
+  os.execute('osascript "' .. os.getenv("HOME") .. '/dotfiles/scripts/Name active application.scpt"')
 end)
-
--- Activate Lever
---hs.urlevent.bind('hypercmdl', function()
-  --os.execute('osascript "/Users/marina/Documents/Applescripts/Activate Chrome for Lever.scpt"')
-  ----os.execute('osascript "/Users/marina/Documents/Applescripts/Activate Chrome for phpMyAdmin.scpt"')
---end)
 
 -- Activate Spotify
 hs.hotkey.bind(hyper, ';', function()
@@ -454,12 +446,12 @@ end)
 
 -- Open downloads folder
 hs.urlevent.bind('hypercmdd', function()
-  os.execute('open /Users/marina/Downloads/')
+  os.execute('open "' .. os.getenv("HOME") .. '/Downloads"')
 end)
 
 -- Open Google Drive folder
 hs.urlevent.bind('hypercmds', function()
-  os.execute('open \"/Users/marina/Google Drive\"')
+  os.execute('open \"' .. os.getenv("HOME") .. '/Google Drive\"')
 end)
 
 -- Activate Slack
@@ -495,13 +487,8 @@ end)
 
 -- Display current track in spotify
 hs.urlevent.bind('hyperslash', function() 
-  os.execute('osascript "/Users/marina/Documents/Applescripts/Spotify display current track info.scpt"')
+  os.execute('osascript "' .. os.getenv("HOME") .. '/dotfiles/scripts/Spotify display current track info.scpt"')
 end)
-
--- Open this config file for editing
---hs.urlevent.bind('hypercmdh', function() 
-  --os.execute('osascript "/Users/marina/Documents/Applescripts/Activate Chrome for Hubspot.scpt"')
---end)
 
 -- Realign windows
 hs.urlevent.bind('hypercmdw', function() 
