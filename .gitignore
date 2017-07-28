@@ -1,5 +1,8 @@
 # Ignore vim/bundle as this will be managed by Vundle
-vim/bundle/
+.DS_Store
 *.swp
 *.swo
-.DS_Store
+
+vim/bundle/
+scripts/Google\ API/credentials.dat
+scripts/Google\ API/client_*
