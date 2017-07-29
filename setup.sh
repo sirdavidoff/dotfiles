@@ -82,3 +82,8 @@ if [ -e "$DIR" ]; then
 else
 	echo "Oh My ZSH not installed!"
 fi
+
+
+
+
+echo "You need to set up Alfred yourself, by going to settings and pointing the sync folder to Alfred.alfredpreferences"
