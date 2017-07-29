@@ -1,0 +1,84 @@
+# Path to your oh-my-zsh configuration.
+ZSH=$HOME/.oh-my-zsh
+
+# Set name of the theme to load.
+# Look in ~/.oh-my-zsh/themes/
+# Optionally, if you set this to "random", it'll load a random theme each
+# time that oh-my-zsh is loaded.
+#ZSH_THEME="solarized-powerline"
+ZSH_THEME="blinks"
+#SOLARIZED_THEME="dark"
+
+
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Set to this to use case-sensitive completion
+# CASE_SENSITIVE="true"
+
+# Comment this out to disable weekly auto-update checks
+# DISABLE_AUTO_UPDATE="true"
+
+# Uncomment following line if you want to disable colors in ls
+# DISABLE_LS_COLORS="true"
+
+# Uncomment following line if you want to disable autosetting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment following line if you want red dots to be displayed while waiting for completion
+# COMPLETION_WAITING_DOTS="true"
+
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+plugins=(git python ruby brew ssh-agent gradle osx zsh-autosuggestions)
+
+source $ZSH/oh-my-zsh.sh
+
+# Do an ls after every cd
+chpwd() {
+  emulate -L zsh
+  ls
+}
+
+# Customize to your needs...
+export PATH="$PATH:/Applications/MAMP/Library/bin"
+export PATH="/usr/local/bin:$PATH"
+export PATH="/opt/subversion/bin:$PATH"
+export PATH="$PATH:/Users/david/tuxebo/svn/cake/console"
+export PATH="$PATH:/Library/PostgreSQL/bin"
+export PATH="$PATH:/Developer/SDKs/flex_sdk_4.6/bin"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home"
+
+
+
+
+#export SSH_AUTH_SOCK=/tmp/501/SSHKeychain.socket
+
+# Need this to make the FO server work properly
+export BB_CONFIG_DIR='/Users/david/dev/fo/code/FundingOptions/config/development'
+
+alias scps="$HOME/dotfiles/scripts/scps.sh"
+alias profile="vi ~/.zshrc"
+alias vimrc="vi ~/.vimrc"
+alias gs="git status"
+alias ga="git add .;git status"
+alias gc="git commit -m"
+alias gp="git push"
+alias sl="sudo !!"
+
+alias tr="ssh tandr@tandr.webfactional.com"
+alias s="ssh sirdavidoff@sirdavidoff.webfactional.com"
+alias fo="cd ~/dev/fo/code/FundingOptions/fundingoptions;source ../../bin/activate"
+alias fos="fo;pserve $BB_CONFIG_DIR/config.ini --reload 2>&1 | colortail -k scripts/colortail.conf /dev/stdin"
+alias fosd="fo;pserve $BB_CONFIG_DIR/config.ini --reload"
+alias for="fo;./scripts/resetdb.sh"
+alias foc="fo;celery -A  tasks worker --loglevel=info"
+alias pw="cd ~/dev/pw-android"
+alias anal="cd ~/Google\ Drive/Analysis/Server\ data\ processing"
+alias sock="ln -s /Applications/MAMP/tmp/mysql/mysql.sock /tmp/mysql.sock"
+alias gmb="ssh david@vpn.loki256.xyz"
+alias gmbd="sftp david@vpn.loki256.xyz:/home/deluge"
+alias is="/Users/david/Google\ Drive/Analysis/Server\ data\ processing/import.sh server"
+alias il="/Users/david/Google\ Drive/Analysis/Server\ data\ processing/import.sh local"

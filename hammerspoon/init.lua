@@ -464,11 +464,11 @@ end)
 -- Activate iTerm
 -- Make sure that all windows are brought to the front when switching to iTerm
 hs.hotkey.bind(hyper, 't', function()
-  app = hs.application.find('iTerm')
+  app = hs.application.find('iTerm2')
   if app ~= nil and app:isRunning() then
     app:activate(true)
   else
-    hs.application.open('iTerm')
+    hs.application.open('/Applications/Utilities/iTerm.app')
   end
 end)
 

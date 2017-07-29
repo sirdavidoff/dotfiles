@@ -14,7 +14,14 @@ call vundle#rc()
 
 " Define plugins for Vundle to manage
 Plugin 'gmarik/vundle'
+Plugin 'tpope/vim-fugitive'
 Plugin 'altercation/vim-colors-solarized.git'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdtree'
 
 " If we've just installed Vundle, fetch the plugins above.
 " To update in the future, run :PluginUpdate from Vim
@@ -30,8 +37,24 @@ filetype plugin indent on
 set number
 set nocompatible
 
-" Set the colour scheme to Solarized
+" Set the colour scheme to Solarized and configure Airline
 syntax enable
 set background=dark
 colorscheme solarized
+colors solarized
+let g:airline_theme='solarized'
+let g:airline_solarized_bg='dark'
+let g:airline_powerline_fonts = 1
+" Show all the open buffers if there's only one tab open
+let g:airline#extensions#tabline#enabled = 1
+set guifont=Source\ Code\ Pro\ for\ Powerline:h14
+
+" Commands for manually reloading .vimrc and .gvimrc
+command RC e $MYVIMRC
+command GRC e $MYGVIMRC
+" Automatically reload .vimrc, etc every time it is saved
+augroup myvimrc
+    au!
+    au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
+augroup END
 

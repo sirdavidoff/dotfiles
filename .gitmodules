@@ -1,0 +1,7 @@
+[submodule "powerline-fonts"]
+	path = powerline-fonts
+	url = git@github.com:powerline/fonts.git
+	ignore = dirty
+[submodule "oh-my-zsh/zsh-autosuggestions"]
+	path = oh-my-zsh/zsh-autosuggestions
+	url = git://github.com/zsh-users/zsh-autosuggestions

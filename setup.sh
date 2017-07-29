@@ -46,3 +46,39 @@ else
 	echo "Karabiner not installed!"
 fi
 
+
+
+
+
+echo "Installing Powerline fonts..."
+
+# Can't include globs (e.g. *) in quoted strings, so we use double-quoted ones
+cp "$SCRIPTPATH/powerline-fonts/SourceCodePro/"*."otf" ~/Library/fonts/
+
+
+
+
+
+if [ ! $SHELL == $(which zsh) ]; then
+	echo "Changing the default shell to ZSH"
+	chsh -s $(which zsh)
+fi
+
+
+
+
+
+echo "Setting up Oh My ZSH..."
+
+# Note the weird stuff going on with quotes here; apparently a ~ isn't expanded if it's in quotes
+DIR="$HOME/.oh-my-zsh"
+if [ -e "$DIR" ]; then
+	removeExisting ~/.zshrc
+	ln -s "$SCRIPTPATH/oh-my-zsh/zshrc" ~/.zshrc
+	echo "Don't forget to install the .itermcolours in the oh-my-zsh directory!"
+
+	removeExisting "$DIR/plugins/zsh-autosuggestions"
+	ln -s "$SCRIPTPATH/oh-my-zsh/zsh-autosuggestions" "$DIR/plugins/zsh-autosuggestions"
+else
+	echo "Oh My ZSH not installed!"
+fi
