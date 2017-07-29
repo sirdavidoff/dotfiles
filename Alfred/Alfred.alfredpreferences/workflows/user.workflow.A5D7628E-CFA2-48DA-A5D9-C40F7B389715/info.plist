@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string></string>
+	<key>connections</key>
+	<dict>
+		<key>4EBCC868-A182-4D00-B619-0438AB28C8A5</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>D8CBBF7F-E025-4A21-8BD9-2CFF1C0217C7</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>842AA980-1FCF-4A54-B99B-C901956A4954</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>D8CBBF7F-E025-4A21-8BD9-2CFF1C0217C7</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string></string>
+	<key>description</key>
+	<string>Opens messenger.com and starts a new message to the person passed</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Message with Facebook</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>applescript</key>
+				<string>on alfred_script(q)
+  -- your script here
+  set scriptPath to (POSIX path of (path to documents folder as text)) &amp; "Applescripts/Activate Chrome and compose FB message.scpt"log scriptPathrun script scriptPath with parameters {q}
+end alfred_script</string>
+				<key>cachescript</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.applescript</string>
+			<key>uid</key>
+			<string>D8CBBF7F-E025-4A21-8BD9-2CFF1C0217C7</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>keyword</key>
+				<string>m</string>
+				<key>text</key>
+				<string>Message with Facebook</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>842AA980-1FCF-4A54-B99B-C901956A4954</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>keyword</key>
+				<string>message</string>
+				<key>text</key>
+				<string>Message with Facebook</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>4EBCC868-A182-4D00-B619-0438AB28C8A5</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>4EBCC868-A182-4D00-B619-0438AB28C8A5</key>
+		<dict>
+			<key>ypos</key>
+			<real>200</real>
+		</dict>
+		<key>842AA980-1FCF-4A54-B99B-C901956A4954</key>
+		<dict>
+			<key>ypos</key>
+			<real>60</real>
+		</dict>
+		<key>D8CBBF7F-E025-4A21-8BD9-2CFF1C0217C7</key>
+		<dict>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string></string>
+</dict>
+</plist>
