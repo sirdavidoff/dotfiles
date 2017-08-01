@@ -1,3 +1,7 @@
+"**********************************************************
+"******************** Plugin management *******************
+"**********************************************************
+
 " Check whether Vundle is already installed, and if not, install it
 let vundleJustInstalled=0 
 let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
@@ -22,10 +26,14 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
+Plugin 'valloric/youcompleteme'
+Plugin 'pangloss/vim-javascript'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'LustyJuggler'
 
 " If we've just installed Vundle, fetch the plugins above.
 " To update in the future, run :PluginUpdate from Vim
-" And you can install from Vim with :PluginSearch <name>
+" and you can install from Vim with :PluginSearch <name>
 if vundleJustInstalled == 1
      :PluginInstall
 endif
@@ -33,11 +41,14 @@ endif
 " Now we can turn our filetype functionality back on
 filetype plugin indent on
 
-" Line numbers are important
-set number
-set nocompatible
+
+
+"**********************************************************
+"*********************** Formatting ***********************
+"**********************************************************
 
 " Set the colour scheme to Solarized and configure Airline
+" Turn on syntax highlighting
 syntax enable
 set background=dark
 colorscheme solarized
@@ -49,12 +60,198 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 set guifont=Source\ Code\ Pro\ for\ Powerline:h14
 
+" Don't wrap long lines of text
+set nowrap
+
+" Turn on line numbers and make them relative to the cursor
+" By putting 'number' after 'relativenumber' we still show the
+" line number on the cursor line
+set relativenumber
+set number
+
+" Show the line and column number of the curson in the bottom-right
+set ruler
+
+" Always show the status line
+set laststatus=2
+
+" Show (partial) command in the status line
+set showcmd
+
+" What are modelines?
+set modeline
+set modelines=10
+
+
+"**********************************************************
+"******************* Text manipulation ********************
+"**********************************************************
+
+" Allow backspacing over everything in insert mode
+set backspace=indent,eol,start
+
+" Convert tabs to 2 spaces
+set expandtab
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+
+"set list listchars=tab:\ \ ,trail:·
+
+"" Return opens a new line, even when in command mode
+nnoremap <S-Enter> O<Esc>
+nnoremap <CR> o<Esc>
+
+"" Join lines above and below with ,j and ,k (with no extra spaces)
+nnoremap <leader>j $mqj^v$yk$pj2dd`ql
+nnoremap <leader>k k$mqj^v$yk$pj2dd`ql
+
+"" Bubble single lines
+nmap <c-up> [e
+nmap <C-Down> ]e
+"" Bubble multiple lines
+vmap <C-Up> [egv
+vmap <C-Down> ]egv
+vmap <C-k> [egv
+vmap <C-j> ]egv
+
+"" Y yanks to the end of the line, rather than yanking the whole line
+nnoremap Y y$
+"" yl yanks the line, but without preceding whitespace or the line break
+nnoremap yl ^y$
+"" 'j and 'k go to the beginning and end of just-selected or just-pasted text
+nnoremap 'j '[
+nnoremap 'k ']
+
+"" R replaces the last pasted text with whatever was previously in the yank
+"" buffer
+nmap R <Plug>yankstack_substitute_older_paste
+nmap <M-p> <Plug>yankstack_substitute_newer_paste
+
+" TODO: Do we need all of these pasting indent commands?
+" Select the last-pasted text
+nnoremap gp `[v`]
+"" Visually select the last changed text
+nnoremap <expr> gp '`[' . getregtype()[0] . '`]'
+
+" TODO: Do we need all of these pasting indent commands?
+" When pasting, auto-indent to match surroundings 
+nnoremap p ]p
+nnoremap P ]P
+" Indent the last paste properly
+nnoremap <leader>i gp=<Esc>
+
+"" Only have to press <> once to change line indent
+nnoremap < <<
+nnoremap > >>
+" Stay in visual mode when indenting
+vnoremap > >gv
+vnoremap < <gv
+
+" Tab toggles comments
+nmap <Tab> <plug>NERDCommenterToggle<bar>j
+xmap <Tab> <plug>NERDCommenterToggle
+" ,d comments out the current line and puts a copy below
+nmap <leader>d yy<plug>NERDCommenterToggle<bar>]p
+vmap <leader>d y]Pgp<plug>NERDCommenterToggle<bar>']j
+
+" Indent the file, keeping cursor in the same place
+nnoremap <leader>f mqgg=G'q
+
+"" s does opens the substitution thing in visual mode
+vnoremap s :s/
+
+"" Uppercase U is redo
+nnoremap U <C-r>
+
+
+
+
+"**********************************************************
+"******************* In-file navigation *******************
+"**********************************************************
+
+"" Searching
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+
+"" 0 goes to the first non-whitespace part of the line, rather than the very
+"" beginning
+nnoremap 0 ^
+nnoremap ^ 0
+
+"" Move up and down a screen with J and K
+nnoremap J <C-f>zz
+nnoremap K <C-b>zz
+vnoremap J <C-f>zz
+vnoremap K <C-b>zz
+nnoremap <C-k> <C-u><C-u>zz
+nnoremap <C-j> <C-d><C-d>zz
+
+" EasyMotion configuration
+nnoremap <space> :call EasyMotion#WB(0, 0)<CR>
+nnoremap <S-space> :call EasyMotion#WB(0, 1)<CR>
+nnoremap gf f
+nnoremap gF F
+nnoremap gt t
+nnoremap gT T
+"let g:EasyMotion_keys = 'abcdeghiklmnopqrstuvwxyzjf;'
+
+"" Remember last location in file
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+    \| exe "normal g'\"" | endif
+endif
+
+
+
+"**********************************************************
+"***************** Inter-file navigation ******************
+"**********************************************************
+
+" Abandon hidden buffers
+set hidden
+
+"Close current buffer
+nnoremap <leader>w :bw<CR>
+"Close all buffers
+nnoremap <leader>a :%bdelete<CR>
+"Close all open buffers
+nnoremap <leader>x :%bdelete<CR>
+
+"" LustyJuggler configuration
+let g:LustyExplorerSuppressRubyWarning = 1
+let g:LustyJugglerAltTabMode = 1
+nnoremap s :LustyJuggler<CR>
+
+"" NERDTree configuration
+let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
+noremap <Leader>n :NERDTreeToggle<CR>
+
+
+
+"**********************************************************
+"*********************** Misc stuff ***********************
+"**********************************************************
+
+" Use comma for <leader>
+let mapleader = ","
+
+set encoding=utf-8
+
+" We want Vim, not Vi
+set nocompatible
+
+"" Directories for swp files
+set backupdir=~/.vim/backup
+set directory=~/.vim/backup
+
+"" Help key is ,h
+nnoremap <leader>h K
+
 " Commands for manually reloading .vimrc and .gvimrc
+" TODO: These produce errors when we resource this file
 command RC e $MYVIMRC
 command GRC e $MYGVIMRC
-" Automatically reload .vimrc, etc every time it is saved
-augroup myvimrc
-    au!
-    au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
-augroup END
-
