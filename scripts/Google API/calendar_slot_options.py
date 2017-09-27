@@ -1,3 +1,12 @@
+# To set up:
+#  - Turn on Google Caldendar API and download credentials .json (as calendar.json) by visiting:
+#    https://console.developers.google.com/start/api?id=calendar
+#  - pip install --upgrade google-api-python-client
+#  - Run this script
+#  - If you get an error about Six, add this line to your profile:
+#    export PYTHONPATH=/Library/Python/2.7/site-packages
+# Full instructions here:
+# https://developers.google.com/google-apps/calendar/quickstart/python
 
 from __future__ import print_function
 import httplib2
