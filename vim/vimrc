@@ -58,7 +58,7 @@ let g:airline_solarized_bg='dark'
 let g:airline_powerline_fonts = 1
 " Show all the open buffers if there's only one tab open
 let g:airline#extensions#tabline#enabled = 1
-set guifont=Source\ Code\ Pro\ for\ Powerline:h14
+set guifont=Source\ Code\ Pro\ for\ Powerline:h16
 
 " Don't wrap long lines of text
 set nowrap

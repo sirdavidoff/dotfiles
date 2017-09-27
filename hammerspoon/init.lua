@@ -7,6 +7,7 @@
 
 -- UNUSED HYPER KEYS
 -- R
+-- Shift+U
 -- '
 -- ,
 -- .
@@ -77,7 +78,7 @@ local hyper = {'cmd', 'alt', 'ctrl', 'shift'}
 -- We use this to keep track of whether the first (main) screen has changed
 local firstScreenName = ""
 
-local workScreenName = "DELL U2415"
+local workScreenName = "DELL U2414H"
 local workScreenLayout = {
   {"MacVim", nil, workScreenName, {x=0, y=0, w=0.5, h=1}, nil, nil, nil},
   {"Google Chrome", nil, workScreenName, {x=0, y=0, w=0.8, h=1}, nil, nil, nil},
@@ -356,6 +357,36 @@ hs.urlevent.bind('hyperaltl', function()
   -- For some reason calling hs.application() when Excel isn't running is really slow
   if appRunning("Microsoft Excel") and hs.application("Microsoft Excel"):isFrontmost() then
     hs.eventtap.keyStroke({'cmd', 'shift'}, 'right', keyDelay)
+  end
+end)
+hs.urlevent.bind('hyperaltu', function() 
+  -- Run script for clicking todo list buttons, but only if we're in Chrome
+  if appRunning("Google Chrome") and hs.application("Google Chrome"):isFrontmost() then
+    os.execute('osascript "' .. os.getenv("HOME") .. '/dotfiles/scripts/Chrome click Todo buttons.scpt" "in_progress"')
+  end
+end)
+hs.urlevent.bind('hyperalti', function() 
+  -- Run script for clicking todo list buttons, but only if we're in Chrome
+  if appRunning("Google Chrome") and hs.application("Google Chrome"):isFrontmost() then
+    os.execute('osascript "' .. os.getenv("HOME") .. '/dotfiles/scripts/Chrome click Todo buttons.scpt" "waiting"')
+  end
+end)
+hs.urlevent.bind('hyperalto', function() 
+  -- Run script for clicking todo list buttons, but only if we're in Chrome
+  if appRunning("Google Chrome") and hs.application("Google Chrome"):isFrontmost() then
+    os.execute('osascript "' .. os.getenv("HOME") .. '/dotfiles/scripts/Chrome click Todo buttons.scpt" "todo"')
+  end
+end)
+hs.urlevent.bind('hyperaltp', function() 
+  -- Run script for clicking todo list buttons, but only if we're in Chrome
+  if appRunning("Google Chrome") and hs.application("Google Chrome"):isFrontmost() then
+    os.execute('osascript "' .. os.getenv("HOME") .. '/dotfiles/scripts/Chrome click Todo buttons.scpt" "done"')
+  end
+end)
+hs.urlevent.bind('hyperaltu', function() 
+  -- Run script for clicking todo list buttons, but only if we're in Chrome
+  if appRunning("Google Chrome") and hs.application("Google Chrome"):isFrontmost() then
+    os.execute('osascript "' .. os.getenv("HOME") .. '/dotfiles/scripts/Chrome click Todo buttons.scpt" "in_progress"')
   end
 end)
 

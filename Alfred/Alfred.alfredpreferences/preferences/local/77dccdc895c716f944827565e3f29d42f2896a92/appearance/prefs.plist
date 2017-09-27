@@ -2,11 +2,7 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>showFolders</key>
-	<true/>
-	<key>showUserDefined</key>
-	<array>
-		<string>com.apple.web-internet-location</string>
-	</array>
+	<key>theme</key>
+	<string>alfred.theme.custom.AEB344FD-C01C-43A6-A142-EFDE67450688</string>
 </dict>
 </plist>

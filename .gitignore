@@ -4,7 +4,7 @@
 *.swo
 
 vim/bundle/
-vim/backup/
+vim/backup/*
 scripts/Google\ API/credentials.dat
 scripts/Google\ API/client_*
 snippets.alfdb

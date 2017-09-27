@@ -9,7 +9,7 @@
 			<key>background</key>
 			<data>
 			BAtzdHJlYW10eXBlZIHoA4QBQISEhAdOU0NvbG9yAISECE5TT2Jq
-			ZWN0AIWEAWMChARmZmZmAAAAAYY=
+			ZWN0AIWEAWMBhARmZmZmgx+OozuDAzKgPYNnDco9AYY=
 			</data>
 			<key>border</key>
 			<data>
@@ -21,7 +21,7 @@
 			<key>credits</key>
 			<string></string>
 			<key>imageStyle</key>
-			<integer>8</integer>
+			<integer>0</integer>
 			<key>name</key>
 			<string>David's theme</string>
 			<key>resultPaddingSize</key>
@@ -29,7 +29,7 @@
 			<key>resultSelectedBackgroundColor</key>
 			<data>
 			BAtzdHJlYW10eXBlZIHoA4QBQISEhAdOU0NvbG9yAISECE5TT2Jq
-			ZWN0AIWEAWMBhARmZmZmg4Yyxz2DtiTGPYNWQMg9AYY=
+			ZWN0AIWEAWMBhARmZmZmg2agjjuDAYbuPYOLaBY+AYY=
 			</data>
 			<key>resultSelectedSubtextColor</key>
 			<data>
@@ -67,7 +67,7 @@
 			<key>searchBackgroundColor</key>
 			<data>
 			BAtzdHJlYW10eXBlZIHoA4QBQISEhAdOU0NvbG9yAISECE5TT2Jq
-			ZWN0AIWEAWMBhARmZmZmg6ySvD2DQJO7PYMYkr09AYY=
+			ZWN0AIWEAWMBhARmZmZmAAAAAIY=
 			</data>
 			<key>searchFont</key>
 			<string>System Light</string>
@@ -96,12 +96,12 @@
 			<key>separatorColor</key>
 			<data>
 			BAtzdHJlYW10eXBlZIHoA4QBQISEhAdOU0NvbG9yAISECE5TT2Jq
-			ZWN0AIWEAWMBhARmZmZmg5Qywz2DLyrCPYP5OsQ9AYY=
+			ZWN0AIWEAWMBhARmZmZmg3ff3TuDpMf2PYN9HSI+AYY=
 			</data>
 			<key>shortcutColor</key>
 			<data>
 			BAtzdHJlYW10eXBlZIHoA4QBQISEhAdOU0NvbG9yAISECE5TT2Jq
-			ZWN0AIWEAWMBhARmZmZmg1O+iD6DRo17PoPWjwY9AYY=
+			ZWN0AIWEAWMBhARmZmZmg1O+iD6DrY2EPoOxxiA+AYY=
 			</data>
 			<key>shortcutFont</key>
 			<string>System Light</string>

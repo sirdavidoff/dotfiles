@@ -55,7 +55,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>cd "/Users/david/Documents/Applescripts/Google API"
+				<string>cd "$HOME/scripts/Google API"
 ./download_latest_google_photo.py</string>
 				<key>type</key>
 				<integer>0</integer>

@@ -45,7 +45,7 @@
 				<key>applescript</key>
 				<string>on alfred_script(q)
   -- your script here
-  set scriptPath to (POSIX path of (path to documents folder as text)) &amp; "Applescripts/Activate Chrome and compose FB message.scpt"log scriptPathrun script scriptPath with parameters {q}
+  set scriptPath to (POSIX path of (path to home folder as text)) &amp; "dotfiles/scripts/Activate Chrome and compose FB message.scpt"log scriptPathrun script scriptPath with parameters {q}
 end alfred_script</string>
 				<key>cachescript</key>
 				<true/>

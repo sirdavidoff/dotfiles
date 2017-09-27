@@ -42,25 +42,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>curl -s ipinfo.io | jq '.country' | sed 's/"//g'</string>
-				<key>type</key>
-				<integer>5</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>FBE80D65-A2A7-42CE-9551-6CA687994E78</string>
-			<key>version</key>
-			<integer>0</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argumenttype</key>
 				<integer>2</integer>
 				<key>keyword</key>
@@ -74,6 +55,25 @@
 			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
 			<string>DC938847-CDAC-446D-8B8F-31062CB74B66</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>curl -s ipinfo.io | jq '.country' | sed 's/"//g'</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>FBE80D65-A2A7-42CE-9551-6CA687994E78</string>
 			<key>version</key>
 			<integer>0</integer>
 		</dict>

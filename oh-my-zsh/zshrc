@@ -32,7 +32,8 @@ ZSH_THEME="blinks"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git python ruby brew ssh-agent gradle osx zsh-autosuggestions)
+#plugins=(git python ruby brew ssh-agent gradle osx zsh-autosuggestions)
+plugins=(git python ruby brew gradle osx)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -51,6 +52,9 @@ export PATH="$PATH:/Library/PostgreSQL/bin"
 export PATH="$PATH:/Developer/SDKs/flex_sdk_4.6/bin"
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home"
 
+# Make python use the newer version of six, not the one pre-installed with OS X
+# http://stackoverflow.com/a/29666702/702875
+export PYTHONPATH=/Library/Python/2.7/site-packages
 
 
 

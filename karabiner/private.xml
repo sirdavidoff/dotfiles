@@ -418,6 +418,11 @@
     <url>hammerspoon://hyperslash</url>
     <background/>
   </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hyperdot</name>
+    <url>hammerspoon://hyperdot</url>
+    <background/>
+  </vkopenurldef>
 
   <item>
     <name>Remap CapsLock to Hyper</name>
@@ -864,10 +869,21 @@
       --KeyToKey--
       KeyCode::DOT,
       ModifierFlag::{{ HYPER }},
-      KeyCode::VK_NONE
+      KeyCode::VK_OPEN_URL_HS_hyperdot
     </autogen>
   </item>
   
+  <item>
+    <name>Remap Launchpad key to Dashboard</name>
+    <appendix>Like in the good old days</appendix>
+    <identifier>private.remap_launchpad</identifier>
+    <autogen>
+        --KeyToKey--
+        KeyCode::LAUNCHPAD,
+        KeyCode::DASHBOARD
+    </autogen>
+  </item>
+
   <item>
     <name>Use the correct shift keys</name>
     <identifier>private.correct_shift_keys</identifier>
