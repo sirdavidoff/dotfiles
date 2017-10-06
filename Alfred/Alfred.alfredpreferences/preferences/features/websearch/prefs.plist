@@ -9,13 +9,13 @@
 			<key>enabled</key>
 			<true/>
 			<key>keyword</key>
-			<string>t</string>
+			<string>pb</string>
 			<key>plusSpaces</key>
 			<false/>
 			<key>text</key>
-			<string>Torrentz.eu search</string>
+			<string>Pirate Bay search</string>
 			<key>url</key>
-			<string>https://torrentz.eu/search?q={query}</string>
+			<string>https://thepiratebay.org/search/{query}/0/99/0</string>
 			<key>utf8</key>
 			<true/>
 		</dict>

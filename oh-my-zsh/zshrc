@@ -44,17 +44,17 @@ chpwd() {
 }
 
 # Customize to your needs...
-export PATH="$PATH:/Applications/MAMP/Library/bin"
 export PATH="/usr/local/bin:$PATH"
-export PATH="/opt/subversion/bin:$PATH"
+export PATH="$PATH:/Applications/MAMP/Library/bin"
 export PATH="$PATH:/Users/david/tuxebo/svn/cake/console"
 export PATH="$PATH:/Library/PostgreSQL/bin"
 export PATH="$PATH:/Developer/SDKs/flex_sdk_4.6/bin"
+export PATH="$PATH:/Users/david/Library/Python/2.7/bin"
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home"
 
 # Make python use the newer version of six, not the one pre-installed with OS X
 # http://stackoverflow.com/a/29666702/702875
-export PYTHONPATH=/Library/Python/2.7/site-packages
+#export PYTHONPATH=/Library/Python/2.7/site-packages
 
 
 
