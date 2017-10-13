@@ -30,7 +30,7 @@
 		</array>
 	</dict>
 	<key>createdby</key>
-	<string></string>
+	<string>David Roberts</string>
 	<key>description</key>
 	<string></string>
 	<key>disabled</key>
@@ -42,24 +42,17 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
+				<key>acceptsmulti</key>
 				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>cd /Users/david/Downloads
-latest_file=$(ls -rt1 | tail -1)
-mv -f "$latest_file" "{query}"
-open "{query}"
-echo $latest_file moved to $(basename "{query}")
-#echo {query}</string>
-				<key>type</key>
-				<integer>0</integer>
+				<key>filetypes</key>
+				<array/>
+				<key>name</key>
+				<string>Move last download here</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.script</string>
+			<string>alfred.workflow.trigger.action</string>
 			<key>uid</key>
-			<string>4CDA0D53-BA3D-46D5-83F3-71D52AE0D763</string>
+			<string>02609E04-2BCF-424E-B21B-12878BD84FEB</string>
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
@@ -91,17 +84,24 @@ echo $latest_file moved to $(basename "{query}")
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>acceptsmulti</key>
+				<key>concurrently</key>
 				<false/>
-				<key>filetypes</key>
-				<array/>
-				<key>name</key>
-				<string>Move last download here</string>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>cd /Users/david/Downloads
+latest_file=$(ls -rt1 | tail -1)
+mv -f "$latest_file" "{query}"
+open "{query}"
+echo $latest_file moved to $(basename "{query}")
+#echo {query}</string>
+				<key>type</key>
+				<integer>0</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.trigger.action</string>
+			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>02609E04-2BCF-424E-B21B-12878BD84FEB</string>
+			<string>4CDA0D53-BA3D-46D5-83F3-71D52AE0D763</string>
 			<key>version</key>
 			<integer>0</integer>
 		</dict>

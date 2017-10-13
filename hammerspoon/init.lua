@@ -7,6 +7,9 @@
 
 -- UNUSED HYPER KEYS
 -- R
+-- Z
+-- P (currently used, but just duplicates cmd-v)
+-- F (currently Finder, but should be using Alfred more for this)
 -- Shift+U
 -- '
 -- ,

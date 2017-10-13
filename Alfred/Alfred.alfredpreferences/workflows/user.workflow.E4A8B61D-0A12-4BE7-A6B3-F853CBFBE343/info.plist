@@ -6,11 +6,11 @@
 	<string></string>
 	<key>connections</key>
 	<dict>
-		<key>CBCF4D48-60CE-41B9-8C10-5D4E4338A95A</key>
+		<key>78A11F63-5F92-4622-87D2-D09D5AB3D0D7</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>04C55CB5-607C-4F9C-9FD8-0D3F3E53D97A</string>
+				<string>9F19AC87-0CEA-4333-90A1-4A7C015F42C0</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -21,11 +21,11 @@
 	<key>createdby</key>
 	<string>David Roberts</string>
 	<key>description</key>
-	<string></string>
+	<string>Open the last modified file</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>Google Docs Todo</string>
+	<string>Open freshest file</string>
 	<key>objects</key>
 	<array>
 		<dict>
@@ -36,34 +36,32 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>export PYTHONPATH=/Library/Python/2.7/site-packages
-python "$HOME/dotfiles/scripts/Google API/todo_add.py" "{query}"</string>
+				<string>cd $HOME/dotfiles/scripts
+./open_freshest_file.sh "{query}"</string>
 				<key>type</key>
-				<integer>5</integer>
+				<integer>0</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>04C55CB5-607C-4F9C-9FD8-0D3F3E53D97A</string>
+			<string>9F19AC87-0CEA-4333-90A1-4A7C015F42C0</string>
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>keyword</key>
-				<string>t</string>
-				<key>text</key>
-				<string>Add new todo task</string>
-				<key>withspace</key>
-				<true/>
+				<key>acceptsmulti</key>
+				<false/>
+				<key>filetypes</key>
+				<array/>
+				<key>name</key>
+				<string>Open freshest file</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
+			<string>alfred.workflow.trigger.action</string>
 			<key>uid</key>
-			<string>CBCF4D48-60CE-41B9-8C10-5D4E4338A95A</string>
+			<string>78A11F63-5F92-4622-87D2-D09D5AB3D0D7</string>
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
@@ -72,15 +70,15 @@ python "$HOME/dotfiles/scripts/Google API/todo_add.py" "{query}"</string>
 	<string></string>
 	<key>uidata</key>
 	<dict>
-		<key>04C55CB5-607C-4F9C-9FD8-0D3F3E53D97A</key>
+		<key>78A11F63-5F92-4622-87D2-D09D5AB3D0D7</key>
 		<dict>
 			<key>ypos</key>
-			<real>160</real>
+			<real>110</real>
 		</dict>
-		<key>CBCF4D48-60CE-41B9-8C10-5D4E4338A95A</key>
+		<key>9F19AC87-0CEA-4333-90A1-4A7C015F42C0</key>
 		<dict>
 			<key>ypos</key>
-			<real>160</real>
+			<real>110</real>
 		</dict>
 	</dict>
 	<key>webaddress</key>
