@@ -41,6 +41,9 @@ endif
 " Now we can turn our filetype functionality back on
 filetype plugin indent on
 
+" Use comma for <leader> (needs to go at the top so that the
+" <Leader> commands in this file work
+let mapleader = ","
 
 
 "**********************************************************
@@ -105,6 +108,10 @@ nnoremap <CR> o<Esc>
 "" Join lines above and below with ,j and ,k (with no extra spaces)
 nnoremap <leader>j $mqj^v$yk$pj2dd`ql
 nnoremap <leader>k k$mqj^v$yk$pj2dd`ql
+
+" Capital ,J and ,K keep a space when you join the lines
+nnoremap <leader>J $mqj^v$yk$i <esc>pj2dd`ql
+nnoremap <leader>K k$mqj^v$yk$i <esc>pj2dd`ql
 
 "" Bubble single lines
 nmap <c-up> [e
@@ -230,14 +237,13 @@ nnoremap s :LustyJuggler<CR>
 let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
 noremap <Leader>n :NERDTreeToggle<CR>
 
+" Ctrl-P
+nnoremap t :CtrlP<CR>
 
 
 "**********************************************************
 "*********************** Misc stuff ***********************
 "**********************************************************
-
-" Use comma for <leader>
-let mapleader = ","
 
 set encoding=utf-8
 

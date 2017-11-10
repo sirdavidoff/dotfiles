@@ -1,7 +1,8 @@
 # To set up:
 #  - Turn on Google Caldendar API and download credentials .json (as calendar.json) by visiting:
 #    https://console.developers.google.com/start/api?id=calendar
-#  - pip install --upgrade google-api-python-client
+#  - pip install --upgrade google-api-python-client --user
+#  - pip install pyperclip --user
 #  - Run this script
 #  - If you get an error about Six, add this line to your profile:
 #    export PYTHONPATH=/Library/Python/2.7/site-packages
@@ -59,7 +60,7 @@ def get_credentials():
     if not credentials or credentials.invalid:
         flow = client.flow_from_clientsecrets(CLIENT_SECRET_FILE, SCOPES)
         flow.user_agent = APPLICATION_NAME
-        credentials = tools.run(flow, store)
+        credentials = tools.run_flow(flow, store, None)
         # if flags:
             # credentials = tools.run_flow(flow, store, flags)
         # else: # Needed only for compatibility with Python 2.6

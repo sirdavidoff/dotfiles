@@ -1,0 +1,60 @@
+{
+  "alfredtheme" : {
+    "result" : {
+      "textSpacing" : 4,
+      "subtext" : {
+        "size" : 11,
+        "colorSelected" : "#999999FF",
+        "font" : "System Light",
+        "color" : "#666666FF"
+      },
+      "shortcut" : {
+        "size" : 16,
+        "colorSelected" : "#230C35FF",
+        "font" : "System Light",
+        "color" : "#555234FF"
+      },
+      "backgroundSelected" : "#002731FF",
+      "text" : {
+        "size" : 16,
+        "colorSelected" : "#F2F2F2FF",
+        "font" : "System Light",
+        "color" : "#B8B8B8FF"
+      },
+      "iconPaddingHorizontal" : 5,
+      "paddingVertical" : 2,
+      "iconSize" : 40
+    },
+    "separator" : {
+      "color" : "#002935FF",
+      "thickness" : 1
+    },
+    "search" : {
+      "paddingVertical" : 2,
+      "background" : "#00000000",
+      "spacing" : 10,
+      "text" : {
+        "size" : 36,
+        "colorSelected" : "#000000FF",
+        "font" : "System Light",
+        "color" : "#FFFFFFFF"
+      },
+      "backgroundSelected" : "#FFDFB3FF"
+    },
+    "scrollbar" : {
+      "color" : "#333333FF",
+      "thickness" : 2
+    },
+    "name" : "David's theme (v2)",
+    "window" : {
+      "color" : "#001921FF",
+      "paddingHorizontal" : 7,
+      "width" : 680,
+      "borderPadding" : 10,
+      "borderColor" : "#7F7F7F00",
+      "blur" : 0,
+      "roundness" : 12,
+      "paddingVertical" : 10
+    }
+  }
+}

@@ -15,6 +15,21 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>61338BE5-94B3-4B9C-BB55-57740172668A</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>E447EAEF-5DAA-4188-B850-9F3B74E4EC31</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 	</dict>
@@ -25,7 +40,7 @@
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>Search Locarta Mail</string>
+	<string>Locarta Mail</string>
 	<key>objects</key>
 	<array>
 		<dict>
@@ -35,6 +50,8 @@
 				<integer>0</integer>
 				<key>keyword</key>
 				<string>lm</string>
+				<key>subtext</key>
+				<string></string>
 				<key>text</key>
 				<string>Search Locarta Mail</string>
 				<key>withspace</key>
@@ -45,7 +62,7 @@
 			<key>uid</key>
 			<string>232C38AD-AFB6-419B-9EA4-D442AAECB5FB</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -55,14 +72,54 @@
   set code to "document.getElementsByName(\"q\")[0].value = \"" &amp; q &amp; "\";document.querySelector('[aria-label=\"Search Locarta Mail\"]').click();"tell application "Google Chrome"	--tell active tab of front window to set URL to "javascript:" &amp; query	set active tab index of front window to 1	execute front window's active tab javascript code	activateend tell
 end alfred_script</string>
 				<key>cachescript</key>
-				<false/>
+				<true/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.applescript</string>
 			<key>uid</key>
 			<string>FFF56652-B617-43DD-B078-F883B88B9E78</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>lc</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>Compose new Locarta mail</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>61338BE5-94B3-4B9C-BB55-57740172668A</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>applescript</key>
+				<string>on alfred_script(q)
+tell application "Google Chrome"	-- We're assuming that mail is the first tab	set active tab index of front window to 1	tell front window's active tab		set URL to URL &amp; "?compose=new"	end tell
+	activateend tell
+
+end alfred_script</string>
+				<key>cachescript</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.applescript</string>
+			<key>uid</key>
+			<string>E447EAEF-5DAA-4188-B850-9F3B74E4EC31</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -71,11 +128,29 @@ end alfred_script</string>
 	<dict>
 		<key>232C38AD-AFB6-419B-9EA4-D442AAECB5FB</key>
 		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
 			<key>ypos</key>
 			<real>10</real>
 		</dict>
+		<key>61338BE5-94B3-4B9C-BB55-57740172668A</key>
+		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
+			<key>ypos</key>
+			<integer>190</integer>
+		</dict>
+		<key>E447EAEF-5DAA-4188-B850-9F3B74E4EC31</key>
+		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
+			<key>ypos</key>
+			<integer>190</integer>
+		</dict>
 		<key>FFF56652-B617-43DD-B078-F883B88B9E78</key>
 		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
 			<key>ypos</key>
 			<real>10</real>
 		</dict>
