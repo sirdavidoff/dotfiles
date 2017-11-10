@@ -6,6 +6,19 @@
 	<string></string>
 	<key>connections</key>
 	<dict>
+		<key>2E059BBE-FC11-4254-949C-2E1A98774633</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>3554AA1B-24C5-4002-9AAE-3BA748E9A172</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>78A11F63-5F92-4622-87D2-D09D5AB3D0D7</key>
 		<array>
 			<dict>
@@ -15,6 +28,60 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>ACA83841-D6E8-461D-BFB0-625CE2A56CCE</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>2545357A-EC23-4375-929D-0B93BC645408</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>B98096D9-8067-4DDD-8603-2A446CA9277B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>0CEA2131-67C7-4C0C-8CC4-39F547D3C989</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>DF1F09D1-32DB-465C-AB88-EE2F862C1E3C</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>2E059BBE-FC11-4254-949C-2E1A98774633</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>E50850AF-C86D-443D-8B22-9D0B098FB86D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>B98096D9-8067-4DDD-8603-2A446CA9277B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 	</dict>
@@ -31,26 +98,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>cd $HOME/dotfiles/scripts
-./open_freshest_file.sh "{query}"</string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>9F19AC87-0CEA-4333-90A1-4A7C015F42C0</string>
-			<key>version</key>
-			<integer>0</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>acceptsmulti</key>
 				<false/>
 				<key>filetypes</key>
@@ -63,22 +110,297 @@
 			<key>uid</key>
 			<string>78A11F63-5F92-4622-87D2-D09D5AB3D0D7</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>cd $HOME/dotfiles/scripts
+./open_freshest_file.sh "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>9F19AC87-0CEA-4333-90A1-4A7C015F42C0</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>applescript</key>
+				<string>on alfred_script(q)
+
+	-- There's a new line on the end of the echo for some reason
+	set q_stripped to text 1 thru -2 of q
+	--display dialog "%" &amp; q_stripped &amp; "%"
+
+    tell application "Alfred 3" to action q_stripped
+
+	delay 0.05 -- Give Alfred time to react
+
+	tell application "System Events"
+		keystroke "Open W"
+		delay 0.05
+		key code 36 -- Enter
+	end tell
+
+end alfred_script</string>
+				<key>cachescript</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.applescript</string>
+			<key>uid</key>
+			<string>0CEA2131-67C7-4C0C-8CC4-39F547D3C989</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>cd $HOME/dotfiles/scripts
+./open_freshest_file.sh "{query}" -echo</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>B98096D9-8067-4DDD-8603-2A446CA9277B</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>acceptsmulti</key>
+				<false/>
+				<key>filetypes</key>
+				<array/>
+				<key>name</key>
+				<string>Open freshest file with...</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.action</string>
+			<key>uid</key>
+			<string>E50850AF-C86D-443D-8B22-9D0B098FB86D</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>old</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>Open last download</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>ACA83841-D6E8-461D-BFB0-625CE2A56CCE</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>$HOME/dotfiles/scripts/open_freshest_file.sh "$HOME/Downloads"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>2545357A-EC23-4375-929D-0B93BC645408</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>applescript</key>
+				<string>on alfred_script(q)
+
+	-- There's a new line on the end of the echo for some reason
+	set q_stripped to text 1 thru -2 of q
+	--display dialog "%" &amp; q_stripped &amp; "%"
+
+    tell application "Alfred 3" to action q_stripped
+
+	delay 0.05 -- Give Alfred time to react
+
+	tell application "System Events"
+		keystroke "Open W"
+		delay 0.05
+		key code 36 -- Enter
+	end tell
+
+end alfred_script</string>
+				<key>cachescript</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.applescript</string>
+			<key>uid</key>
+			<string>3554AA1B-24C5-4002-9AAE-3BA748E9A172</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>$HOME/dotfiles/scripts/open_freshest_file.sh "$HOME/Downloads" -echo</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>2E059BBE-FC11-4254-949C-2E1A98774633</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>oldw</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>Open last download with...</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>DF1F09D1-32DB-465C-AB88-EE2F862C1E3C</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
 	<key>uidata</key>
 	<dict>
+		<key>0CEA2131-67C7-4C0C-8CC4-39F547D3C989</key>
+		<dict>
+			<key>xpos</key>
+			<integer>580</integer>
+			<key>ypos</key>
+			<integer>170</integer>
+		</dict>
+		<key>2545357A-EC23-4375-929D-0B93BC645408</key>
+		<dict>
+			<key>xpos</key>
+			<integer>320</integer>
+			<key>ypos</key>
+			<integer>300</integer>
+		</dict>
+		<key>2E059BBE-FC11-4254-949C-2E1A98774633</key>
+		<dict>
+			<key>xpos</key>
+			<integer>320</integer>
+			<key>ypos</key>
+			<integer>430</integer>
+		</dict>
+		<key>3554AA1B-24C5-4002-9AAE-3BA748E9A172</key>
+		<dict>
+			<key>xpos</key>
+			<integer>580</integer>
+			<key>ypos</key>
+			<integer>430</integer>
+		</dict>
 		<key>78A11F63-5F92-4622-87D2-D09D5AB3D0D7</key>
 		<dict>
+			<key>xpos</key>
+			<integer>50</integer>
 			<key>ypos</key>
-			<real>110</real>
+			<integer>40</integer>
 		</dict>
 		<key>9F19AC87-0CEA-4333-90A1-4A7C015F42C0</key>
 		<dict>
+			<key>xpos</key>
+			<integer>320</integer>
 			<key>ypos</key>
-			<real>110</real>
+			<integer>40</integer>
+		</dict>
+		<key>ACA83841-D6E8-461D-BFB0-625CE2A56CCE</key>
+		<dict>
+			<key>xpos</key>
+			<integer>50</integer>
+			<key>ypos</key>
+			<integer>300</integer>
+		</dict>
+		<key>B98096D9-8067-4DDD-8603-2A446CA9277B</key>
+		<dict>
+			<key>xpos</key>
+			<integer>320</integer>
+			<key>ypos</key>
+			<integer>170</integer>
+		</dict>
+		<key>DF1F09D1-32DB-465C-AB88-EE2F862C1E3C</key>
+		<dict>
+			<key>xpos</key>
+			<integer>50</integer>
+			<key>ypos</key>
+			<integer>430</integer>
+		</dict>
+		<key>E50850AF-C86D-443D-8B22-9D0B098FB86D</key>
+		<dict>
+			<key>xpos</key>
+			<integer>50</integer>
+			<key>ypos</key>
+			<integer>170</integer>
 		</dict>
 	</dict>
 	<key>webaddress</key>

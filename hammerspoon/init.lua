@@ -229,13 +229,23 @@ hs.hotkey.bind(hyper, 'y', function()
   hs.eventtap.keyStroke({}, 'right', keyDelay)
 end)
 
--- Cut the current line
 hs.hotkey.bind(hyper, 'd', function()
-  hs.eventtap.keyStroke({'cmd'}, 'left', keyDelay)
-  hs.eventtap.keyStroke({'cmd', 'shift'}, 'right', keyDelay)
-  -- We need a delay before the copy, otherwise it doesn't always work
-  hs.eventtap.keyStroke({'cmd'}, 'x', 200000)
-  hs.eventtap.keyStroke({}, 'delete', keyDelay)
+  if hs.application("Finder"):isFrontmost() then
+    -- Go back up one level in the hierarchy
+    hs.eventtap.keyStroke({"cmd"}, 'up', keyDelay) 
+  else
+    -- Cut the current line
+    hs.eventtap.keyStroke({'cmd'}, 'left', keyDelay)
+    hs.eventtap.keyStroke({'cmd', 'shift'}, 'right', keyDelay)
+    -- We need a delay before the copy, otherwise it doesn't always work
+    hs.eventtap.keyStroke({'cmd'}, 'x', 200000)
+    hs.eventtap.keyStroke({}, 'delete', keyDelay)
+  end
+end)
+-- multiple instances for some reason
+hs.urlevent.bind('hypercmdm', function()
+
+  --apps = hs.application.runningApplications()
 end)
 
 -- Open line below/above
@@ -640,11 +650,6 @@ bindapp("Finder", {"cmd"}, 'l', function()
   --hs.timer.doAfter(0.2, function() -- Need to do this to make sure the key is up, otherwise won't work
     hs.eventtap.keyStroke({"cmd"}, 'f', keyDelay) 
   --end)
-end)
-
--- Move one level up in the folder hierarchy
-bindapp("Finder", hyper, 'b', function() 
-    hs.eventtap.keyStroke({"cmd"}, 'up', keyDelay) 
 end)
 
 -- Get moving to beginning and end of line to work as normal in iTerm
