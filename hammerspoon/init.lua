@@ -8,7 +8,7 @@
 -- UNUSED HYPER KEYS
 -- R
 -- Z
--- P (currently used, but just duplicates cmd-v)
+-- P (currently used, but similar to Cmd-V)
 -- F (currently Finder, but should be using Alfred more for this)
 -- Shift+U
 -- '
@@ -195,6 +195,11 @@ end)
 
 -- Forward delete
 hs.hotkey.bind(hyper, 'return', function() hs.eventtap.keyStroke({}, 'forwarddelete', keyDelay) end)
+-- Forward delete entire word
+hs.urlevent.bind('hypercmdreturn', function()
+  hs.eventtap.keyStroke({'alt', 'shift'}, 'right', keyDelay) 
+  hs.eventtap.keyStroke({}, 'delete', keyDelay) 
+end)
 
 -- Move up, down, left and right
 hs.hotkey.bind(hyper, 'j', function() hs.eventtap.keyStroke({}, 'down', keyDelay) end)
@@ -454,7 +459,12 @@ hs.hotkey.bind(hyper, 'm', function()
   os.execute('osascript "' .. os.getenv("HOME") .. '/dotfiles/scripts/Activate Chrome for Messenger.scpt"')
 end)
 
--- Activate Facebook Messenger
+-- Activate Whatsapp
+hs.hotkey.bind(hyper, 'r', function()
+  os.execute('osascript "' .. os.getenv("HOME") .. '/dotfiles/scripts/Activate Chrome for WhatsApp.scpt"')
+end)
+
+-- Activate JIRA
 hs.hotkey.bind(hyper, 'q', function()
   os.execute('osascript "' .. os.getenv("HOME") .. '/dotfiles/scripts/Activate Pointwise Jira.scpt"')
 end)

@@ -150,6 +150,11 @@
     <url>hammerspoon://hypercmdz</url>
     <background/>
   </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_HS_hypercmdreturn</name>
+    <url>hammerspoon://hypercmdreturn</url>
+    <background/>
+  </vkopenurldef>
 
   <vkopenurldef>
     <name>KeyCode::VK_OPEN_URL_HS_hyperalta</name>
@@ -575,6 +580,11 @@
         --KeyToKey--
         KeyCode::Z, ModifierFlag::{{ HYPER }} | ModifierFlag::COMMAND_L,
         KeyCode::VK_OPEN_URL_HS_hypercmdz
+    </autogen>
+    <autogen>
+        --KeyToKey--
+        KeyCode::RETURN, ModifierFlag::{{ HYPER }} | ModifierFlag::COMMAND_L,
+        KeyCode::VK_OPEN_URL_HS_hypercmdreturn
     </autogen>
   </item>
 
