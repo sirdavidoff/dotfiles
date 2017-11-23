@@ -587,7 +587,7 @@ function showHelpItems() {
 				<key>variables</key>
 				<dict>
 					<key>defaultList</key>
-					<string></string>
+					<string>Reminders</string>
 				</dict>
 			</dict>
 			<key>type</key>
@@ -602,6 +602,8 @@ function showHelpItems() {
 			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
