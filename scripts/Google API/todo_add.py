@@ -2,8 +2,9 @@
 # To install, follow instructions here:
 # https://developers.google.com/apps-script/guides/rest/quickstart/python
 # Make sure that you:
-# - Enable both the apps script API and the drive API
+# - Enable both the apps script API AND the drive API
 # - Create a WEB OAuth token (with the right origin and redirect settings)
+# - Update APPLICATION_NAME below to be the same as the name of your client ID from the token
 # - Update SCRIPT_ID below to refer to the Apps Script you want to run
 # You also need to publish the script as an API executable using the 'publish' menu of the script edit
 

@@ -431,12 +431,12 @@ end)
 
 -- Activate Evernote, or switch to the 'todo' note if it's already frontmost
 hs.hotkey.bind(hyper, 'n', function()
-  app = hs.application.find('Evernote')
-  if app ~= nil and app.isFrontmost ~= nil and app:isFrontmost() then
-    hs.eventtap.keyStroke({'cmd'}, '1', keyDelay)
-  else
+  --app = hs.application.find('Evernote')
+  --if app ~= nil and app.isFrontmost ~= nil and app:isFrontmost() then
+    --hs.eventtap.keyStroke({'cmd'}, '1', keyDelay)
+  --else
     hs.application.launchOrFocus('Evernote')
-  end
+  --end
 end)
 
 -- Activate todo list in Google Docs
