@@ -19,6 +19,19 @@
 			<key>utf8</key>
 			<true/>
 		</dict>
+		<key>D1981444-3C45-4A44-A94B-6751DCDF7AC6</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>np</string>
+			<key>text</key>
+			<string>The Noun Project</string>
+			<key>url</key>
+			<string>https://thenounproject.com/search/?q={query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
 		<key>E9DAD082-9DD5-4225-A329-A9BE0FDAA598</key>
 		<dict>
 			<key>enabled</key>
