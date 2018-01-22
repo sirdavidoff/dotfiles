@@ -192,6 +192,21 @@ end)
 
 
 
+-- Notify me when I use a keyboard shortcut to copy something
+-- that way if I hit the keys wrong I'll know straight away
+hs.eventtap.new({hs.eventtap.event.types.keyDown},
+  function(e)
+    if (e:getCharacters() == "c" and e:getFlags():containExactly({"cmd"})) then
+      hs.alert.show(
+        "Copy", 
+        {radius=5, strokeColor={white=0, alpha=0}}, 
+        hs.screen.mainScreen(), 
+        0.2
+      )
+    end
+    return false
+  end
+):start()
 
 -- Forward delete
 hs.hotkey.bind(hyper, 'return', function() hs.eventtap.keyStroke({}, 'forwarddelete', keyDelay) end)
@@ -259,9 +274,14 @@ hs.hotkey.bind(hyper, 'o', function()
   hs.eventtap.keyStroke({''}, 'return', keyDelay) 
 end)
 hs.urlevent.bind('hypercmdo', function() 
-  hs.eventtap.keyStroke({'cmd'}, 'left', keyDelay) 
-  hs.eventtap.keyStroke({''}, 'return', keyDelay) 
-  hs.eventtap.keyStroke({''}, 'up', keyDelay) 
+  if appRunning("Microsoft Excel") and hs.application("Microsoft Excel"):isFrontmost() then
+    -- Lock the cell reference with $ (easier than pressing Fn-F4)
+    hs.eventtap.keyStroke({}, 'F4', keyDelay)
+  else
+    hs.eventtap.keyStroke({'cmd'}, 'left', keyDelay) 
+    hs.eventtap.keyStroke({''}, 'return', keyDelay) 
+    hs.eventtap.keyStroke({''}, 'up', keyDelay) 
+  end
 end)
 
 -- Paste on new line below/above
@@ -662,6 +682,11 @@ bindapp("Finder", {"cmd"}, 'l', function()
   --end)
 end)
 
+-- Focus on the Excel formula bar with Cmd-L
+bindapp("Microsoft Excel", {"cmd"}, 'l', function() 
+    hs.eventtap.keyStroke({"ctrl"}, 'u', keyDelay) 
+end)
+
 -- Get moving to beginning and end of line to work as normal in iTerm
 bindapp("iTerm", hyper, 'i', function() hs.eventtap.keyStroke({"ctrl"}, 'a', keyDelay) end)
 bindapp("iTerm", hyper, 'a', function() hs.eventtap.keyStroke({"ctrl"}, 'e', keyDelay) end)
@@ -679,11 +704,6 @@ bindapp("Tableau", {"cmd"}, 'e', function()
       hs.eventtap.keyStrokes(os.date("%Y%m%d") .. " ")
     end)
   end)
-end)
-
--- Focus on the Excel formula bar with Cmd-L
-bindapp("Microsoft Excel", {"cmd"}, 'l', function() 
-    hs.eventtap.keyStroke({"ctrl"}, 'u', keyDelay) 
 end)
 
 -- When closing Private Internet Access, kill some other applications (pia_tray)
