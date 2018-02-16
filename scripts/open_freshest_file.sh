@@ -54,7 +54,7 @@ fi
 
 if [[ -n $2 && $2 -eq "-echo" ]]; then
   # TODO: This is triggered for any non-empty $2
-  echo $OUT
+  echo "$OUT"
 else
-  open $OUT
+  open "$OUT"
 fi

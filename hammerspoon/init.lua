@@ -101,7 +101,7 @@ local workScreenLayout = {
   {"Tableau", nil, workScreenName, {x=0, y=0, w=1, h=1}, nil, nil, nil},
 }
 
-local laptopScreenName = "Color LCD"
+local laptopScreenName = "Built-in Retina Display"
 local laptopScreenLayout = {
   {"MacVim", nil, laptopScreenName, {x=0, y=0, w=0.9, h=1}, nil, nil, nil},
   {"Google Chrome", nil, laptopScreenName, {x=0, y=0, w=1, h=1}, nil, nil, nil},
@@ -242,14 +242,14 @@ hs.hotkey.bind(hyper, 'v', function()
 end)
 
 -- Yank the current line
-hs.hotkey.bind(hyper, 'y', function()
+hs.hotkey.bind(hyper, 'y', nil, function()
   hs.eventtap.keyStroke({'cmd'}, 'left', keyDelay)
   hs.eventtap.keyStroke({'cmd', 'shift'}, 'right', keyDelay)
   hs.eventtap.keyStroke({'cmd'}, 'c', 200000)
   hs.eventtap.keyStroke({}, 'right', keyDelay)
 end)
 
-hs.hotkey.bind(hyper, 'd', function()
+hs.hotkey.bind(hyper, 'd', nil, function()
   if hs.application("Finder"):isFrontmost() then
     -- Go back up one level in the hierarchy
     hs.eventtap.keyStroke({"cmd"}, 'up', keyDelay) 
@@ -257,8 +257,8 @@ hs.hotkey.bind(hyper, 'd', function()
     -- Cut the current line
     hs.eventtap.keyStroke({'cmd'}, 'left', keyDelay)
     hs.eventtap.keyStroke({'cmd', 'shift'}, 'right', keyDelay)
-    -- We need a delay before the copy, otherwise it doesn't always work
-    hs.eventtap.keyStroke({'cmd'}, 'x', 200000)
+    -- We need a delay before the cut, otherwise it doesn't always work
+    hs.eventtap.keyStroke({'cmd'}, 'x', 500000)
     hs.eventtap.keyStroke({}, 'delete', keyDelay)
   end
 end)
@@ -419,12 +419,6 @@ hs.urlevent.bind('hyperaltp', function()
   -- Run script for clicking todo list buttons, but only if we're in Chrome
   if appRunning("Google Chrome") and hs.application("Google Chrome"):isFrontmost() then
     os.execute('osascript "' .. os.getenv("HOME") .. '/dotfiles/scripts/Chrome click Todo buttons.scpt" "done"')
-  end
-end)
-hs.urlevent.bind('hyperaltu', function() 
-  -- Run script for clicking todo list buttons, but only if we're in Chrome
-  if appRunning("Google Chrome") and hs.application("Google Chrome"):isFrontmost() then
-    os.execute('osascript "' .. os.getenv("HOME") .. '/dotfiles/scripts/Chrome click Todo buttons.scpt" "in_progress"')
   end
 end)
 
