@@ -634,11 +634,17 @@ hs.urlevent.bind('tileapps', function(eventName, params)
 end)
 
 -- Text insertions
-hs.hotkey.bind(hyper, '1', function() hs.eventtap.keyStrokes('6kk81Cug2GnUZYjzk33dL87K3JIK95yu') end)
-hs.hotkey.bind(hyper, '2', function() hs.eventtap.keyStrokes('davewroberts@yahoo.com') end)
-hs.hotkey.bind(hyper, '3', function() hs.eventtap.keyStrokes(os.date("%Y%m%d")) end)
-hs.hotkey.bind(hyper, '4', function() hs.eventtap.keyStrokes('david.roberts@locarta.co') end)
-hs.hotkey.bind(hyper, '9', function() hs.eventtap.keyStrokes('+4915753632560') end)
+-- (we paste the text rather than using hs.eventtap.keyStrokes(), because otherwise
+--  the letters sometimes appear in the wrong order)
+function insertText(text)
+  hs.pasteboard.setContents(text)
+  hs.eventtap.keyStroke({'cmd'}, 'v', keyDelay) 
+end
+hs.hotkey.bind(hyper, '1', function() insertText('6kk81Cug2GnUZYjzk33dL87K3JIK95yu') end)
+hs.hotkey.bind(hyper, '2', function() insertText('davewroberts@yahoo.com') end)
+hs.hotkey.bind(hyper, '3', function() insertText(os.date("%Y%m%d")) end)
+hs.hotkey.bind(hyper, '4', function() insertText('david.roberts@locarta.co') end)
+hs.hotkey.bind(hyper, '9', function() insertText('+4915753632560') end)
 
 ---------------------------------------------
 -- Application-specific keyboard shortcuts --
