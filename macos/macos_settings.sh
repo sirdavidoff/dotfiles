@@ -126,6 +126,9 @@ rm -rf ~/Library/Application Support/Dock/desktoppicture.db
 sudo rm -rf /System/Library/CoreServices/DefaultDesktop.jpg
 sudo ln -s "$HOME/dotfiles/macos/wallpaper.jpg" /System/Library/CoreServices/DefaultDesktop.jpg
 
+# Change the number of recent places displayed in save dialogs
+defaults write -g NSNavRecentPlacesLimit -int 10
+
 ###############################################################################
 # SSD-specific tweaks                                                         #
 ###############################################################################

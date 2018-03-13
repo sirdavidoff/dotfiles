@@ -101,7 +101,7 @@ local workScreenLayout = {
   {"Tableau", nil, workScreenName, {x=0, y=0, w=1, h=1}, nil, nil, nil},
 }
 
-local laptopScreenName = "Built-in Retina Display"
+local laptopScreenName = "Color LCD"
 local laptopScreenLayout = {
   {"MacVim", nil, laptopScreenName, {x=0, y=0, w=0.9, h=1}, nil, nil, nil},
   {"Google Chrome", nil, laptopScreenName, {x=0, y=0, w=1, h=1}, nil, nil, nil},
@@ -151,7 +151,7 @@ function updateWindows()
   log.e("updateWindows() called")
   newScreenName = hs.screen.primaryScreen():name()
   log.e("newScreenName is " .. newScreenName)
-  --hs.alert.show("First screen is " .. firstScreenName)
+  --hs.alert.show("New screen is " .. newScreenName)
 
   if newScreenName == workScreenName then
       log.e("Turning off screen")
@@ -633,13 +633,18 @@ hs.urlevent.bind('tileapps', function(eventName, params)
   wins[1]:focus()
 end)
 
--- Text insertions
--- (we paste the text rather than using hs.eventtap.keyStrokes(), because otherwise
---  the letters sometimes appear in the wrong order)
+--
+---------------------------------------------
+------------- Text insertions ---------------
+---------------------------------------------
+
+-- We paste the text rather than using hs.eventtap.keyStrokes(), because otherwise
+-- the letters sometimes appear in the wrong order
 function insertText(text)
   hs.pasteboard.setContents(text)
   hs.eventtap.keyStroke({'cmd'}, 'v', keyDelay) 
 end
+
 hs.hotkey.bind(hyper, '1', function() insertText('6kk81Cug2GnUZYjzk33dL87K3JIK95yu') end)
 hs.hotkey.bind(hyper, '2', function() insertText('davewroberts@yahoo.com') end)
 hs.hotkey.bind(hyper, '3', function() insertText(os.date("%Y%m%d")) end)

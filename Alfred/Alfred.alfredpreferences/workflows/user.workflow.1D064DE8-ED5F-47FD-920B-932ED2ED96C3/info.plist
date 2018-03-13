@@ -15,6 +15,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 	</dict>
@@ -31,6 +33,12 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>escaping</key>
@@ -46,9 +54,15 @@
 				<key>queuemode</key>
 				<integer>1</integer>
 				<key>runningsubtext</key>
-				<string>Fetching running apps</string>
+				<string>Fetching running apps...</string>
 				<key>script</key>
 				<string>python list_apps.py "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
 				<key>title</key>
 				<string>Tile frontmost application with...</string>
 				<key>type</key>
@@ -61,15 +75,15 @@
 			<key>uid</key>
 			<string>D5994E7A-1B0E-4DDA-ACEE-BEA35F1F459F</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
 				<key>browser</key>
 				<string>org.hammerspoon.Hammerspoon</string>
-				<key>plusspaces</key>
-				<false/>
+				<key>spaces</key>
+				<string></string>
 				<key>url</key>
 				<string>hammerspoon://tileapps?app={query}</string>
 				<key>utf8</key>
@@ -80,7 +94,7 @@
 			<key>uid</key>
 			<string>F4F3F463-E36E-4C25-B810-42E8DC8B2267</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -89,11 +103,15 @@
 	<dict>
 		<key>D5994E7A-1B0E-4DDA-ACEE-BEA35F1F459F</key>
 		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
 			<key>ypos</key>
 			<real>10</real>
 		</dict>
 		<key>F4F3F463-E36E-4C25-B810-42E8DC8B2267</key>
 		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
 			<key>ypos</key>
 			<real>10</real>
 		</dict>
