@@ -6,6 +6,32 @@
 	<string></string>
 	<key>connections</key>
 	<dict>
+		<key>0DE59689-BBC8-4661-A083-EDA3AACA2FDD</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>2E059BBE-FC11-4254-949C-2E1A98774633</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>18A455C4-16BD-4F10-AE8C-B57C49AC37D6</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>2545357A-EC23-4375-929D-0B93BC645408</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>2E059BBE-FC11-4254-949C-2E1A98774633</key>
 		<array>
 			<dict>
@@ -32,37 +58,11 @@
 				<false/>
 			</dict>
 		</array>
-		<key>ACA83841-D6E8-461D-BFB0-625CE2A56CCE</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>2545357A-EC23-4375-929D-0B93BC645408</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>B98096D9-8067-4DDD-8603-2A446CA9277B</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>0CEA2131-67C7-4C0C-8CC4-39F547D3C989</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>DF1F09D1-32DB-465C-AB88-EE2F862C1E3C</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>2E059BBE-FC11-4254-949C-2E1A98774633</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -211,23 +211,51 @@ end alfred_script</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
 				<key>argumenttype</key>
-				<integer>2</integer>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
 				<key>keyword</key>
 				<string>old</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>path=$($HOME/dotfiles/scripts/open_freshest_file.sh "$HOME/Downloads" -echo)
+file=$(basename "$path")
+echo '{"items": [{"title":"Open last download", "subtitle":"'"$file"'"}]}'</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
 				<key>subtext</key>
 				<string></string>
-				<key>text</key>
+				<key>title</key>
 				<string>Open last download</string>
+				<key>type</key>
+				<integer>0</integer>
 				<key>withspace</key>
-				<false/>
+				<true/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
+			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>ACA83841-D6E8-461D-BFB0-625CE2A56CCE</string>
+			<string>18A455C4-16BD-4F10-AE8C-B57C49AC37D6</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -309,23 +337,51 @@ end alfred_script</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
 				<key>argumenttype</key>
-				<integer>2</integer>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
 				<key>keyword</key>
 				<string>oldw</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>path=$($HOME/dotfiles/scripts/open_freshest_file.sh "$HOME/Downloads" -echo)
+file=$(basename "$path")
+echo '{"items": [{"title":"Open last download with...", "subtitle":"'"$file"'"}]}'</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
 				<key>subtext</key>
 				<string></string>
-				<key>text</key>
+				<key>title</key>
 				<string>Open last download with...</string>
+				<key>type</key>
+				<integer>0</integer>
 				<key>withspace</key>
-				<false/>
+				<true/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
+			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>DF1F09D1-32DB-465C-AB88-EE2F862C1E3C</string>
+			<string>0DE59689-BBC8-4661-A083-EDA3AACA2FDD</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -338,6 +394,20 @@ end alfred_script</string>
 			<integer>580</integer>
 			<key>ypos</key>
 			<integer>170</integer>
+		</dict>
+		<key>0DE59689-BBC8-4661-A083-EDA3AACA2FDD</key>
+		<dict>
+			<key>xpos</key>
+			<integer>50</integer>
+			<key>ypos</key>
+			<integer>430</integer>
+		</dict>
+		<key>18A455C4-16BD-4F10-AE8C-B57C49AC37D6</key>
+		<dict>
+			<key>xpos</key>
+			<integer>50</integer>
+			<key>ypos</key>
+			<integer>300</integer>
 		</dict>
 		<key>2545357A-EC23-4375-929D-0B93BC645408</key>
 		<dict>
@@ -374,26 +444,12 @@ end alfred_script</string>
 			<key>ypos</key>
 			<integer>40</integer>
 		</dict>
-		<key>ACA83841-D6E8-461D-BFB0-625CE2A56CCE</key>
-		<dict>
-			<key>xpos</key>
-			<integer>50</integer>
-			<key>ypos</key>
-			<integer>300</integer>
-		</dict>
 		<key>B98096D9-8067-4DDD-8603-2A446CA9277B</key>
 		<dict>
 			<key>xpos</key>
 			<integer>320</integer>
 			<key>ypos</key>
 			<integer>170</integer>
-		</dict>
-		<key>DF1F09D1-32DB-465C-AB88-EE2F862C1E3C</key>
-		<dict>
-			<key>xpos</key>
-			<integer>50</integer>
-			<key>ypos</key>
-			<integer>430</integer>
 		</dict>
 		<key>E50850AF-C86D-443D-8B22-9D0B098FB86D</key>
 		<dict>
