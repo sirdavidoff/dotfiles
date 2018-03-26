@@ -1,7 +1,7 @@
 import sys
 from recurrent import RecurringEvent
 import json
-from datetime import datetime
+from datetime import datetime, timedelta
 import pytz
 from tzlocal import get_localzone # $ pip install tzlocal
 import re
@@ -70,8 +70,20 @@ def parse_event(query):
             split_pos_back += 1
         action = " ".join(words[split_pos_back+1:])
 
+    # Add in the timezone
     date = get_localzone().localize(date)
-    if not contains_time(query): date = date.replace(hour=default_hour, second=0)
+
+    # If we didn't specify a time, use the default one
+    if not contains_time(query): date = date.replace(hour=default_hour, minute=0, second=0)
+
+    # If the date is today but for a time that's already passed, add a day
+    # to it so it's tomorrow
+    now = datetime.now(get_localzone())
+    if date < now:
+        # Date is in the past
+        diff = date.date() - now.date()
+        if diff.days == 0:
+            date = date + timedelta(days=1)
 
     alfred_output(action, date)
 
@@ -108,7 +120,7 @@ def contains_time(string):
     Returns true if the passed string contains a time 
     Detects times like 1pm and 13:00
     """
-    giveaways = [r'\d ?am', r'\d ?pm', r'\d\d:\d\d'] 
+    giveaways = [r'\d ?am', r'\d ?pm', r'\d:\d\d'] 
     return any([re.search(t, string) is not None for t in giveaways])
 
 
@@ -119,17 +131,17 @@ def humanised_date(then):
     now = datetime.now(get_localzone())
     diff = then.date() - now.date()
     if diff.days == 0:
-        return then.strftime("Today, %H:%S")
+        return then.strftime("Today, %H:%M")
     elif diff.days == 1:
-        return then.strftime("Tomorrow, %H:%S")
+        return then.strftime("Tomorrow, %H:%M")
     elif diff.days < 6:
-        return then.strftime("%a, %H:%S")
+        return then.strftime("%a, %H:%M")
     elif then.year == now.year and then.month == now.month:
-        return then.strftime("%a {d}, %H:%S").replace('{d}', str(then.day)+suffix(then.day))
+        return then.strftime("%a {d}, %H:%M").replace('{d}', str(then.day)+suffix(then.day))
     elif then.year == now.year:
-        return then.strftime("%a {d} %b, %H:%S").replace('{d}', str(then.day)+suffix(then.day))
+        return then.strftime("%a {d} %b, %H:%M").replace('{d}', str(then.day)+suffix(then.day))
     else:
-        return then.strftime("%a {d} %b %Y, %H:%S").replace('{d}', str(then.day)+suffix(then.day))
+        return then.strftime("%a {d} %b %Y, %H:%M").replace('{d}', str(then.day)+suffix(then.day))
 
 
 def suffix(d):
