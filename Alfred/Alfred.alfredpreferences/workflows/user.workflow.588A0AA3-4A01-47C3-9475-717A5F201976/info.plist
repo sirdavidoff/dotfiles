@@ -46,6 +46,66 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>function run(argv) {
+
+	var alreadyRunning = Application('Reminders').running();
+	var Reminders = Application('Reminders');
+	var reminderData = JSON.parse(argv[0]);
+
+	try {
+
+		data = {name:reminderData['text']}
+		if(reminderData['body']) {
+			data['body'] = reminderData['body'];
+		}
+		if(reminderData['date']) {
+			data['remindMeDate'] = new Date(reminderData['date']);
+			console.log("Date:" + reminderData['date']);
+			console.log("Date:" + data['date']);
+		}
+		if(reminderData['priority']) {
+			data['priority'] = parseInt(reminderData['priority']);
+		}
+		if(reminderData['list'] &amp;&amp; Reminders.lists.whose({name:reminderData['list']}).length) {
+			// list provided by query
+			reminderList = Reminders.lists.whose({name:reminderData['list']})[0];
+		} else {
+			reminderList = Reminders.defaultList();
+		}
+
+		reminder = Reminders.Reminder(data);
+		reminderList.reminders.push(reminder);
+
+		if(!alreadyRunning) Reminders.quit();
+		return data['name'];
+
+	} catch (e) {
+		console.log(e);
+		return "ERROR!";
+	}
+}</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>7</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>D0E3F071-BD7B-44C5-AC04-46CD6300B6A8</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -110,61 +170,6 @@
 			<string>D853D52E-371C-44DB-B409-CA4711E19197</string>
 			<key>version</key>
 			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>68</integer>
-				<key>script</key>
-				<string>function run(argv) {
-
-	var Reminders = Application('Reminders');
-	var reminderData = JSON.parse(argv[0]);
-
-	try {
-		data = {name:reminderData['text']}
-		if(reminderData['body']) {
-			data['body'] = reminderData['body'];
-		}
-		if(reminderData['date']) {
-			data['remindMeDate'] = new Date(reminderData['date']);
-			console.log("Date:" + reminderData['date']);
-			console.log("Date:" + data['date']);
-		}
-		if(reminderData['priority']) {
-			data['priority'] = parseInt(reminderData['priority']);
-		}
-		if(reminderData['list'] &amp;&amp; Reminders.lists.whose({name:reminderData['list']}).length) {
-			// list provided by query
-			reminderList = Reminders.lists.whose({name:reminderData['list']})[0];
-		} else {
-			reminderList = Reminders.defaultList();
-		}
-
-		reminder = Reminders.Reminder(data);
-		reminderList.reminders.push(reminder);
-		return data['name'];
-	} catch (e) {
-		console.log(e);
-		return "ERROR!";
-	}
-}</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>7</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>D0E3F071-BD7B-44C5-AC04-46CD6300B6A8</string>
-			<key>version</key>
-			<integer>2</integer>
 		</dict>
 	</array>
 	<key>readme</key>

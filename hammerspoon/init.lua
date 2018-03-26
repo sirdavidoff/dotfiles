@@ -163,8 +163,11 @@ function updateWindows()
 
   if screenLayouts[newScreenName] ~= nil then
     hs.layout.apply(screenLayouts[newScreenName])
-    setiTermLayout()
+  else
+    hs.layout.apply(laptopScreenLayout)
   end
+
+  setiTermLayout()
 
 end
 
@@ -249,6 +252,11 @@ hs.hotkey.bind(hyper, 'y', nil, function()
   hs.eventtap.keyStroke({}, 'right', keyDelay)
 end)
 
+--function myerrorhandler( err )
+   --print( "ERROR:", err )
+   --hs.alert.show(err)
+--end
+
 hs.hotkey.bind(hyper, 'd', nil, function()
   if hs.application("Finder"):isFrontmost() then
     -- Go back up one level in the hierarchy
@@ -256,6 +264,9 @@ hs.hotkey.bind(hyper, 'd', nil, function()
   else
     -- Cut the current line
     hs.eventtap.keyStroke({'cmd'}, 'left', keyDelay)
+    --xpcall(bad, myerrorhandler)
+    --xpcall(hs.eventtap.keyStroke, myerrorhandler, {'cmd', 'shift'}, 'right', keyDelay)
+    --xpcall(hs.eventtap.keyStroke, myerrorhandler, {'cmd'}, 'x', 500000)
     hs.eventtap.keyStroke({'cmd', 'shift'}, 'right', keyDelay)
     -- We need a delay before the cut, otherwise it doesn't always work
     hs.eventtap.keyStroke({'cmd'}, 'x', 500000)
