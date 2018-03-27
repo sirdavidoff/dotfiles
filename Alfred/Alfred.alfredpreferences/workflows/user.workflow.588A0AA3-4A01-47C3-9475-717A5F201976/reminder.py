@@ -120,7 +120,9 @@ def contains_time(string):
     Returns true if the passed string contains a time 
     Detects times like 1pm and 13:00
     """
-    giveaways = [r'\d ?am', r'\d ?pm', r'\d:\d\d'] 
+    # Last two examples cover things like "1 hour's time" or
+    # "in 50 mins"
+    giveaways = [r'\d ?am', r'\d ?pm', r'\d:\d\d', r'hour', r'min'] 
     return any([re.search(t, string) is not None for t in giveaways])
 
 
