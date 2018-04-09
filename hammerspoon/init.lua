@@ -495,13 +495,13 @@ hs.hotkey.bind(hyper, 'q', function()
 end)
 
 -- Activate IDEA
-hs.hotkey.bind(hyper, 'z', function()
-  local appName = "IntelliJ IDEA CE"
-  local bool, obj, descriptor = hs.osascript.applescript("set result to (display dialog \"Really launch ".. appName .."?\")\n return the button returned of result")
-  if obj == "OK" then
-    hs.application.launchOrFocus(appName)
-  end
-end)
+--hs.hotkey.bind(hyper, 'z', function()
+  --local appName = "IntelliJ IDEA CE"
+  --local bool, obj, descriptor = hs.osascript.applescript("set result to (display dialog \"Really launch ".. appName .."?\")\n return the button returned of result")
+  --if obj == "OK" then
+    --hs.application.launchOrFocus(appName)
+  --end
+--end)
 
 -- Open work mail
 hs.hotkey.bind(hyper, 'x', function()
