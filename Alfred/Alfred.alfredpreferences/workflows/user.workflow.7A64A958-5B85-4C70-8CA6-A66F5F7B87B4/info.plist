@@ -15,6 +15,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 	</dict>
@@ -38,6 +40,10 @@
 				<key>script</key>
 				<string>cd "{query}"
 mvim</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
 				<key>type</key>
 				<integer>0</integer>
 			</dict>
@@ -46,7 +52,7 @@ mvim</string>
 			<key>uid</key>
 			<string>9F06CD9F-A8F8-4186-BC8C-DA41DA537EF9</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -65,7 +71,7 @@ mvim</string>
 			<key>uid</key>
 			<string>8197E1CF-3B28-4EF6-8D34-B29FFC261B17</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -74,11 +80,15 @@ mvim</string>
 	<dict>
 		<key>8197E1CF-3B28-4EF6-8D34-B29FFC261B17</key>
 		<dict>
+			<key>xpos</key>
+			<integer>100</integer>
 			<key>ypos</key>
 			<real>10</real>
 		</dict>
 		<key>9F06CD9F-A8F8-4186-BC8C-DA41DA537EF9</key>
 		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
 			<key>ypos</key>
 			<real>10</real>
 		</dict>

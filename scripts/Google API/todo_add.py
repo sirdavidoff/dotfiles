@@ -3,8 +3,9 @@
 # https://developers.google.com/apps-script/guides/rest/quickstart/python
 # Make sure that you:
 # - Enable both the apps script API AND the drive API
-# - Create a WEB OAuth token (with the right origin and redirect settings)
+# - Create a WEB OAuth token (with the right origin and redirect settings) (although an 'other' token might also be OK)
 # - Update APPLICATION_NAME below to be the same as the name of your client ID from the token
+# - Update the SCOPES below to include everything you find in File -> Project properties -> Scopes in the Script Editor 
 # - Update SCRIPT_ID below to refer to the Apps Script you want to run
 # You also need to publish the script as an API executable using the 'publish' menu of the script edit
 
@@ -23,17 +24,15 @@ from oauth2client.file import Storage
 
 from apiclient import errors
 
-# try:
-    # import argparse
-    # flags = argparse.ArgumentParser(parents=[tools.argparser]).parse_args()
-# except ImportError:
-    # flags = None
-
+# You can find out the scopes you script uses by going to
+# File -> Project properties -> Scopes in the Script Editor
 # If modifying these scopes, delete your previously saved credentials
-# at ~/.credentials/script-python-quickstart.json
-SCOPES = 'https://www.googleapis.com/auth/documents'
+SCOPES = ['https://www.googleapis.com/auth/documents', 'https://www.googleapis.com/auth/script.container.ui']
+CREDENTIALS_FILE = 'todo_add_credentials_other.json'
 CLIENT_SECRET_FILE = 'client_secret_todo.json'
-APPLICATION_NAME = 'Apps Script'
+APPLICATION_NAME = 'Todo add script'
+# This is the ID of the script that we want to run (not the doc it acts on)
+SCRIPT_ID = 'M4CP4VlCLiMXot8vw2N4VXhO8kIdkNjLe'
 
 
 def get_credentials():
@@ -49,18 +48,15 @@ def get_credentials():
     credential_dir = os.path.join(home_dir, '.credentials')
     if not os.path.exists(credential_dir):
         os.makedirs(credential_dir)
-    credential_path = os.path.join(credential_dir,
-                                   'script-python-quickstart.json')
+    credential_path = os.path.join(credential_dir, CREDENTIALS_FILE)
 
     store = Storage(credential_path)
     credentials = store.get()
     if not credentials or credentials.invalid:
         flow = client.flow_from_clientsecrets(CLIENT_SECRET_FILE, SCOPES)
         flow.user_agent = APPLICATION_NAME
-        # if flags:
+        flags = tools.argparser.parse_args(args=[])
         credentials = tools.run_flow(flow, store, flags)
-        # else: # Needed only for compatibility with Python 2.6
-            # credentials = tools.run(flow, store)
         print('Storing credentials to ' + credential_path)
     return credentials
 
@@ -72,8 +68,6 @@ def main():
 
     task = sys.argv[1]
     task = task[0].upper() + task[1:] # Capitalise first letter
-
-    SCRIPT_ID = 'M4CP4VlCLiMXot8vw2N4VXhO8kIdkNjLe'
 
     # Authorize and create a service object.
     credentials = get_credentials()

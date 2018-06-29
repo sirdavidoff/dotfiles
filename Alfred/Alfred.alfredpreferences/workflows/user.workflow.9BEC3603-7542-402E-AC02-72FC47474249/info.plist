@@ -15,6 +15,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 	</dict>
@@ -43,7 +45,7 @@ end alfred_script</string>
 			<key>uid</key>
 			<string>7AC9CF7E-6155-4202-B14D-FC89F67763B6</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -52,6 +54,8 @@ end alfred_script</string>
 				<integer>2</integer>
 				<key>keyword</key>
 				<string>frontmost</string>
+				<key>subtext</key>
+				<string></string>
 				<key>text</key>
 				<string>Name frontmost application</string>
 				<key>withspace</key>
@@ -62,7 +66,7 @@ end alfred_script</string>
 			<key>uid</key>
 			<string>A8E13454-E16A-4BE0-B822-A6FF8915A82A</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -71,11 +75,15 @@ end alfred_script</string>
 	<dict>
 		<key>7AC9CF7E-6155-4202-B14D-FC89F67763B6</key>
 		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
 			<key>ypos</key>
 			<real>10</real>
 		</dict>
 		<key>A8E13454-E16A-4BE0-B822-A6FF8915A82A</key>
 		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
 			<key>ypos</key>
 			<real>10</real>
 		</dict>

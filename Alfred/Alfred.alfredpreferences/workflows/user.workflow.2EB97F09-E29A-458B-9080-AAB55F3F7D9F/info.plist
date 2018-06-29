@@ -15,6 +15,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 	</dict>
@@ -35,6 +37,14 @@
 				<integer>0</integer>
 				<key>argument</key>
 				<integer>2</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>0</integer>
+				<key>hotmod</key>
+				<integer>0</integer>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -47,7 +57,7 @@
 			<key>uid</key>
 			<string>FB0CAA23-ECCD-44FD-9903-0EBE021B04DE</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -56,24 +66,30 @@
 				<true/>
 				<key>clipboardtext</key>
 				<string></string>
+				<key>transient</key>
+				<false/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.clipboard</string>
 			<key>uid</key>
 			<string>68E6ECF1-34D1-4800-8AAB-EF0260E7D019</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 	</array>
 	<key>uidata</key>
 	<dict>
 		<key>68E6ECF1-34D1-4800-8AAB-EF0260E7D019</key>
 		<dict>
+			<key>xpos</key>
+			<integer>700</integer>
 			<key>ypos</key>
 			<real>70</real>
 		</dict>
 		<key>FB0CAA23-ECCD-44FD-9903-0EBE021B04DE</key>
 		<dict>
+			<key>xpos</key>
+			<integer>100</integer>
 			<key>ypos</key>
 			<real>70</real>
 		</dict>

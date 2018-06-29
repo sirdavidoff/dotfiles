@@ -17,6 +17,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 	</dict>
@@ -37,6 +39,8 @@
 				<integer>0</integer>
 				<key>keyword</key>
 				<string>slot</string>
+				<key>subtext</key>
+				<string></string>
 				<key>text</key>
 				<string>Google Calendar Slot Options</string>
 				<key>withspace</key>
@@ -47,7 +51,7 @@
 			<key>uid</key>
 			<string>B8725F53-7C0F-4DA7-AE91-B85AE291EE24</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -60,6 +64,10 @@
 				<string>export PYTHONPATH=/Library/Python/2.7/site-packages
 python "$HOME/dotfiles/scripts/Google API/calendar_slot_options.py" "{query}"
 </string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
 				<key>type</key>
 				<integer>0</integer>
 			</dict>
@@ -68,7 +76,7 @@ python "$HOME/dotfiles/scripts/Google API/calendar_slot_options.py" "{query}"
 			<key>uid</key>
 			<string>928B873A-9597-4CF6-B604-E07CD9993208</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -77,11 +85,15 @@ python "$HOME/dotfiles/scripts/Google API/calendar_slot_options.py" "{query}"
 	<dict>
 		<key>928B873A-9597-4CF6-B604-E07CD9993208</key>
 		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
 			<key>ypos</key>
 			<real>10</real>
 		</dict>
 		<key>B8725F53-7C0F-4DA7-AE91-B85AE291EE24</key>
 		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
 			<key>ypos</key>
 			<real>10</real>
 		</dict>

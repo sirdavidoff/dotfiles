@@ -15,6 +15,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 		<key>842AA980-1FCF-4A54-B99B-C901956A4954</key>
@@ -26,6 +28,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 	</dict>
@@ -55,7 +59,7 @@ end alfred_script</string>
 			<key>uid</key>
 			<string>D8CBBF7F-E025-4A21-8BD9-2CFF1C0217C7</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -64,6 +68,8 @@ end alfred_script</string>
 				<integer>1</integer>
 				<key>keyword</key>
 				<string>m</string>
+				<key>subtext</key>
+				<string></string>
 				<key>text</key>
 				<string>Message with Facebook</string>
 				<key>withspace</key>
@@ -74,7 +80,7 @@ end alfred_script</string>
 			<key>uid</key>
 			<string>842AA980-1FCF-4A54-B99B-C901956A4954</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -83,6 +89,8 @@ end alfred_script</string>
 				<integer>1</integer>
 				<key>keyword</key>
 				<string>message</string>
+				<key>subtext</key>
+				<string></string>
 				<key>text</key>
 				<string>Message with Facebook</string>
 				<key>withspace</key>
@@ -93,7 +101,7 @@ end alfred_script</string>
 			<key>uid</key>
 			<string>4EBCC868-A182-4D00-B619-0438AB28C8A5</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -102,16 +110,22 @@ end alfred_script</string>
 	<dict>
 		<key>4EBCC868-A182-4D00-B619-0438AB28C8A5</key>
 		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
 			<key>ypos</key>
 			<real>200</real>
 		</dict>
 		<key>842AA980-1FCF-4A54-B99B-C901956A4954</key>
 		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
 			<key>ypos</key>
 			<real>60</real>
 		</dict>
 		<key>D8CBBF7F-E025-4A21-8BD9-2CFF1C0217C7</key>
 		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
 			<key>ypos</key>
 			<real>10</real>
 		</dict>

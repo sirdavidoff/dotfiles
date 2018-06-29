@@ -283,37 +283,6 @@ echo '{"items": [{"title":"Open last download", "subtitle":"'"$file"'"}]}'</stri
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>applescript</key>
-				<string>on alfred_script(q)
-
-	-- There's a new line on the end of the echo for some reason
-	set q_stripped to text 1 thru -2 of q
-	--display dialog "%" &amp; q_stripped &amp; "%"
-
-    tell application "Alfred 3" to action q_stripped
-
-	delay 0.05 -- Give Alfred time to react
-
-	tell application "System Events"
-		keystroke "Open W"
-		delay 0.05
-		key code 36 -- Enter
-	end tell
-
-end alfred_script</string>
-				<key>cachescript</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.applescript</string>
-			<key>uid</key>
-			<string>3554AA1B-24C5-4002-9AAE-3BA748E9A172</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -382,6 +351,37 @@ echo '{"items": [{"title":"Open last download with...", "subtitle":"'"$file"'"}]
 			<string>0DE59689-BBC8-4661-A083-EDA3AACA2FDD</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>applescript</key>
+				<string>on alfred_script(q)
+
+	-- There's a new line on the end of the echo for some reason
+	set q_stripped to text 1 thru -2 of q
+	--display dialog "%" &amp; q_stripped &amp; "%"
+
+    tell application "Alfred 3" to action q_stripped
+
+	delay 0.05 -- Give Alfred time to react
+
+	tell application "System Events"
+		keystroke "Open W"
+		delay 0.05
+		key code 36 -- Enter
+	end tell
+
+end alfred_script</string>
+				<key>cachescript</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.applescript</string>
+			<key>uid</key>
+			<string>3554AA1B-24C5-4002-9AAE-3BA748E9A172</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 	</array>
 	<key>readme</key>

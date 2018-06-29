@@ -1,86 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>bundleid</key>
-	<string></string>
-	<key>connections</key>
-	<dict>
-		<key>70115B72-745C-44C1-BCD6-B2FDE48B3200</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>2A35E785-3380-434F-9F46-FAC266BD8E29</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-			</dict>
-		</array>
-	</dict>
-	<key>createdby</key>
-	<string></string>
-	<key>description</key>
-	<string></string>
-	<key>disabled</key>
-	<false/>
-	<key>name</key>
-	<string>Toggle Chiffchaff</string>
-	<key>objects</key>
-	<array>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>applescript</key>
-				<string>on alfred_script(q)
-  tell application "Airfoil"	set launched to it is not running	activate	#display dialog launched	if launched then delay 0.5		set current audio source to first system source	set aSpeaker to first speaker whose name is "Chiffchaff"	if not (connected of aSpeaker) then		#set (volume of aSpeaker) to 0.5		connect to aSpeaker	else		disconnect from aSpeaker		quit	end ifend telltell application "System Events"	set visible of process "Airfoil" to falseend tell
-end alfred_script</string>
-				<key>cachescript</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.applescript</string>
-			<key>uid</key>
-			<string>2A35E785-3380-434F-9F46-FAC266BD8E29</string>
-			<key>version</key>
-			<integer>0</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>keyword</key>
-				<string>cc</string>
-				<key>text</key>
-				<string>Toggle Chiffchaff speakers</string>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>70115B72-745C-44C1-BCD6-B2FDE48B3200</string>
-			<key>version</key>
-			<integer>0</integer>
-		</dict>
-	</array>
-	<key>readme</key>
-	<string></string>
-	<key>uidata</key>
-	<dict>
-		<key>2A35E785-3380-434F-9F46-FAC266BD8E29</key>
-		<dict>
-			<key>ypos</key>
-			<real>10</real>
-		</dict>
-		<key>70115B72-745C-44C1-BCD6-B2FDE48B3200</key>
-		<dict>
-			<key>ypos</key>
-			<real>80</real>
-		</dict>
-	</dict>
-	<key>webaddress</key>
-	<string></string>
-</dict>
-</plist>

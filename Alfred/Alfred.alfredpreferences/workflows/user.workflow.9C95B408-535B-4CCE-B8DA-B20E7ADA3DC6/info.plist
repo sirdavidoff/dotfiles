@@ -15,6 +15,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 	</dict>
@@ -39,6 +41,10 @@
 				<string>cd /Users/david/Downloads
 open -a "Adobe Photoshop CS6" "$(pwd)/$(ls -rt1 | tail -1)"
 </string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
 				<key>type</key>
 				<integer>0</integer>
 			</dict>
@@ -47,7 +53,7 @@ open -a "Adobe Photoshop CS6" "$(pwd)/$(ls -rt1 | tail -1)"
 			<key>uid</key>
 			<string>457EA0A5-6D27-4699-BD30-F9CF66E66196</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -56,6 +62,8 @@ open -a "Adobe Photoshop CS6" "$(pwd)/$(ls -rt1 | tail -1)"
 				<integer>2</integer>
 				<key>keyword</key>
 				<string>ops</string>
+				<key>subtext</key>
+				<string></string>
 				<key>text</key>
 				<string>Open last download with Photoshop</string>
 				<key>withspace</key>
@@ -66,7 +74,7 @@ open -a "Adobe Photoshop CS6" "$(pwd)/$(ls -rt1 | tail -1)"
 			<key>uid</key>
 			<string>D6469E8D-D220-483F-A096-AC78698581B9</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -75,11 +83,15 @@ open -a "Adobe Photoshop CS6" "$(pwd)/$(ls -rt1 | tail -1)"
 	<dict>
 		<key>457EA0A5-6D27-4699-BD30-F9CF66E66196</key>
 		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
 			<key>ypos</key>
 			<real>80</real>
 		</dict>
 		<key>D6469E8D-D220-483F-A096-AC78698581B9</key>
 		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
 			<key>ypos</key>
 			<real>190</real>
 		</dict>

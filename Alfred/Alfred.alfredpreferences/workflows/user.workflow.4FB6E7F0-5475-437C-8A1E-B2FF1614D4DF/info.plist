@@ -15,6 +15,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 		<key>DC6E7E25-C03C-4494-B70F-6298D1E12147</key>
@@ -26,6 +28,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 		<key>EB739A08-3E1C-4252-8A50-DFA64F24E9E2</key>
@@ -37,6 +41,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 	</dict>
@@ -57,12 +63,10 @@
 				<false/>
 				<key>onlyshowifquerypopulated</key>
 				<true/>
-				<key>output</key>
-				<integer>0</integer>
 				<key>removeextension</key>
 				<false/>
-				<key>sticky</key>
-				<false/>
+				<key>text</key>
+				<string></string>
 				<key>title</key>
 				<string>{query}</string>
 			</dict>
@@ -71,7 +75,7 @@
 			<key>uid</key>
 			<string>4E9B3039-CFCD-4FDA-970A-4C3A2930EBE5</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -92,7 +96,7 @@ end alfred_script</string>
 			<key>uid</key>
 			<string>DC6E7E25-C03C-4494-B70F-6298D1E12147</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -101,6 +105,8 @@ end alfred_script</string>
 				<integer>2</integer>
 				<key>keyword</key>
 				<string>song</string>
+				<key>subtext</key>
+				<string></string>
 				<key>text</key>
 				<string>Display current song info</string>
 				<key>withspace</key>
@@ -111,7 +117,7 @@ end alfred_script</string>
 			<key>uid</key>
 			<string>EB739A08-3E1C-4252-8A50-DFA64F24E9E2</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -132,7 +138,7 @@ end alfred_script</string>
 			<key>uid</key>
 			<string>03E6FE2B-135A-4FFB-8C43-26597A4E67F7</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -141,21 +147,29 @@ end alfred_script</string>
 	<dict>
 		<key>03E6FE2B-135A-4FFB-8C43-26597A4E67F7</key>
 		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
 			<key>ypos</key>
 			<real>130</real>
 		</dict>
 		<key>4E9B3039-CFCD-4FDA-970A-4C3A2930EBE5</key>
 		<dict>
+			<key>xpos</key>
+			<integer>700</integer>
 			<key>ypos</key>
 			<real>10</real>
 		</dict>
 		<key>DC6E7E25-C03C-4494-B70F-6298D1E12147</key>
 		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
 			<key>ypos</key>
 			<real>10</real>
 		</dict>
 		<key>EB739A08-3E1C-4252-8A50-DFA64F24E9E2</key>
 		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
 			<key>ypos</key>
 			<real>40</real>
 		</dict>

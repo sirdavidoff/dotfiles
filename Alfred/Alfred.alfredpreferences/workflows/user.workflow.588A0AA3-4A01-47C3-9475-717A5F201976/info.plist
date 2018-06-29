@@ -67,6 +67,81 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>// NB: Need to run this first:
+// defaults write com.apple.reminders RemindersDebugMenu -boolean true
+// More info on JXA here: https://github.com/JXA-Cookbook/JXA-Cookbook/wiki
+
+
+function run(argv) {
+
+	var alreadyRunning = Application('Reminders').running();
+	var Reminders = Application('Reminders');
+	var reminderData = JSON.parse(argv[0]);
+
+	try {
+
+		data = {name:reminderData['text']}
+		if(reminderData['body']) {
+			data['body'] = reminderData['body'];
+		}
+		if(reminderData['date']) {
+			data['remindMeDate'] = new Date(reminderData['date']);
+			console.log("Date:" + reminderData['date']);
+			console.log("Date:" + data['date']);
+		}
+		if(reminderData['priority']) {
+			data['priority'] = parseInt(reminderData['priority']);
+		}
+		if(reminderData['list'] &amp;&amp; Reminders.lists.whose({name:reminderData['list']}).length) {
+			// list provided by query
+			reminderList = Reminders.lists.whose({name:reminderData['list']})[0];
+		} else {
+			reminderList = Reminders.defaultList();
+		}
+
+		reminder = Reminders.Reminder(data);
+		reminderList.reminders.push(reminder);
+
+		// Sync the reminder (note that the debug menu must
+		// be enabled for this, using:
+		// defaults write com.apple.reminders RemindersDebugMenu -boolean true
+		Reminders.windows[0].miniaturized = true;
+		Reminders.activate();
+		delay(0.3)
+		var se = Application('System Events');
+		se.keystroke('r', { using: 'command down' });
+		delay(0.3);
+
+		if(!alreadyRunning) Reminders.quit();
+		return data['name'];
+
+	} catch (e) {
+		console.log(e);
+		return "ERROR!";
+	}
+}</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>7</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>D0E3F071-BD7B-44C5-AC04-46CD6300B6A8</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -108,79 +183,6 @@
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
 			<string>501AA218-FEEC-4B1B-9D20-EFE6DF5F7330</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>68</integer>
-				<key>script</key>
-				<string>// NB: Need to run this first:
-// defaults write com.apple.reminders RemindersDebugMenu -boolean true
-
-
-function run(argv) {
-
-	var alreadyRunning = Application('Reminders').running();
-	var Reminders = Application('Reminders');
-	var reminderData = JSON.parse(argv[0]);
-
-	try {
-
-		data = {name:reminderData['text']}
-		if(reminderData['body']) {
-			data['body'] = reminderData['body'];
-		}
-		if(reminderData['date']) {
-			data['remindMeDate'] = new Date(reminderData['date']);
-			console.log("Date:" + reminderData['date']);
-			console.log("Date:" + data['date']);
-		}
-		if(reminderData['priority']) {
-			data['priority'] = parseInt(reminderData['priority']);
-		}
-		if(reminderData['list'] &amp;&amp; Reminders.lists.whose({name:reminderData['list']}).length) {
-			// list provided by query
-			reminderList = Reminders.lists.whose({name:reminderData['list']})[0];
-		} else {
-			reminderList = Reminders.defaultList();
-		}
-
-		reminder = Reminders.Reminder(data);
-		reminderList.reminders.push(reminder);
-
-		// Sync the reminder (note that the debug menu must
-		// be enabled for this, using:
-		// defaults write com.apple.reminders RemindersDebugMenu -boolean true
-		Reminders.windows[0].miniaturized = true;
-		Reminders.activate();
-		var se = Application('System Events');
-		se.keystroke('r', { using: 'command down' });
-		delay(0.5);
-
-		if(!alreadyRunning) Reminders.quit();
-		return data['name'];
-
-	} catch (e) {
-		console.log(e);
-		return "ERROR!";
-	}
-}</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>7</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>D0E3F071-BD7B-44C5-AC04-46CD6300B6A8</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>

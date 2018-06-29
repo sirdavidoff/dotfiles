@@ -6,10 +6,7 @@
 -- When closing PIA, kill uTorrent and Popcorn-Time
 
 -- UNUSED HYPER KEYS
--- R
--- Z
--- P (currently used, but similar to Cmd-V)
--- F (currently Finder, but should be using Alfred more for this)
+-- F (currently Finder, but should be using Alfred more for this?)
 -- Shift+U
 -- '
 -- ,
@@ -197,25 +194,30 @@ end)
 
 -- Notify me when I use a keyboard shortcut to copy something
 -- that way if I hit the keys wrong I'll know straight away
-hs.eventtap.new({hs.eventtap.event.types.keyDown},
-  function(e)
-    if (e:getCharacters() == "c" and e:getFlags():containExactly({"cmd"})) then
-      hs.alert.show(
-        "Copy", 
-        {radius=5, strokeColor={white=0, alpha=0}}, 
-        hs.screen.mainScreen(), 
-        0.2
-      )
-    end
-    return false
-  end
-):start()
+--hs.eventtap.new({hs.eventtap.event.types.keyDown},
+  --function(e)
+    --if (e:getCharacters() == "c" and e:getFlags():containExactly({"cmd"})) then
+      --hs.alert.show(
+        --"Copy", 
+        --{radius=5, strokeColor={white=0, alpha=0}}, 
+        --hs.screen.mainScreen(), 
+        --0.2
+      --)
+    --end
+    --return false
+  --end
+--):start()
 
 -- Forward delete
 hs.hotkey.bind(hyper, 'return', function() hs.eventtap.keyStroke({}, 'forwarddelete', keyDelay) end)
 -- Forward delete entire word
-hs.urlevent.bind('hypercmdreturn', function()
+hs.urlevent.bind('hyperaltreturn', function()
   hs.eventtap.keyStroke({'alt', 'shift'}, 'right', keyDelay) 
+  hs.eventtap.keyStroke({}, 'delete', keyDelay) 
+end)
+-- Forward delete rest of line
+hs.urlevent.bind('hypercmdreturn', function()
+  hs.eventtap.keyStroke({'cmd', 'shift'}, 'right', keyDelay) 
   hs.eventtap.keyStroke({}, 'delete', keyDelay) 
 end)
 
@@ -228,6 +230,9 @@ hs.hotkey.bind(hyper, 'l', function() hs.eventtap.keyStroke({}, 'right', keyDela
 -- Move to start/end of line
 hs.hotkey.bind(hyper, 'i', function() hs.eventtap.keyStroke({'cmd'}, 'left', keyDelay) end)
 hs.hotkey.bind(hyper, 'a', function() hs.eventtap.keyStroke({'cmd'}, 'right', keyDelay) end)
+-- This doesn't seem to work in certain apps (e.g. Evernote, Alfred)
+--hs.hotkey.bind(hyper, 'i', function() hs.eventtap.keyStroke({}, 'home', keyDelay) end)
+--hs.hotkey.bind(hyper, 'a', function() hs.eventtap.keyStroke({}, 'end', keyDelay) end)
 
 -- Move to start of / end of / next word
 hs.hotkey.bind(hyper, 'b', function() hs.eventtap.keyStroke({'alt'}, 'left', keyDelay) end)
@@ -240,14 +245,18 @@ end)
 
 -- Select the current line
 hs.hotkey.bind(hyper, 'v', function()
+  --hs.eventtap.keyStroke({}, 'home', keyDelay)
   hs.eventtap.keyStroke({'cmd'}, 'left', keyDelay)
+  --hs.eventtap.keyStroke({'shift'}, 'end', keyDelay)
   hs.eventtap.keyStroke({'cmd', 'shift'}, 'right', keyDelay)
 end)
 
 -- Yank the current line
 hs.hotkey.bind(hyper, 'y', nil, function()
+  --hs.eventtap.keyStroke({}, 'home', keyDelay)
   hs.eventtap.keyStroke({'cmd'}, 'left', keyDelay)
-  hs.eventtap.keyStroke({'cmd', 'shift'}, 'right', keyDelay)
+  --hs.eventtap.keyStroke({'shift'}, 'end', keyDelay)
+  hs.eventtap.keyStroke({'cmd'}, 'right', keyDelay)
   hs.eventtap.keyStroke({'cmd'}, 'c', 200000)
   hs.eventtap.keyStroke({}, 'right', keyDelay)
 end)
@@ -263,10 +272,12 @@ hs.hotkey.bind(hyper, 'd', nil, function()
     hs.eventtap.keyStroke({"cmd"}, 'up', keyDelay) 
   else
     -- Cut the current line
+    --hs.eventtap.keyStroke({}, 'home', keyDelay)
     hs.eventtap.keyStroke({'cmd'}, 'left', keyDelay)
     --xpcall(bad, myerrorhandler)
     --xpcall(hs.eventtap.keyStroke, myerrorhandler, {'cmd', 'shift'}, 'right', keyDelay)
     --xpcall(hs.eventtap.keyStroke, myerrorhandler, {'cmd'}, 'x', 500000)
+    --hs.eventtap.keyStroke({'shift'}, 'end', keyDelay)
     hs.eventtap.keyStroke({'cmd', 'shift'}, 'right', keyDelay)
     -- We need a delay before the cut, otherwise it doesn't always work
     hs.eventtap.keyStroke({'cmd'}, 'x', 500000)
@@ -281,7 +292,8 @@ end)
 
 -- Open line below/above
 hs.hotkey.bind(hyper, 'o', function() 
-  hs.eventtap.keyStroke({'cmd'}, 'right', keyDelay) 
+  --hs.eventtap.keyStroke({}, 'end', keyDelay) 
+  hs.eventtap.keyStroke({'cmd'}, 'right', keyDelay)
   hs.eventtap.keyStroke({''}, 'return', keyDelay) 
 end)
 hs.urlevent.bind('hypercmdo', function() 
@@ -289,7 +301,8 @@ hs.urlevent.bind('hypercmdo', function()
     -- Lock the cell reference with $ (easier than pressing Fn-F4)
     hs.eventtap.keyStroke({}, 'F4', keyDelay)
   else
-    hs.eventtap.keyStroke({'cmd'}, 'left', keyDelay) 
+    --hs.eventtap.keyStroke({}, 'home', keyDelay) 
+    hs.eventtap.keyStroke({'cmd'}, 'left', keyDelay)
     hs.eventtap.keyStroke({''}, 'return', keyDelay) 
     hs.eventtap.keyStroke({''}, 'up', keyDelay) 
   end
@@ -297,12 +310,14 @@ end)
 
 -- Paste on new line below/above
 hs.hotkey.bind(hyper, 'p', function() 
-  hs.eventtap.keyStroke({'cmd'}, 'right', keyDelay) 
+  --hs.eventtap.keyStroke({}, 'end', keyDelay) 
+  hs.eventtap.keyStroke({'cmd'}, 'right', keyDelay)
   hs.eventtap.keyStroke({''}, 'return', keyDelay) 
   hs.eventtap.keyStroke({'cmd'}, 'v', keyDelay) 
 end)
 hs.urlevent.bind('hypercmdp', function() 
-  hs.eventtap.keyStroke({'cmd'}, 'left', keyDelay) 
+  --hs.eventtap.keyStroke({}, 'home', keyDelay) 
+  hs.eventtap.keyStroke({'cmd'}, 'left', keyDelay)
   hs.eventtap.keyStroke({''}, 'return', keyDelay) 
   hs.eventtap.keyStroke({''}, 'up', keyDelay) 
   hs.eventtap.keyStroke({'cmd'}, 'v', keyDelay) 
@@ -310,7 +325,8 @@ end)
 
 -- Insert a bullet at the beginning of the line
 hs.urlevent.bind('hypercmdb', function() 
-  hs.eventtap.keyStroke({'cmd'}, 'left', keyDelay) 
+  --hs.eventtap.keyStroke({}, 'home', keyDelay) 
+  hs.eventtap.keyStroke({'cmd'}, 'left', keyDelay)
   hs.eventtap.keyStroke({''}, '-', keyDelay) 
   hs.eventtap.keyStroke({''}, 'space', keyDelay) 
   hs.eventtap.keyStroke({''}, 'down', keyDelay) 
@@ -494,14 +510,14 @@ hs.hotkey.bind(hyper, 'q', function()
   os.execute('osascript "' .. os.getenv("HOME") .. '/dotfiles/scripts/Activate Pointwise Jira.scpt"')
 end)
 
--- Activate IDEA
---hs.hotkey.bind(hyper, 'z', function()
-  --local appName = "IntelliJ IDEA CE"
+-- Activate Excel
+hs.hotkey.bind(hyper, 'z', function()
+  local appName = "Microsoft Excel"
   --local bool, obj, descriptor = hs.osascript.applescript("set result to (display dialog \"Really launch ".. appName .."?\")\n return the button returned of result")
   --if obj == "OK" then
-    --hs.application.launchOrFocus(appName)
+    hs.application.launchOrFocus(appName)
   --end
---end)
+end)
 
 -- Open work mail
 hs.hotkey.bind(hyper, 'x', function()
@@ -518,9 +534,9 @@ hs.urlevent.bind('hypercmda', function()
   os.execute('osascript "' .. os.getenv("HOME") .. '/dotfiles/scripts/Name active application.scpt"')
 end)
 
--- Activate Spotify
+-- Activate PowerPoint
 hs.hotkey.bind(hyper, ';', function()
-  hs.application.launchOrFocus("Spotify")
+  hs.application.launchOrFocus("Microsoft PowerPoint")
 end)
 
 -- Open downloads folder
@@ -535,8 +551,9 @@ end)
 
 -- Activate Slack
 hs.hotkey.bind(hyper, 's', function()
+  os.execute('osascript "' .. os.getenv("HOME") .. '/dotfiles/scripts/Activate Chrome for Slack.scpt"')
   -- For some reason applescript is faster than launchOrFocus
-  hs.osascript.applescript("tell application \"Slack\" to activate")
+  --hs.osascript.applescript("tell application \"Slack\" to activate")
   --hs.application.launchOrFocus("Slack")
 end)
 
@@ -703,9 +720,11 @@ bindapp("Microsoft Excel", {"cmd"}, 'l', function()
     hs.eventtap.keyStroke({"ctrl"}, 'u', keyDelay) 
 end)
 
--- Get moving to beginning and end of line to work as normal in iTerm
+-- Get moving to beginning and end of line to work as normal in iTerm and Excel
 bindapp("iTerm", hyper, 'i', function() hs.eventtap.keyStroke({"ctrl"}, 'a', keyDelay) end)
 bindapp("iTerm", hyper, 'a', function() hs.eventtap.keyStroke({"ctrl"}, 'e', keyDelay) end)
+bindapp("Microsoft Excel", hyper, 'i', function() hs.eventtap.keyStroke({}, 'home', keyDelay) end)
+bindapp("Microsoft Excel", hyper, 'a', function() hs.eventtap.keyStroke({}, 'end', keyDelay) end)
 
 -- Export current Tableau worksheet as image
 bindapp("Tableau", {"cmd"}, 'e', function() 

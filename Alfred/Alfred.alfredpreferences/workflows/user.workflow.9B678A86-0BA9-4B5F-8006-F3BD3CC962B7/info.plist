@@ -46,19 +46,25 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>acceptsmulti</key>
+				<key>concurrently</key>
 				<false/>
-				<key>filetypes</key>
-				<array/>
-				<key>name</key>
-				<string>Move last download here</string>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>"$HOME/dotfiles/scripts/move_last_download.sh" "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.trigger.action</string>
+			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>02609E04-2BCF-424E-B21B-12878BD84FEB</string>
+			<string>4CDA0D53-BA3D-46D5-83F3-71D52AE0D763</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -84,25 +90,19 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
+				<key>acceptsmulti</key>
 				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>"$HOME/dotfiles/scripts/move_last_download.sh" "{query}"</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
+				<key>filetypes</key>
+				<array/>
+				<key>name</key>
+				<string>Move last download here</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.script</string>
+			<string>alfred.workflow.trigger.action</string>
 			<key>uid</key>
-			<string>4CDA0D53-BA3D-46D5-83F3-71D52AE0D763</string>
+			<string>02609E04-2BCF-424E-B21B-12878BD84FEB</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>1</integer>
 		</dict>
 	</array>
 	<key>readme</key>
