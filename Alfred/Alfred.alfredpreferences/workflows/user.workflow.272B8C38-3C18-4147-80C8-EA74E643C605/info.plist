@@ -69,7 +69,7 @@
 			<dict>
 				<key>applescript</key>
 				<string>on alfred_script(q)
-  set code to "document.getElementsByName(\"q\")[0].value = \"" &amp; q &amp; "\";document.querySelector('[aria-label=\"Search Locarta Mail\"]').click();"tell application "Google Chrome"	--tell active tab of front window to set URL to "javascript:" &amp; query	set active tab index of front window to 1	execute front window's active tab javascript code	activateend tell
+  set code to "document.getElementsByName(\"q\")[0].value = \"" &amp; q &amp; "\";document.querySelector('[aria-label=\"Search Mail\"]').click();"tell application "Google Chrome"	--tell active tab of front window to set URL to "javascript:" &amp; query	set active tab index of front window to 1	execute front window's active tab javascript code	activateend tell
 end alfred_script</string>
 				<key>cachescript</key>
 				<true/>

@@ -297,7 +297,10 @@ hs.hotkey.bind(hyper, 'o', function()
   hs.eventtap.keyStroke({''}, 'return', keyDelay) 
 end)
 hs.urlevent.bind('hypercmdo', function() 
-  if appRunning("Microsoft Excel") and hs.application("Microsoft Excel"):isFrontmost() then
+  if appRunning("Google Chrome") and hs.application("Google Chrome"):isFrontmost() then
+    -- Run the Gmail labelling shortcuts
+    os.execute('osascript "' .. os.getenv("HOME") .. '/dotfiles/scripts/Chrome Gmail add label.scpt"')
+  elseif appRunning("Microsoft Excel") and hs.application("Microsoft Excel"):isFrontmost() then
     -- Lock the cell reference with $ (easier than pressing Fn-F4)
     hs.eventtap.keyStroke({}, 'F4', keyDelay)
   else
@@ -482,7 +485,8 @@ end)
 
 -- Activate todo list in Google Docs
 hs.hotkey.bind(hyper, 'u', function()
-  os.execute('osascript "' .. os.getenv("HOME") .. '/dotfiles/scripts/Activate Chrome for Google Docs todo.scpt"')
+  --os.execute('osascript "' .. os.getenv("HOME") .. '/dotfiles/scripts/Activate Chrome for Google Docs todo.scpt"')
+  os.execute('osascript "' .. os.getenv("HOME") .. '/dotfiles/scripts/Activate Chrome for Trello.scpt"')
 end)
 
 -- Activate Gmail

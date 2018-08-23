@@ -1,0 +1,71 @@
+{
+    "5b59c0ec7365694784898cd8": {
+        "first_list_id": "5b59c0fb91c5e74a79435282", 
+        "labels": {
+            "blue": "5b59c0ec9c16fb124ac7b82e", 
+            "purple": "5b59c0ec9c16fb124ac7b82f", 
+            "yellow": "5b59c0ec9c16fb124ac7b828", 
+            "green": "5b59c0ec9c16fb124ac7b829", 
+            "orange": "5b59c0ec9c16fb124ac7b82a", 
+            "red": "5b59c0ec9c16fb124ac7b82b"
+        }, 
+        "lists": {
+            "Later": "5b59c1ed5a42529035afd563", 
+            "Buy": "5b59c10675d144c4790cce66", 
+            "Todo": "5b59c100c8b03334e3930153", 
+            "Inbox": "5b59c0fb91c5e74a79435282", 
+            "Projects": "5b59c0ff002fdaeb33c8a1da"
+        }, 
+        "name": "Personal", 
+        "lastUpdated": "2018-08-06 15:03:20.585972"
+    }, 
+    "5b5b1e4bfd0be36b044d7072": {
+        "first_list_id": "5b5b1e61a7d19114d1c97452", 
+        "labels": {
+            "blue": "5b5b1e4b9c16fb124a9e142f", 
+            "Confirmed": "5b5b20eae12c4a162f9eeb23", 
+            "purple": "5b5b1e4b9c16fb124a9e1430", 
+            "sky": "5b5b1e4b9c16fb124a9e141e", 
+            "yellow": "5b618675776b8bfbc6e934a4", 
+            "Verbally confirmed": "5b61be4bd7b5211ac9701799", 
+            "green": "5b5b20eae12c4a162f9eeb23", 
+            "Paid": "5b5b1e4b9c16fb124a9e1430", 
+            "red": "5b61be4bd7b5211ac9701799", 
+            "Invoiced": "5b618675776b8bfbc6e934a4"
+        }, 
+        "lists": {
+            "Gathering Details": "5b5b1e61a7d19114d1c97452", 
+            "Finished": "5b5b1f0ea7ba48be23dec7f8", 
+            "Validating impression data": "5b5b1efe486e191da50280ba", 
+            "Generating Report": "5b5b1f06d2450c9305a7256c", 
+            "Cancelled": "5b618617ba81b654bee420fa", 
+            "Setting up (Pixel, Geofences etc.)": "5b5b1eaf488a77d27d0657dc", 
+            "Queued": "5b61bcadef276427afe9d254"
+        }, 
+        "name": "Campaign Planner", 
+        "lastUpdated": "2018-08-06 15:03:20.585962"
+    }, 
+    "5b56eb587d141d9fd06d8bfc": {
+        "first_list_id": "5b5740a8146858ac55539823", 
+        "labels": {
+            "blue": "5b56eb589c16fb124aa41344", 
+            "purple": "5b56eb589c16fb124aa41343", 
+            "Big": "5b56eb589c16fb124aa41343", 
+            "Quite big": "5b56eb589c16fb124aa41344", 
+            "yellow": "5b56eb589c16fb124aa4133c", 
+            "green": "5b56eb589c16fb124aa4133d", 
+            "orange": "5b56eb589c16fb124aa4133e", 
+            "red": "5b56eb589c16fb124aa41340"
+        }, 
+        "lists": {
+            "Later": "5b574f20e90c734e513b4918", 
+            "Inbox": "5b5740a8146858ac55539823", 
+            "Small": "5b59c823226eeeb3d24ca4da", 
+            "Blocked": "5b574fb9a618bca5a964db94", 
+            "Today": "5b574f1cd74cfa9746c4e7a7", 
+            "Projects": "5b5740af14ef6c15086da35b"
+        }, 
+        "name": "Work", 
+        "lastUpdated": "2018-08-06 15:03:20.585975"
+    }
+}
