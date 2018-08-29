@@ -4,6 +4,19 @@
 <dict>
 	<key>customSites</key>
 	<dict>
+		<key>88FF99C7-FFC0-44A1-A547-65F28195597B</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>play</string>
+			<key>text</key>
+			<string>Google Play app search</string>
+			<key>url</key>
+			<string>https://play.google.com/store/search?q={query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
 		<key>AA9717F2-8AAC-4F67-AD03-C6CE95BBC76C</key>
 		<dict>
 			<key>enabled</key>

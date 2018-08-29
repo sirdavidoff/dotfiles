@@ -17,7 +17,7 @@
             "Projects": "5b59c0ff002fdaeb33c8a1da"
         }, 
         "name": "Personal", 
-        "lastUpdated": "2018-08-22 17:06:35.891800"
+        "lastUpdated": "2018-08-29 17:44:49.054144"
     }, 
     "5b5b1e4bfd0be36b044d7072": {
         "first_list_id": "5b5b1e61a7d19114d1c97452", 
@@ -34,7 +34,7 @@
             "Invoiced": "5b618675776b8bfbc6e934a4"
         }, 
         "lists": {
-            "Lost/Cancelled": "5b618617ba81b654bee420fa", 
+            "Lost or Cancelled": "5b618617ba81b654bee420fa", 
             "Gathering Details": "5b5b1e61a7d19114d1c97452", 
             "Finished": "5b5b1f0ea7ba48be23dec7f8", 
             "Validating impression data": "5b5b1efe486e191da50280ba", 
@@ -43,7 +43,7 @@
             "Queued": "5b61bcadef276427afe9d254"
         }, 
         "name": "Locarta Reports", 
-        "lastUpdated": "2018-08-22 17:06:35.891798"
+        "lastUpdated": "2018-08-29 17:44:49.054142"
     }, 
     "5b5b1de27cb0bf2776fb376e": {
         "first_list_id": "5b68702525ee497288c78b26", 
@@ -65,7 +65,7 @@
             "Projects": "5b68706e0fe0627aaea378c8"
         }, 
         "name": "Holger To Do", 
-        "lastUpdated": "2018-08-22 17:06:35.891789"
+        "lastUpdated": "2018-08-29 17:44:49.054133"
     }, 
     "5b56eb587d141d9fd06d8bfc": {
         "first_list_id": "5b5740a8146858ac55539823", 
@@ -90,6 +90,6 @@
             "Projects": "5b5740af14ef6c15086da35b"
         }, 
         "name": "Work", 
-        "lastUpdated": "2018-08-22 17:06:35.891801"
+        "lastUpdated": "2018-08-29 17:44:49.054146"
     }
 }

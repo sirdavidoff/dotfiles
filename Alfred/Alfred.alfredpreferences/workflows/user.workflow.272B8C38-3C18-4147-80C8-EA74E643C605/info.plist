@@ -108,7 +108,12 @@ end alfred_script</string>
 				<key>applescript</key>
 				<string>on alfred_script(q)
 tell application "Google Chrome"	-- We're assuming that mail is the first tab	set active tab index of front window to 1	tell front window's active tab		set URL to URL &amp; "?compose=new"	end tell
-	activateend tell
+	activate
+
+	delay 0.3
+
+	--run script "Users:david:dotfiles:scripts:Chrome Gmail set focusz.scpt"
+	do shell script "osascript '/Users/david/dotfiles/scripts/Chrome Gmail set focus.scpt'"end tell
 
 end alfred_script</string>
 				<key>cachescript</key>

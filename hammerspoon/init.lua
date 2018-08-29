@@ -427,28 +427,10 @@ hs.urlevent.bind('hyperaltl', function()
     hs.eventtap.keyStroke({'cmd', 'shift'}, 'right', keyDelay)
   end
 end)
-hs.urlevent.bind('hyperaltu', function() 
-  -- Run script for clicking todo list buttons, but only if we're in Chrome
-  if appRunning("Google Chrome") and hs.application("Google Chrome"):isFrontmost() then
-    os.execute('osascript "' .. os.getenv("HOME") .. '/dotfiles/scripts/Chrome click Todo buttons.scpt" "in_progress"')
-  end
-end)
-hs.urlevent.bind('hyperalti', function() 
-  -- Run script for clicking todo list buttons, but only if we're in Chrome
-  if appRunning("Google Chrome") and hs.application("Google Chrome"):isFrontmost() then
-    os.execute('osascript "' .. os.getenv("HOME") .. '/dotfiles/scripts/Chrome click Todo buttons.scpt" "waiting"')
-  end
-end)
 hs.urlevent.bind('hyperalto', function() 
   -- Run script for clicking todo list buttons, but only if we're in Chrome
   if appRunning("Google Chrome") and hs.application("Google Chrome"):isFrontmost() then
-    os.execute('osascript "' .. os.getenv("HOME") .. '/dotfiles/scripts/Chrome click Todo buttons.scpt" "todo"')
-  end
-end)
-hs.urlevent.bind('hyperaltp', function() 
-  -- Run script for clicking todo list buttons, but only if we're in Chrome
-  if appRunning("Google Chrome") and hs.application("Google Chrome"):isFrontmost() then
-    os.execute('osascript "' .. os.getenv("HOME") .. '/dotfiles/scripts/Chrome click Todo buttons.scpt" "done"')
+    os.execute('osascript "' .. os.getenv("HOME") .. '/dotfiles/scripts/Chrome Gmail set focus.scpt" "todo"')
   end
 end)
 
