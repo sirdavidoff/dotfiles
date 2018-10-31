@@ -217,8 +217,8 @@ hs.urlevent.bind('hyperaltreturn', function()
 end)
 -- Forward delete rest of line
 hs.urlevent.bind('hypercmdreturn', function()
-  hs.eventtap.keyStroke({'cmd', 'shift'}, 'right', keyDelay) 
-  hs.eventtap.keyStroke({}, 'delete', keyDelay) 
+  hs.eventtap.keyStroke({'cmd', 'shift'}, 'right', keydelay) 
+  hs.eventtap.keyStroke({}, 'delete', keydelay) 
 end)
 
 -- Move up, down, left and right
@@ -300,6 +300,9 @@ hs.urlevent.bind('hypercmdo', function()
   if appRunning("Google Chrome") and hs.application("Google Chrome"):isFrontmost() then
     -- Run the Gmail labelling shortcuts
     os.execute('osascript "' .. os.getenv("HOME") .. '/dotfiles/scripts/Chrome Gmail add label.scpt"')
+  elseif appRunning("Evernote") and hs.application("Evernote"):isFrontmost() then
+    -- Run the script that copies the current Evernote note into a new Gmail message
+    os.execute('osascript "' .. os.getenv("HOME") .. '/dotfiles/scripts/Evernote note to Gmail compose.scpt"')
   elseif appRunning("Microsoft Excel") and hs.application("Microsoft Excel"):isFrontmost() then
     -- Lock the cell reference with $ (easier than pressing Fn-F4)
     hs.eventtap.keyStroke({}, 'F4', keyDelay)
@@ -664,6 +667,10 @@ hs.hotkey.bind(hyper, '2', function() insertText('davewroberts@yahoo.com') end)
 hs.hotkey.bind(hyper, '3', function() insertText(os.date("%Y%m%d")) end)
 hs.hotkey.bind(hyper, '4', function() insertText('david.roberts@locarta.co') end)
 hs.hotkey.bind(hyper, '9', function() insertText('+4915753632560') end)
+-- Insert the euro sign
+hs.urlevent.bind('hypercmde', function()
+  hs.eventtap.keyStroke({}, '€', keyDelay) 
+end)
 
 ---------------------------------------------
 -- Application-specific keyboard shortcuts --

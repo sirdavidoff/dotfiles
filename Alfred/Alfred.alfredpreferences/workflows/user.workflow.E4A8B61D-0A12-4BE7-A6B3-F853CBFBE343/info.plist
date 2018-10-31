@@ -151,7 +151,7 @@
 	delay 0.05 -- Give Alfred time to react
 
 	tell application "System Events"
-		keystroke "Open W"
+		keystroke "Open With..."
 		delay 0.05
 		key code 36 -- Enter
 	end tell
@@ -367,7 +367,7 @@ echo '{"items": [{"title":"Open last download with...", "subtitle":"'"$file"'"}]
 	delay 0.05 -- Give Alfred time to react
 
 	tell application "System Events"
-		keystroke "Open W"
+		keystroke "Open With..."
 		delay 0.05
 		key code 36 -- Enter
 	end tell

@@ -301,27 +301,6 @@ DEFAULT_BOARD_ID='5b56eb587d141d9fd06d8bfc'
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>keyword</key>
-				<string>get trello token</string>
-				<key>subtext</key>
-				<string>Usage: get trello token {YourAPIKey}</string>
-				<key>text</key>
-				<string>Authorize Trello Workflow to use your Trello account.</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>0442D773-2E45-40E3-B79E-6879C09EDCB8</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>lastpathcomponent</key>
 				<false/>
 				<key>onlyshowifquerypopulated</key>
@@ -356,6 +335,27 @@ DEFAULT_BOARD_ID='5b56eb587d141d9fd06d8bfc'
 			<string>alfred.workflow.action.openurl</string>
 			<key>uid</key>
 			<string>BBAACDB8-006A-4F21-832F-16FA411C1103</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>get trello token</string>
+				<key>subtext</key>
+				<string>Usage: get trello token {YourAPIKey}</string>
+				<key>text</key>
+				<string>Authorize Trello Workflow to use your Trello account.</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>0442D773-2E45-40E3-B79E-6879C09EDCB8</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>

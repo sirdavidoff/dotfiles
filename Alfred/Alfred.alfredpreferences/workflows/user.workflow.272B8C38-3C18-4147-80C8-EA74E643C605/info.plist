@@ -23,7 +23,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>E447EAEF-5DAA-4188-B850-9F3B74E4EC31</string>
+				<string>F534F384-E242-49A3-A537-971AEEB098D4</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -84,6 +84,29 @@ end alfred_script</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>osascript "$HOME/dotfiles/scripts/Chrome Gmail compose new message.scpt"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>F534F384-E242-49A3-A537-971AEEB098D4</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argumenttype</key>
 				<integer>2</integer>
 				<key>keyword</key>
@@ -99,30 +122,6 @@ end alfred_script</string>
 			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
 			<string>61338BE5-94B3-4B9C-BB55-57740172668A</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>applescript</key>
-				<string>on alfred_script(q)
-tell application "Google Chrome"	-- We're assuming that mail is the first tab	set active tab index of front window to 1	tell front window's active tab		set URL to URL &amp; "?compose=new"	end tell
-	activate
-
-	delay 0.3
-
-	--run script "Users:david:dotfiles:scripts:Chrome Gmail set focusz.scpt"
-	do shell script "osascript '/Users/david/dotfiles/scripts/Chrome Gmail set focus.scpt'"end tell
-
-end alfred_script</string>
-				<key>cachescript</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.applescript</string>
-			<key>uid</key>
-			<string>E447EAEF-5DAA-4188-B850-9F3B74E4EC31</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -145,7 +144,7 @@ end alfred_script</string>
 			<key>ypos</key>
 			<integer>190</integer>
 		</dict>
-		<key>E447EAEF-5DAA-4188-B850-9F3B74E4EC31</key>
+		<key>F534F384-E242-49A3-A537-971AEEB098D4</key>
 		<dict>
 			<key>xpos</key>
 			<integer>500</integer>
