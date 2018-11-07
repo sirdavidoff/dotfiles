@@ -1,6 +1,7 @@
 # To set up:
-#  - Turn on Google Caldendar API and download credentials .json (as calendar.json) by visiting:
+#  - Turn on Google Caldendar API and download client secret .json (as client_secret_calendar.json) by visiting:
 #    https://console.developers.google.com/start/api?id=calendar
+#  - Install pip if not already (sudo easy_install pip)
 #  - pip install --upgrade google-api-python-client --user
 #  - pip install pyperclip --user
 #  - Run this script
@@ -25,12 +26,6 @@ import dateutil.parser
 from dateutil import tz
 import pytz
 import pyperclip
-
-# try:
-    # import argparse
-    # flags = argparse.ArgumentParser(parents=[tools.argparser]).parse_args()
-# except ImportError:
-    # flags = None
 
 # If modifying these scopes, delete your previously saved credentials
 # at ~/.credentials/CREDENTIALS_FILE
@@ -60,11 +55,8 @@ def get_credentials():
     if not credentials or credentials.invalid:
         flow = client.flow_from_clientsecrets(CLIENT_SECRET_FILE, SCOPES)
         flow.user_agent = APPLICATION_NAME
-        credentials = tools.run_flow(flow, store, None)
-        # if flags:
-            # credentials = tools.run_flow(flow, store, flags)
-        # else: # Needed only for compatibility with Python 2.6
-            # credentials = tools.run(flow, store)
+        flags = tools.argparser.parse_args(args=[])
+        credentials = tools.run_flow(flow, store, flags)
         print('Storing credentials to ' + credential_path)
     return credentials
 
