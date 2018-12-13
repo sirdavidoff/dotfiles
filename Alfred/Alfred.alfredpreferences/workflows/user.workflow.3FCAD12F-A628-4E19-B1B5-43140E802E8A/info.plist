@@ -278,7 +278,7 @@
 	<key>description</key>
 	<string>Generate Fake Data</string>
 	<key>disabled</key>
-	<false/>
+	<true/>
 	<key>name</key>
 	<string>Fakeum</string>
 	<key>objects</key>

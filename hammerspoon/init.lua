@@ -12,9 +12,10 @@
 -- ,
 -- .
 -- /
---hs.hotkey.bind(hyper, 'r', function()
+hs.urlevent.bind('hypercmdu', function() 
   --local status, result, descriptor = hs.osascript.applescript("tell application \"Google Chrome\" to execute javascript \"$('#dscript_to_todo').click();\"")
---end)
+  os.execute('osascript "' .. os.getenv("HOME") .. '/dotfiles/scripts/Excel click style buttons.scpt"')
+end)
 
 local log = hs.logger.new('mymodule','debug')
 local keyDelay = 0
