@@ -10,6 +10,7 @@
             "red": "5bd99c8ba724a908c0dff5a1"
         }, 
         "lists": {
+            "Future Pool": "5c138d32a1bdf50ac5e5cfe3", 
             "Waiting for tech interview": "5bd99d6293ab264c6c73c7b7", 
             "Inbound": "5bd99d50b013b32002390c4a", 
             "Making final decision": "5bd9af6fec4a25228f187aa6", 
@@ -17,11 +18,10 @@
             "Processed": "5bfe6dee24e90167be339bbe", 
             "Waiting for phone interview": "5bd99d5ea5ec3821ef9d8ada", 
             "Reached Out": "5bd99d5732cc635640aead55", 
-            "Waiting for tech task solution": "5bd99d67a6e23e569d35aa71", 
             "Offer made": "5bd99d70533fb384c332be71"
         }, 
         "name": "HR Backend Engineer", 
-        "lastUpdated": "2018-12-12 10:26:04.346058"
+        "lastUpdated": "2018-12-17 15:10:41.299268"
     }, 
     "5b59c0ec7365694784898cd8": {
         "first_list_id": "5b59c0fb91c5e74a79435282", 
@@ -42,7 +42,7 @@
             "Projects": "5b59c0ff002fdaeb33c8a1da"
         }, 
         "name": "Personal", 
-        "lastUpdated": "2018-12-12 10:26:04.346071"
+        "lastUpdated": "2018-12-17 15:10:41.299278"
     }, 
     "5b5b1e4bfd0be36b044d7072": {
         "first_list_id": "5b5b1e61a7d19114d1c97452", 
@@ -68,7 +68,7 @@
             "Queued": "5b61bcadef276427afe9d254"
         }, 
         "name": "Locarta Reports", 
-        "lastUpdated": "2018-12-12 10:26:04.346069"
+        "lastUpdated": "2018-12-17 15:10:41.299277"
     }, 
     "5b5b1de27cb0bf2776fb376e": {
         "first_list_id": "5b68702525ee497288c78b26", 
@@ -89,7 +89,7 @@
             "Projects": "5b68706e0fe0627aaea378c8"
         }, 
         "name": "Holger To Do", 
-        "lastUpdated": "2018-12-12 10:26:04.346067"
+        "lastUpdated": "2018-12-17 15:10:41.299275"
     }, 
     "5b56eb587d141d9fd06d8bfc": {
         "first_list_id": "5b5740a8146858ac55539823", 
@@ -115,6 +115,6 @@
             "Projects": "5b5740af14ef6c15086da35b"
         }, 
         "name": "Work", 
-        "lastUpdated": "2018-12-12 10:26:04.346073"
+        "lastUpdated": "2018-12-17 15:10:41.299279"
     }
 }
