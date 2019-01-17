@@ -500,13 +500,20 @@ hs.hotkey.bind(hyper, 'q', function()
   os.execute('osascript "' .. os.getenv("HOME") .. '/dotfiles/scripts/Activate Pointwise Jira.scpt"')
 end)
 
--- Activate Excel
+-- Activate VMware
 hs.hotkey.bind(hyper, 'z', function()
+  local appName = "VMware Fusion"
+  if not appRunning(appName) then
+    local bool, obj, descriptor = hs.osascript.applescript("set result to (display dialog \"Really launch ".. appName .."?\")\n return the button returned of result")
+    if obj ~= "OK" then return end
+  end
+  hs.application.launchOrFocus(appName)
+end)
+
+-- Activate Excel
+hs.hotkey.bind(hyper, "'", function()
   local appName = "Microsoft Excel"
-  --local bool, obj, descriptor = hs.osascript.applescript("set result to (display dialog \"Really launch ".. appName .."?\")\n return the button returned of result")
-  --if obj == "OK" then
-    hs.application.launchOrFocus(appName)
-  --end
+  hs.application.launchOrFocus(appName)
 end)
 
 -- Open work mail
@@ -526,7 +533,12 @@ end)
 
 -- Activate PowerPoint
 hs.hotkey.bind(hyper, ';', function()
-  hs.application.launchOrFocus("Microsoft PowerPoint")
+  local appName = "Microsoft PowerPoint"
+  if not appRunning(appName) then
+    local bool, obj, descriptor = hs.osascript.applescript("set result to (display dialog \"Really launch ".. appName .."?\")\n return the button returned of result")
+    if obj ~= "OK" then return end
+  end
+  hs.application.launchOrFocus(appName)
 end)
 
 -- Open downloads folder
@@ -691,6 +703,15 @@ bindapp("Google Chrome", {"cmd"}, 'm', function()
   hs.eventtap.keyStroke({}, 'tab', keyDelay) 
 end)
 
+-- Run the Google Chrome save calendar entry script
+--bindapp("Google Chrome", {"cmd"}, 'return', function() 
+  --hs.alert.show("Called")
+  --hs.eventtap.keyStroke({}, 'a', keyDelay) 
+  --hs.eventtap.keyStroke({"cmd"}, 'return', keyDelay) 
+  --hs.eventtap.keyStroke({}, 'x', keyDelay) 
+  --os.execute('osascript "' .. os.getenv("HOME") .. '/dotfiles/scripts/Chrome Google Calendar save.scpt"')
+--end)
+
 -- Put focus on the notes list in Evernote when editing an
 -- individual note
 bindapp("Evernote", {"cmd"}, 'h', function() 
@@ -712,6 +733,17 @@ end)
 -- Focus on the Excel formula bar with Cmd-L
 bindapp("Microsoft Excel", {"cmd"}, 'l', function() 
     hs.eventtap.keyStroke({"ctrl"}, 'u', keyDelay) 
+end)
+
+-- Fill down to the end of the adjacent column (to left) in Excel
+bindapp("Microsoft Excel", {"cmd", "shift"}, 'd', function() 
+    keyDelay = 400000
+    hs.alert.show("Here")
+    hs.eventtap.keyStroke({}, 'left', keyDelay) 
+    hs.eventtap.keyStroke({"cmd"}, 'down', keyDelay) 
+    hs.eventtap.keyStroke({}, 'right', keyDelay) 
+    hs.eventtap.keyStroke({"cmd", "shift"}, 'up', keyDelay) 
+    hs.eventtap.keyStroke({"cmd"}, 'd', 400000) 
 end)
 
 -- Get moving to beginning and end of line to work as normal in iTerm and Excel

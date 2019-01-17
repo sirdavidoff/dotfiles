@@ -32,8 +32,34 @@
 				<false/>
 			</dict>
 		</array>
+		<key>76568C83-0C36-4082-9D66-4397C6AAFDC3</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>B845F16E-211A-4E16-939A-D9774089FCD4</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>B52392F2-134F-4DC0-A056-B7581FD26897</key>
 		<array/>
+		<key>B845F16E-211A-4E16-939A-D9774089FCD4</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>46A8D483-8034-4D6B-BF78-18BD64844A51</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>BB4FCEDA-A055-4022-BE05-A9D2E24CFB9E</key>
 		<array>
 			<dict>
@@ -125,10 +151,136 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>t</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string># Fill these in yourself
+KEY='2a3af0cbdc9f6e22a9b5ac8f5637ce38'
+TOKEN='2f11dc1f29a54ca673a3ebf9eaeb6b677c23da2157b37ebbd9f3455391ae798c'
+DEFAULT_BOARD_ID='5b56eb587d141d9fd06d8bfc'
+
+/usr/local/bin/python trello_add.py -s $KEY $TOKEN $DEFAULT_BOARD_ID "{query}"
+# echo trello_add.py $KEY $TOKEN $DEFAULT_BOARD_ID "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>title [# description][; keywords][; due_date]</string>
+				<key>title</key>
+				<string>Add to Trello</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>76568C83-0C36-4082-9D66-4397C6AAFDC3</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>98</integer>
+				<key>script</key>
+				<string>/usr/local/bin/python trello_add.py {query}</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>B845F16E-211A-4E16-939A-D9774089FCD4</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>Trello</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>46A8D483-8034-4D6B-BF78-18BD64844A51</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>6</integer>
+				<key>script</key>
+				<string># Fill these in yourself
+KEY='2a3af0cbdc9f6e22a9b5ac8f5637ce38'
+TOKEN='2f11dc1f29a54ca673a3ebf9eaeb6b677c23da2157b37ebbd9f3455391ae798c'
+DEFAULT_BOARD_ID='5b56eb587d141d9fd06d8bfc'
+
+/usr/local/bin/python trello_add.py $KEY $TOKEN $DEFAULT_BOARD_ID "{query}"
+# echo trello_add.py $KEY $TOKEN $DEFAULT_BOARD_ID "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>BB4FCEDA-A055-4022-BE05-A9D2E24CFB9E</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argumenttype</key>
 				<integer>0</integer>
 				<key>keyword</key>
-				<string>t</string>
+				<string>tt</string>
 				<key>subtext</key>
 				<string>Format: title # description ; keywords (can also use 'top' as a keyword)</string>
 				<key>text</key>
@@ -163,35 +315,6 @@
 			<string>BCBEF829-5790-415C-B492-BE2D0DFAEB63</string>
 			<key>version</key>
 			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>6</integer>
-				<key>script</key>
-				<string># Fill these in yourself
-KEY='2a3af0cbdc9f6e22a9b5ac8f5637ce38'
-TOKEN='2f11dc1f29a54ca673a3ebf9eaeb6b677c23da2157b37ebbd9f3455391ae798c'
-DEFAULT_BOARD_ID='5b56eb587d141d9fd06d8bfc'
-
-/usr/local/bin/python trello_add.py $KEY $TOKEN $DEFAULT_BOARD_ID "{query}"
-# echo trello_add.py $KEY $TOKEN $DEFAULT_BOARD_ID "{query}"</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>BB4FCEDA-A055-4022-BE05-A9D2E24CFB9E</string>
-			<key>version</key>
-			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -240,6 +363,25 @@ DEFAULT_BOARD_ID='5b56eb587d141d9fd06d8bfc'
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>https://trello.com/app-key/</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>16BB38FE-8155-4853-8675-42456C67EE07</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>lastpathcomponent</key>
 				<false/>
 				<key>onlyshowifquerypopulated</key>
@@ -282,19 +424,21 @@ DEFAULT_BOARD_ID='5b56eb587d141d9fd06d8bfc'
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>browser</key>
-				<string></string>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string>https://trello.com/app-key/</string>
-				<key>utf8</key>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>get trello token</string>
+				<key>subtext</key>
+				<string>Usage: get trello token {YourAPIKey}</string>
+				<key>text</key>
+				<string>Authorize Trello Workflow to use your Trello account.</string>
+				<key>withspace</key>
 				<true/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
+			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
-			<string>16BB38FE-8155-4853-8675-42456C67EE07</string>
+			<string>0442D773-2E45-40E3-B79E-6879C09EDCB8</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -338,27 +482,6 @@ DEFAULT_BOARD_ID='5b56eb587d141d9fd06d8bfc'
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>keyword</key>
-				<string>get trello token</string>
-				<key>subtext</key>
-				<string>Usage: get trello token {YourAPIKey}</string>
-				<key>text</key>
-				<string>Authorize Trello Workflow to use your Trello account.</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>0442D773-2E45-40E3-B79E-6879C09EDCB8</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
 	</array>
 	<key>readme</key>
 	<string>Script: 	   Trello Workflow for Alfred
@@ -388,12 +511,33 @@ https://github.com/MikoMagni/Trello-Workflow-for-Alfred</string>
 			<key>ypos</key>
 			<integer>500</integer>
 		</dict>
+		<key>46A8D483-8034-4D6B-BF78-18BD64844A51</key>
+		<dict>
+			<key>xpos</key>
+			<integer>870</integer>
+			<key>ypos</key>
+			<integer>10</integer>
+		</dict>
+		<key>76568C83-0C36-4082-9D66-4397C6AAFDC3</key>
+		<dict>
+			<key>xpos</key>
+			<integer>190</integer>
+			<key>ypos</key>
+			<integer>10</integer>
+		</dict>
 		<key>B52392F2-134F-4DC0-A056-B7581FD26897</key>
 		<dict>
 			<key>xpos</key>
 			<integer>870</integer>
 			<key>ypos</key>
 			<integer>270</integer>
+		</dict>
+		<key>B845F16E-211A-4E16-939A-D9774089FCD4</key>
+		<dict>
+			<key>xpos</key>
+			<integer>540</integer>
+			<key>ypos</key>
+			<integer>10</integer>
 		</dict>
 		<key>BB4FCEDA-A055-4022-BE05-A9D2E24CFB9E</key>
 		<dict>
