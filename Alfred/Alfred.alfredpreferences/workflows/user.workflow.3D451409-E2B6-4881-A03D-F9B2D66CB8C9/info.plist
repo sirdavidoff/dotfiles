@@ -209,7 +209,8 @@ DEFAULT_BOARD_ID='5b56eb587d141d9fd06d8bfc'
 				<key>escaping</key>
 				<integer>98</integer>
 				<key>script</key>
-				<string>/usr/local/bin/python trello_add.py {query}</string>
+				<string>&gt;&amp;2 echo {query}
+/usr/local/bin/python trello_add.py {query}</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>

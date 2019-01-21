@@ -20,7 +20,7 @@
             "Backend": "5c3c631f9b5c624d881456c5"
         }, 
         "name": "Dev", 
-        "lastUpdated": "2019-01-16 16:46:56.736479"
+        "lastUpdated": "2019-01-21 09:36:36.973974"
     }, 
     "5b5b1e4bfd0be36b044d7072": {
         "first_list_id": "5b5b1e61a7d19114d1c97452", 
@@ -46,7 +46,7 @@
             "Queued": "5b61bcadef276427afe9d254"
         }, 
         "name": "Locarta Reports", 
-        "lastUpdated": "2019-01-16 16:46:56.736491"
+        "lastUpdated": "2019-01-21 09:36:36.973984"
     }, 
     "5b5b1de27cb0bf2776fb376e": {
         "first_list_id": "5b68702525ee497288c78b26", 
@@ -67,7 +67,7 @@
             "Projects": "5b68706e0fe0627aaea378c8"
         }, 
         "name": "Holger To Do", 
-        "lastUpdated": "2019-01-16 16:46:56.736489"
+        "lastUpdated": "2019-01-21 09:36:36.973982"
     }, 
     "5b56eb587d141d9fd06d8bfc": {
         "first_list_id": "5b5740a8146858ac55539823", 
@@ -93,7 +93,7 @@
             "Projects": "5b5740af14ef6c15086da35b"
         }, 
         "name": "Work", 
-        "lastUpdated": "2019-01-16 16:46:56.736494"
+        "lastUpdated": "2019-01-21 09:36:36.973987"
     }, 
     "5bd99c8bd768850228f6dcda": {
         "first_list_id": "5bd99d50b013b32002390c4a", 
@@ -118,7 +118,7 @@
             "Offer made": "5bd99d70533fb384c332be71"
         }, 
         "name": "HR Backend Engineer", 
-        "lastUpdated": "2019-01-16 16:46:56.736487"
+        "lastUpdated": "2019-01-21 09:36:36.973980"
     }, 
     "5b59c0ec7365694784898cd8": {
         "first_list_id": "5b59c0fb91c5e74a79435282", 
@@ -139,6 +139,6 @@
             "Projects": "5b59c0ff002fdaeb33c8a1da"
         }, 
         "name": "Personal", 
-        "lastUpdated": "2019-01-16 16:46:56.736493"
+        "lastUpdated": "2019-01-21 09:36:36.973985"
     }
 }

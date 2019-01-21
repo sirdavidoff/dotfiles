@@ -453,7 +453,16 @@ def main():
             error(data['error'])
     
         # Create the card
-        r = requests.post(url+"/cards", params={'key':data['key'], 'token':data['token']}, data=data)
+        try:
+            r = requests.post(url+"/cards", params={'key':data['key'], 'token':data['token']}, data=data)
+        except:
+            error("Failed to create card - couldn't reach server")
+
+        try:
+            r.raise_for_status()
+        except:
+            error("Failed to create card - server returned error ({})".format(r.status_code))
+
         r.json()
 
         # Print a summary of exactly where the card was inserted
@@ -470,9 +479,10 @@ def main():
         elif 'error' in data:
             # Try taking off the last word of the input, generating the string again
             # and adding a warning that there's an error
-            details_parts = args.card_details.strip().split(' ')
-            args.card_details = " ".join(details_parts[0:-1])
-            new_data = parse_card_details(wf, args)
+            new_args = parser.parse_args()
+            details_parts = new_args.card_details.strip().split(' ')
+            new_args.card_details = " ".join(details_parts[0:-1])
+            new_data = parse_card_details(wf, new_args)
             if 'error' in new_data:
                 # TODO: Ideally we'd keep on taking words off until we get a non-error state
                 # Warning sign emoji
