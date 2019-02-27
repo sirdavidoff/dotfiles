@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.actsofdavid.alfred.compresspdf</string>
+	<key>connections</key>
+	<dict>
+		<key>126593B0-9AD8-4884-BFF0-35C699F4B28C</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>1F647062-466F-4B25-8AF3-AF9253F12506</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>David Roberts</string>
+	<key>description</key>
+	<string></string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Compress PDF</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>acceptsmulti</key>
+				<false/>
+				<key>filetypes</key>
+				<array/>
+				<key>name</key>
+				<string>Compress PDF</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.action</string>
+			<key>uid</key>
+			<string>126593B0-9AD8-4884-BFF0-35C699F4B28C</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>QUERY=$1
+
+# We swap stdout and stderr so that any errors go into $ERROR
+ERROR=$(/usr/bin/automator -i "$QUERY" "$DOTFILES/scripts/Compress PDF.workflow" 3&gt;&amp;2 2&gt;&amp;1 1&gt;&amp;3)
+
+# Print any errors to the Alfred log (stderr)
+#&gt;&amp;2 echo "Exit code $?"
+&gt;&amp;2 echo "Errors: $ERROR!"
+
+# If $ERROR is empty it's worked
+if [ -z "$ERROR" ]; then
+	osascript -e 'display notification "File compressed"'
+else
+	osascript -e 'display notification "'"$ERROR"'" with title "Compression failed"'
+fi</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>1F647062-466F-4B25-8AF3-AF9253F12506</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>126593B0-9AD8-4884-BFF0-35C699F4B28C</key>
+		<dict>
+			<key>xpos</key>
+			<integer>270</integer>
+			<key>ypos</key>
+			<integer>140</integer>
+		</dict>
+		<key>1F647062-466F-4B25-8AF3-AF9253F12506</key>
+		<dict>
+			<key>xpos</key>
+			<integer>570</integer>
+			<key>ypos</key>
+			<integer>270</integer>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string></string>
+</dict>
+</plist>

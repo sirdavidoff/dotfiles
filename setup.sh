@@ -11,6 +11,13 @@ function removeExisting() {
 
 
 
+
+echo "Setting up environment variables..."
+sed "s|DOTFILES_PATH|$SCRIPTPATH|g" env/environment_template.plist > environment.plist
+mv environment.plist "$HOME/Library/LaunchAgents"
+
+
+
 echo "Setting up Vim..."
 
 removeExisting ~/.vimrc

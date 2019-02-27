@@ -51,7 +51,7 @@
 			<key>config</key>
 			<dict>
 				<key>openwith</key>
-				<string>/usr/local/Cellar/macvim/8.0-135/MacVim.app</string>
+				<string>/Applications/MacVim.app</string>
 				<key>sourcefile</key>
 				<string></string>
 			</dict>

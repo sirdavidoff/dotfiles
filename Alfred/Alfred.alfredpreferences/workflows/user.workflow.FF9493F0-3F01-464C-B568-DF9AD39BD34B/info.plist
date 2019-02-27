@@ -86,7 +86,7 @@
 				<integer>102</integer>
 				<key>script</key>
 				<string>query=$1
-osascript "$HOME/dotfiles/scripts/Excel click style buttons.scpt" "$query"</string>
+osascript "$DOTFILES/scripts/Excel click style buttons.scpt" "$query"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>

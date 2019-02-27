@@ -1,5 +1,4 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*- 
+#!/usr/bin/env python# -*- coding: utf-8 -*- 
 
 # Adds a card to a Trello board
 #
@@ -439,10 +438,20 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("trello_key")
     parser.add_argument("trello_token")
-    parser.add_argument("board_id")
-    parser.add_argument("card_details", help=input_format)
+    parser.add_argument("board_id", nargs='?')
+    parser.add_argument("card_details", nargs='?', help=input_format)
     parser.add_argument("-s", "--script-filter", help="output result for Alfred script filter instead of creating card", action="store_true")
+    parser.add_argument("-r", "--refresh-boards", help="update the board info from Trello", action="store_true")
     args = parser.parse_args()
+
+    if args.refresh_boards:
+        get_boards_info(args.trello_key, args.trello_token, True)
+        print "Refreshing board data"
+        return
+
+    # If there's no -r flag set and we don't have the board_id or card_details, throw and error
+    if args.board_id is None or args.card_details is None:
+        parser.error("board_id and card_details are required as arguments (unless -r is set)")
 
     data = parse_card_details(wf, args)
 
@@ -506,6 +515,20 @@ def main():
             uid="a",
             valid=True
         )
+
+        # Add option to refresh data if required
+        if args.card_details.strip() == "" or \
+           args.card_details.strip().upper() in "Refresh board data".upper():
+            wf.add_item(
+                title="Refresh board data",
+                arg='-r {} {}"'.format(
+                    args.trello_key, 
+                    args.trello_token
+                ),
+                uid="trello_refresh",
+                valid=True
+            )
+
 
         wf.send_feedback()
 

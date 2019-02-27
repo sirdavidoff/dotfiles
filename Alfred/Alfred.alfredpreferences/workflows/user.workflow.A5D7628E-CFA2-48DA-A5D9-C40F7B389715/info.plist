@@ -10,7 +10,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>D8CBBF7F-E025-4A21-8BD9-2CFF1C0217C7</string>
+				<string>996CE6DF-B18B-48DD-9930-45B932D6CEEF</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -23,7 +23,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>159EF346-5367-4B92-A116-682A4A810B73</string>
+				<string>DEE2FCD5-5885-4B01-9C05-D8D72CEE2D20</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -43,24 +43,6 @@
 	<string>Message with Facebook/WhatsApp</string>
 	<key>objects</key>
 	<array>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>applescript</key>
-				<string>on alfred_script(q)
-  -- your script here
-  set scriptPath to (POSIX path of (path to home folder as text)) &amp; "dotfiles/scripts/Activate Chrome and compose FB message.scpt"log scriptPathrun script scriptPath with parameters {q}
-end alfred_script</string>
-				<key>cachescript</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.applescript</string>
-			<key>uid</key>
-			<string>D8CBBF7F-E025-4A21-8BD9-2CFF1C0217C7</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -85,20 +67,52 @@ end alfred_script</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>applescript</key>
-				<string>on alfred_script(q)
-  -- your script here
-  set scriptPath to (POSIX path of (path to home folder as text)) &amp; "dotfiles/scripts/Activate Chrome and compose WhatsApp message.scpt"log scriptPathrun script scriptPath with parameters {q}
-end alfred_script</string>
-				<key>cachescript</key>
-				<true/>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>query=$1
+
+osascript "$DOTFILES/scripts/Activate Chrome and compose FB message.scpt" "$query"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.applescript</string>
+			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>159EF346-5367-4B92-A116-682A4A810B73</string>
+			<string>996CE6DF-B18B-48DD-9930-45B932D6CEEF</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>query=$1
+
+osascript "$DOTFILES/scripts/Activate Chrome and compose WhatsApp message.scpt" "$query"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>DEE2FCD5-5885-4B01-9C05-D8D72CEE2D20</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -126,19 +140,19 @@ end alfred_script</string>
 	<string></string>
 	<key>uidata</key>
 	<dict>
-		<key>159EF346-5367-4B92-A116-682A4A810B73</key>
-		<dict>
-			<key>xpos</key>
-			<integer>520</integer>
-			<key>ypos</key>
-			<integer>270</integer>
-		</dict>
 		<key>842AA980-1FCF-4A54-B99B-C901956A4954</key>
 		<dict>
 			<key>xpos</key>
 			<integer>300</integer>
 			<key>ypos</key>
 			<real>60</real>
+		</dict>
+		<key>996CE6DF-B18B-48DD-9930-45B932D6CEEF</key>
+		<dict>
+			<key>xpos</key>
+			<integer>520</integer>
+			<key>ypos</key>
+			<integer>60</integer>
 		</dict>
 		<key>9F24A94D-09BA-4B27-8E8C-9FD13CC9BABF</key>
 		<dict>
@@ -147,12 +161,12 @@ end alfred_script</string>
 			<key>ypos</key>
 			<integer>270</integer>
 		</dict>
-		<key>D8CBBF7F-E025-4A21-8BD9-2CFF1C0217C7</key>
+		<key>DEE2FCD5-5885-4B01-9C05-D8D72CEE2D20</key>
 		<dict>
 			<key>xpos</key>
-			<integer>520</integer>
+			<integer>530</integer>
 			<key>ypos</key>
-			<integer>60</integer>
+			<integer>270</integer>
 		</dict>
 	</dict>
 	<key>webaddress</key>

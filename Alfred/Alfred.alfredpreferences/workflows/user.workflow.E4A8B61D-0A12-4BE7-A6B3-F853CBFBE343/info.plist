@@ -120,7 +120,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>cd $HOME/dotfiles/scripts
+				<string>cd $DOTFILES/scripts
 ./open_freshest_file.sh "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
@@ -175,7 +175,7 @@ end alfred_script</string>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>cd $HOME/dotfiles/scripts
+				<string>cd $DOTFILES/scripts
 ./open_freshest_file.sh "{query}" -echo</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
@@ -265,7 +265,7 @@ echo '{"items": [{"title":"Open last download", "subtitle":"'"$file"'"}]}'</stri
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>$HOME/dotfiles/scripts/open_freshest_file.sh "$HOME/Downloads"</string>
+				<string>$DOTFILES/scripts/open_freshest_file.sh "$HOME/Downloads"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -288,7 +288,7 @@ echo '{"items": [{"title":"Open last download", "subtitle":"'"$file"'"}]}'</stri
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>$HOME/dotfiles/scripts/open_freshest_file.sh "$HOME/Downloads" -echo</string>
+				<string>$DOTFILES/scripts/open_freshest_file.sh "$HOME/Downloads" -echo</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>

@@ -1,0 +1,4 @@
+To work properly, Excel focus formula bar.scpt need to be symlinked into the directory below.
+Note that the directory may not exist yet.
+
+~/Library/Application Scripts/com.microsoft.Excel

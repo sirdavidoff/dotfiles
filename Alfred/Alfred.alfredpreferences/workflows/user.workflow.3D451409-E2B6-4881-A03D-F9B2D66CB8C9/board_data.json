@@ -1,6 +1,6 @@
 {
     "5c18efa6f9a3fd88f0731bad": {
-        "first_list_id": "5c18efaa268d2a1d73baef2e", 
+        "first_list_id": "5c50830efdf58325f5c9ddef", 
         "labels": {
             "blue": "5c18efa6c8388fca220175b1", 
             "purple": "5c18efa6c8388fca220175af", 
@@ -12,15 +12,16 @@
         "lists": {
             "Other later": "5c18efe922e3ad3a98fe899f", 
             "Mobile": "5c18efaa268d2a1d73baef2e", 
-            "Data science": "5c18efdc2686b962e31a3722", 
+            "Data science later": "5c18efe00eaf4f3d9c56c280", 
             "Backend backend later": "5c18efe50be59d52ce3b7775", 
+            "To groom": "5c50830efdf58325f5c9ddef", 
             "Other": "5c18efe70df41e2d33057bd5", 
             "Mobile later": "5c18efb377b6465fc6a2c5fe", 
-            "Data science later": "5c18efe00eaf4f3d9c56c280", 
+            "Data science": "5c18efdc2686b962e31a3722", 
             "Backend": "5c3c631f9b5c624d881456c5"
         }, 
         "name": "Dev", 
-        "lastUpdated": "2019-01-21 09:36:36.973974"
+        "lastUpdated": "2019-02-26 17:51:24.315732"
     }, 
     "5b5b1e4bfd0be36b044d7072": {
         "first_list_id": "5b5b1e61a7d19114d1c97452", 
@@ -46,7 +47,7 @@
             "Queued": "5b61bcadef276427afe9d254"
         }, 
         "name": "Locarta Reports", 
-        "lastUpdated": "2019-01-21 09:36:36.973984"
+        "lastUpdated": "2019-02-26 17:51:24.315750"
     }, 
     "5b5b1de27cb0bf2776fb376e": {
         "first_list_id": "5b68702525ee497288c78b26", 
@@ -67,7 +68,7 @@
             "Projects": "5b68706e0fe0627aaea378c8"
         }, 
         "name": "Holger To Do", 
-        "lastUpdated": "2019-01-21 09:36:36.973982"
+        "lastUpdated": "2019-02-26 17:51:24.315745"
     }, 
     "5b56eb587d141d9fd06d8bfc": {
         "first_list_id": "5b5740a8146858ac55539823", 
@@ -93,7 +94,7 @@
             "Projects": "5b5740af14ef6c15086da35b"
         }, 
         "name": "Work", 
-        "lastUpdated": "2019-01-21 09:36:36.973987"
+        "lastUpdated": "2019-02-26 17:51:24.315755"
     }, 
     "5bd99c8bd768850228f6dcda": {
         "first_list_id": "5bd99d50b013b32002390c4a", 
@@ -104,6 +105,7 @@
             "yellow": "5bd99c8ba724a908c0dff59e", 
             "green": "5bd99c8ba724a908c0dff5a0", 
             "orange": "5bd99c8ba724a908c0dff59f", 
+            "to schedule tech interview": "5bd99c8ba724a908c0dff5a6", 
             "red": "5bd99c8ba724a908c0dff5a1"
         }, 
         "lists": {
@@ -114,11 +116,11 @@
             "Rejected": "5bd99d6a9e433d2cdcf22b99", 
             "Processed": "5bfe6dee24e90167be339bbe", 
             "Waiting for phone interview": "5bd99d5ea5ec3821ef9d8ada", 
-            "Reached Out": "5bd99d5732cc635640aead55", 
+            "fac": "5bd99d5732cc635640aead55", 
             "Offer made": "5bd99d70533fb384c332be71"
         }, 
         "name": "HR Backend Engineer", 
-        "lastUpdated": "2019-01-21 09:36:36.973980"
+        "lastUpdated": "2019-02-26 17:51:24.315742"
     }, 
     "5b59c0ec7365694784898cd8": {
         "first_list_id": "5b59c0fb91c5e74a79435282", 
@@ -139,6 +141,6 @@
             "Projects": "5b59c0ff002fdaeb33c8a1da"
         }, 
         "name": "Personal", 
-        "lastUpdated": "2019-01-21 09:36:36.973985"
+        "lastUpdated": "2019-02-26 17:51:24.315753"
     }
 }

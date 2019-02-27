@@ -14,14 +14,14 @@
 -- /
 hs.urlevent.bind('hypercmdu', function() 
   --local status, result, descriptor = hs.osascript.applescript("tell application \"Google Chrome\" to execute javascript \"$('#dscript_to_todo').click();\"")
-  os.execute('osascript "' .. os.getenv("HOME") .. '/dotfiles/scripts/Excel click style buttons.scpt"')
+  os.execute('osascript "' .. os.getenv("DOTFILES") .. '/scripts/Excel click style buttons.scpt"')
 end)
 
 local log = hs.logger.new('mymodule','debug')
 local keyDelay = 0
 
 -- Load the application-specific hotkey library
-dofile (os.getenv("HOME") .. "/dotfiles/hammerspoon/app_hotkey.lua")
+dofile (os.getenv("DOTFILES") .. "/hammerspoon/app_hotkey.lua")
 
 hs.window.animationDuration = 0
 
@@ -300,10 +300,10 @@ end)
 hs.urlevent.bind('hypercmdo', function() 
   if appRunning("Google Chrome") and hs.application("Google Chrome"):isFrontmost() then
     -- Run the Gmail labelling shortcuts
-    os.execute('osascript "' .. os.getenv("HOME") .. '/dotfiles/scripts/Chrome Gmail add label.scpt"')
+    os.execute('osascript "' .. os.getenv("DOTFILES") .. '/scripts/Chrome Gmail add label.scpt"')
   elseif appRunning("Evernote") and hs.application("Evernote"):isFrontmost() then
     -- Run the script that copies the current Evernote note into a new Gmail message
-    os.execute('osascript "' .. os.getenv("HOME") .. '/dotfiles/scripts/Evernote note to Gmail compose.scpt"')
+    os.execute('osascript "' .. os.getenv("DOTFILES") .. '/scripts/Evernote note to Gmail compose.scpt"')
   elseif appRunning("Microsoft Excel") and hs.application("Microsoft Excel"):isFrontmost() then
     -- Lock the cell reference with $ (easier than pressing Fn-F4)
     hs.eventtap.keyStroke({}, 'F4', keyDelay)
@@ -330,13 +330,12 @@ hs.urlevent.bind('hypercmdp', function()
   hs.eventtap.keyStroke({'cmd'}, 'v', keyDelay) 
 end)
 
--- Insert a bullet at the beginning of the line
+-- Bold the current line
 hs.urlevent.bind('hypercmdb', function() 
   --hs.eventtap.keyStroke({}, 'home', keyDelay) 
   hs.eventtap.keyStroke({'cmd'}, 'left', keyDelay)
-  hs.eventtap.keyStroke({''}, '-', keyDelay) 
-  hs.eventtap.keyStroke({''}, 'space', keyDelay) 
-  hs.eventtap.keyStroke({''}, 'down', keyDelay) 
+  hs.eventtap.keyStroke({'cmd', 'shift'}, 'right', keyDelay)
+  hs.eventtap.keyStroke({'cmd'}, 'b', keyDelay) 
 end)
 
 -- Delete the current word
@@ -375,7 +374,7 @@ hs.urlevent.bind('hypercmdh', function()
     hs.eventtap.keyStroke({'cmd'}, 'left', keyDelay)
   else
     -- Open Hubspot
-    os.execute('osascript "' .. os.getenv("HOME") .. '/dotfiles/scripts/Activate Chrome for Hubspot.scpt"')
+    os.execute('osascript "' .. os.getenv("DOTFILES") .. '/scripts/Activate Chrome for Hubspot.scpt"')
   end
 end)
 hs.urlevent.bind('hypercmdl', function() 
@@ -384,8 +383,11 @@ hs.urlevent.bind('hypercmdl', function()
   -- Expand selection right to end of data
     hs.eventtap.keyStroke({'cmd'}, 'right', keyDelay)
   else
-    -- Open Lever
-    os.execute('osascript "' .. os.getenv("HOME") .. '/dotfiles/scripts/Activate Chrome for Lever.scpt"')
+    -- Inset a bullet at the beginning of the current line and move down one line
+    hs.eventtap.keyStroke({'cmd'}, 'left', keyDelay)
+    hs.eventtap.keyStroke({''}, '-', keyDelay) 
+    hs.eventtap.keyStroke({''}, 'space', keyDelay) 
+    hs.eventtap.keyStroke({''}, 'down', keyDelay) 
   end
 end)
 
@@ -434,7 +436,7 @@ end)
 hs.urlevent.bind('hyperalto', function() 
   -- Run script for clicking todo list buttons, but only if we're in Chrome
   if appRunning("Google Chrome") and hs.application("Google Chrome"):isFrontmost() then
-    os.execute('osascript "' .. os.getenv("HOME") .. '/dotfiles/scripts/Chrome Gmail set focus.scpt" "todo"')
+    os.execute('osascript "' .. os.getenv("DOTFILES") .. '/scripts/Chrome Gmail set focus.scpt" "todo"')
   end
 end)
 
@@ -446,7 +448,7 @@ hs.urlevent.bind('hypershiftl', function() hs.eventtap.keyStroke({'shift'}, 'rig
 -- Paste without formatting
 hs.urlevent.bind('hypercmdv', function() 
   hs.alert.show("Pasting without formatting")
-  os.execute('osascript "' .. os.getenv("HOME") .. '/dotfiles/scripts/Paste without formatting.scpt"')
+  os.execute('osascript "' .. os.getenv("DOTFILES") .. '/scripts/Paste without formatting.scpt"')
 end)
 
 -- Show the clipboard history from Alfred
@@ -472,32 +474,32 @@ end)
 -- Activate todo list in Google Docs
 hs.hotkey.bind(hyper, 'u', function()
   --os.execute('osascript "' .. os.getenv("HOME") .. '/dotfiles/scripts/Activate Chrome for Google Docs todo.scpt"')
-  os.execute('osascript "' .. os.getenv("HOME") .. '/dotfiles/scripts/Activate Chrome for Trello.scpt"')
+  os.execute('osascript "' .. os.getenv("DOTFILES") .. '/scripts/Activate Chrome for Trello.scpt"')
 end)
 
 -- Activate Gmail
 hs.hotkey.bind(hyper, 'g', function()
-  os.execute('osascript "' .. os.getenv("HOME") .. '/dotfiles/scripts/Activate Chrome for Gmail.scpt"')
+  os.execute('osascript "' .. os.getenv("DOTFILES") .. '/scripts/Activate Chrome for Gmail.scpt"')
 end)
 
 -- Activate Google Calendar
 hs.hotkey.bind(hyper, 'c', function()
-  os.execute('osascript "' .. os.getenv("HOME") .. '/dotfiles/scripts/Activate Chrome for Google Calendar.scpt"')
+  os.execute('osascript "' .. os.getenv("DOTFILES") .. '/scripts/Activate Chrome for Google Calendar.scpt"')
 end)
 
 -- Activate Facebook Messenger
 hs.hotkey.bind(hyper, 'm', function()
-  os.execute('osascript "' .. os.getenv("HOME") .. '/dotfiles/scripts/Activate Chrome for Messenger.scpt"')
+  os.execute('osascript "' .. os.getenv("DOTFILES") .. '/scripts/Activate Chrome for Messenger.scpt"')
 end)
 
 -- Activate Whatsapp
 hs.hotkey.bind(hyper, 'r', function()
-  os.execute('osascript "' .. os.getenv("HOME") .. '/dotfiles/scripts/Activate Chrome for WhatsApp.scpt"')
+  os.execute('osascript "' .. os.getenv("DOTFILES") .. '/scripts/Activate Chrome for WhatsApp.scpt"')
 end)
 
 -- Activate JIRA
 hs.hotkey.bind(hyper, 'q', function()
-  os.execute('osascript "' .. os.getenv("HOME") .. '/dotfiles/scripts/Activate Pointwise Jira.scpt"')
+  os.execute('osascript "' .. os.getenv("DOTFILES") .. '/scripts/Activate Pointwise Jira.scpt"')
 end)
 
 -- Activate VMware
@@ -518,17 +520,17 @@ end)
 
 -- Open work mail
 hs.hotkey.bind(hyper, 'x', function()
-  os.execute('osascript "' .. os.getenv("HOME") .. '/dotfiles/scripts/Activate Chrome for Gmail (PointWise).scpt"')
+  os.execute('osascript "' .. os.getenv("DOTFILES") .. '/scripts/Activate Chrome for Gmail (PointWise).scpt"')
 end)
 
 -- Activate Chrome (going to last tab if we're already in Chrome)
 hs.hotkey.bind(hyper, 'space', function()
-  os.execute('osascript "' .. os.getenv("HOME") .. '/dotfiles/scripts/Activate Chrome or go to last tab.scpt"')
+  os.execute('osascript "' .. os.getenv("DOTFILES") .. '/scripts/Activate Chrome or go to last tab.scpt"')
 end)
 
 -- Name active application
 hs.urlevent.bind('hypercmda', function()
-  os.execute('osascript "' .. os.getenv("HOME") .. '/dotfiles/scripts/Name active application.scpt"')
+  os.execute('osascript "' .. os.getenv("DOTFILES") .. '/scripts/Name active application.scpt"')
 end)
 
 -- Activate PowerPoint
@@ -553,7 +555,7 @@ end)
 
 -- Activate Slack
 hs.hotkey.bind(hyper, 's', function()
-  os.execute('osascript "' .. os.getenv("HOME") .. '/dotfiles/scripts/Activate Chrome for Slack.scpt"')
+  os.execute('osascript "' .. os.getenv("DOTFILES") .. '/scripts/Activate Chrome for Slack.scpt"')
   -- For some reason applescript is faster than launchOrFocus
   --hs.osascript.applescript("tell application \"Slack\" to activate")
   --hs.application.launchOrFocus("Slack")
@@ -585,7 +587,7 @@ end)
 
 -- Display current track in spotify
 hs.urlevent.bind('hyperslash', function() 
-  os.execute('osascript "' .. os.getenv("HOME") .. '/dotfiles/scripts/Spotify display current track info.scpt"')
+  os.execute('osascript "' .. os.getenv("DOTFILES") .. '/scripts/Spotify display current track info.scpt"')
 end)
 
 -- Realign windows

@@ -62,8 +62,7 @@
 				<integer>102</integer>
 				<key>script</key>
 				<string>export PYTHONPATH=/Library/Python/2.7/site-packages
-python "$HOME/dotfiles/scripts/Google API/calendar_slot_options.py" "{query}"
-</string>
+python "$DOTFILES/scripts/Google API/calendar_slot_options.py" "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>

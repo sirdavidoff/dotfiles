@@ -38,9 +38,8 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>cd /Users/david/Downloads
-open -a "Adobe Photoshop CS6" "$(pwd)/$(ls -rt1 | tail -1)"
-</string>
+				<string>cd $HOME/Downloads
+open -a "Adobe Photoshop CS6" "$(pwd)/$(ls -rt1 | tail -1)"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -84,9 +83,9 @@ open -a "Adobe Photoshop CS6" "$(pwd)/$(ls -rt1 | tail -1)"
 		<key>457EA0A5-6D27-4699-BD30-F9CF66E66196</key>
 		<dict>
 			<key>xpos</key>
-			<integer>500</integer>
+			<integer>510</integer>
 			<key>ypos</key>
-			<real>80</real>
+			<integer>190</integer>
 		</dict>
 		<key>D6469E8D-D220-483F-A096-AC78698581B9</key>
 		<dict>
