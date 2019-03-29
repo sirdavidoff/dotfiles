@@ -21,7 +21,7 @@
             "Backend": "5c3c631f9b5c624d881456c5"
         }, 
         "name": "Dev", 
-        "lastUpdated": "2019-03-28 14:07:04.019286"
+        "lastUpdated": "2019-03-21 09:30:58.999295"
     }, 
     "5b5b1e4bfd0be36b044d7072": {
         "first_list_id": "5b5b1e61a7d19114d1c97452", 
@@ -47,7 +47,28 @@
             "Queued": "5b61bcadef276427afe9d254"
         }, 
         "name": "Locarta Reports", 
-        "lastUpdated": "2019-03-28 14:07:04.019314"
+        "lastUpdated": "2019-03-21 09:30:58.999306"
+    }, 
+    "5b5b1de27cb0bf2776fb376e": {
+        "first_list_id": "5b68702525ee497288c78b26", 
+        "labels": {
+            "blue": "5b5b1de29c16fb124a976d04", 
+            "purple": "5b5b1de29c16fb124a976d01", 
+            "yellow": "5b5b1de29c16fb124a976cfc", 
+            "green": "5b5b1de29c16fb124a976cf9", 
+            "orange": "5b5b1de29c16fb124a976cfd", 
+            "red": "5b5b1de29c16fb124a976cfb"
+        }, 
+        "lists": {
+            "Waiting for Feedback": "5b686d317592296a45e0fb81", 
+            "To Do": "5b5b1de27cb0bf2776fb376f", 
+            "Done": "5b5b1de27cb0bf2776fb3771", 
+            "Inbox": "5b68702525ee497288c78b26", 
+            "To do today": "5b686cda78cffb54bf3f8291", 
+            "Projects": "5b68706e0fe0627aaea378c8"
+        }, 
+        "name": "Holger To Do", 
+        "lastUpdated": "2019-03-21 09:30:58.999304"
     }, 
     "5b56eb587d141d9fd06d8bfc": {
         "first_list_id": "5b5740a8146858ac55539823", 
@@ -73,53 +94,7 @@
             "Projects": "5b5740af14ef6c15086da35b"
         }, 
         "name": "Work", 
-        "lastUpdated": "2019-03-28 14:07:04.019324"
-    }, 
-    "5b5b1de27cb0bf2776fb376e": {
-        "first_list_id": "5b68702525ee497288c78b26", 
-        "labels": {
-            "blue": "5b5b1de29c16fb124a976d04", 
-            "purple": "5b5b1de29c16fb124a976d01", 
-            "yellow": "5b5b1de29c16fb124a976cfc", 
-            "green": "5b5b1de29c16fb124a976cf9", 
-            "orange": "5b5b1de29c16fb124a976cfd", 
-            "red": "5b5b1de29c16fb124a976cfb"
-        }, 
-        "lists": {
-            "Waiting for Feedback": "5b686d317592296a45e0fb81", 
-            "To Do": "5b5b1de27cb0bf2776fb376f", 
-            "Done": "5b5b1de27cb0bf2776fb3771", 
-            "Inbox": "5b68702525ee497288c78b26", 
-            "To do today": "5b686cda78cffb54bf3f8291", 
-            "Projects": "5b68706e0fe0627aaea378c8"
-        }, 
-        "name": "Holger To Do", 
-        "lastUpdated": "2019-03-28 14:07:04.019308"
-    }, 
-    "5c99e442add3be18c0fd9381": {
-        "first_list_id": "5c99e446a0649032cef57747", 
-        "labels": {
-            "blue": "5c99e44291d0c2ddc5b30d38", 
-            "purple": "5c99e44291d0c2ddc5b30d3b", 
-            "yellow": "5c99e44291d0c2ddc5b30d33", 
-            "green": "5c99e44291d0c2ddc5b30d2c", 
-            "orange": "5c99e44291d0c2ddc5b30d25", 
-            "Reached out": "5c99e44291d0c2ddc5b30d2c", 
-            "red": "5c99e44291d0c2ddc5b30d2e"
-        }, 
-        "lists": {
-            "Task": "5c99ecb6d277018f8ef227fc", 
-            "2nd Interview + Task": "5c99e49d5d60ab5c7eedc493", 
-            "Inbound": "5c99e446a0649032cef57747", 
-            "Making final decision": "5c99e534d598f86013a4c318", 
-            "Rejected": "5c99e468aa39f9330be9d57e", 
-            "Processed": "5c99e4b991ef743acd1d90a3", 
-            "Final Interview": "5c99e462469d2436745970fd", 
-            "First phone interview": "5c99e4558a26fe7f26b6430c", 
-            "Offer made": "5c99e4669457fa5fa8faa215"
-        }, 
-        "name": "HR COO", 
-        "lastUpdated": "2019-03-28 14:07:04.019303"
+        "lastUpdated": "2019-03-21 09:30:58.999310"
     }, 
     "5bd99c8bd768850228f6dcda": {
         "first_list_id": "5bd99d50b013b32002390c4a", 
@@ -145,7 +120,7 @@
             "Offer made": "5bd99d70533fb384c332be71"
         }, 
         "name": "HR Backend Engineer", 
-        "lastUpdated": "2019-03-28 14:07:04.019298"
+        "lastUpdated": "2019-03-21 09:30:58.999302"
     }, 
     "5b59c0ec7365694784898cd8": {
         "first_list_id": "5b59c0fb91c5e74a79435282", 
@@ -166,6 +141,6 @@
             "Projects": "5b59c0ff002fdaeb33c8a1da"
         }, 
         "name": "Personal", 
-        "lastUpdated": "2019-03-28 14:07:04.019319"
+        "lastUpdated": "2019-03-21 09:30:58.999308"
     }
 }

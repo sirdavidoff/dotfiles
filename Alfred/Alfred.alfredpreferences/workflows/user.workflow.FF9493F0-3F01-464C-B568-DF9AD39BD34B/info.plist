@@ -6,6 +6,8 @@
 	<string>com.actsofdavid.alfred.formatexcelcells</string>
 	<key>connections</key>
 	<dict>
+		<key>911DC614-DB2D-4ECB-8B13-8254B1CCE15C</key>
+		<array/>
 		<key>D5994E7A-1B0E-4DDA-ACEE-BEA35F1F459F</key>
 		<array>
 			<dict>
@@ -86,7 +88,8 @@
 				<integer>102</integer>
 				<key>script</key>
 				<string>query=$1
-osascript "$DOTFILES/scripts/Excel click style buttons.scpt" "$query"</string>
+osascript "$DOTFILES/scripts/Excel/Excel click buttons.scpt" "$query"
+echo $query</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>

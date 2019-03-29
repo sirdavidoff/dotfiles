@@ -41,16 +41,27 @@ fi
 
 
 
-
 echo "Setting up Karabiner..."
 
 # Note the weird stuff going on with quotes here; apparently a ~ isn't expanded if it's in quotes
 DIR="$HOME/Library/Application Support/Karabiner"
 if [ -e "$DIR" ]; then
-	removeExisting "$DIR/private.xml"
-	ln -s "$SCRIPTPATH/karabiner/private.xml" "$DIR/private.xml"
+  removeExisting "$DIR/private.xml"
+  ln -s "$SCRIPTPATH/karabiner/private.xml" "$DIR/private.xml"
 else
-	echo "Karabiner not installed!"
+  echo "Karabiner not installed!"
+fi
+
+
+echo "Setting up Karabiner Elements..."
+
+# Note the weird stuff going on with quotes here; apparently a ~ isn't expanded if it's in quotes
+DIR="$HOME/.config/karabiner"
+if [ -e "$DIR" ]; then
+  removeExisting "$DIR/karabiner.json"
+  ln -s "$SCRIPTPATH/karabiner/karabiner.json" "$DIR/karabiner.json"
+else
+  echo "Karabiner Elements not installed!"
 fi
 
 
@@ -92,5 +103,6 @@ fi
 
 
 
-
-echo "You need to set up Alfred yourself, by going to settings and pointing the sync folder to Alfred.alfredpreferences"
+echo ""
+echo "You need to set up Alfred yourself, by going to settings and pointing the sync folder to:"
+echo "  $SCRIPTPATH/Alfred/Alfred.alfredpreferences"

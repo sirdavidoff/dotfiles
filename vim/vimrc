@@ -2,6 +2,9 @@
 "******************** Plugin management *******************
 "**********************************************************
 
+" We want Vim, not Vi
+set nocompatible
+
 " Check whether Vundle is already installed, and if not, install it
 let vundleJustInstalled=0 
 let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
@@ -14,10 +17,11 @@ endif
 " Initialise Vundle
 filetype off
 set rtp+=~/.vim/bundle/vundle
-call vundle#rc()
+call vundle#begin()
 
 " Define plugins for Vundle to manage
 Plugin 'gmarik/vundle'
+Plugin 'vim-scripts/LustyJuggler'
 Plugin 'tpope/vim-fugitive'
 Plugin 'altercation/vim-colors-solarized.git'
 Plugin 'vim-airline/vim-airline'
@@ -29,7 +33,6 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'valloric/youcompleteme'
 Plugin 'pangloss/vim-javascript'
 Plugin 'easymotion/vim-easymotion'
-Plugin 'LustyJuggler'
 
 " If we've just installed Vundle, fetch the plugins above.
 " To update in the future, run :PluginUpdate from Vim
@@ -37,6 +40,8 @@ Plugin 'LustyJuggler'
 if vundleJustInstalled == 1
      :PluginInstall
 endif
+
+call vundle#end()
 
 " Now we can turn our filetype functionality back on
 filetype plugin indent on
@@ -229,7 +234,7 @@ nnoremap <leader>a :%bdelete<CR>
 nnoremap <leader>x :%bdelete<CR>
 
 "" LustyJuggler configuration
-let g:LustyExplorerSuppressRubyWarning = 1
+let g:LustyExplorerSuppressRubyWarning = 0
 let g:LustyJugglerAltTabMode = 1
 nnoremap s :LustyJuggler<CR>
 
@@ -246,9 +251,6 @@ nnoremap t :CtrlP<CR>
 "**********************************************************
 
 set encoding=utf-8
-
-" We want Vim, not Vi
-set nocompatible
 
 "" Directories for swp files
 set backupdir=~/.vim/backup

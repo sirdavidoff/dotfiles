@@ -12,6 +12,12 @@
 -- ,
 -- .
 -- /
+
+function fileExists(name)
+    if type(name)~="string" then return false end
+    return os.rename(name,name) and true or false
+end
+
 hs.urlevent.bind('hypercmdu', function() 
   --local status, result, descriptor = hs.osascript.applescript("tell application \"Google Chrome\" to execute javascript \"$('#dscript_to_todo').click();\"")
   os.execute('osascript "' .. os.getenv("DOTFILES") .. '/scripts/Excel click style buttons.scpt"')
@@ -463,17 +469,20 @@ end)
 
 -- Activate Evernote, or switch to the 'todo' note if it's already frontmost
 hs.hotkey.bind(hyper, 'n', function()
-  --app = hs.application.find('Evernote')
-  --if app ~= nil and app.isFrontmost ~= nil and app:isFrontmost() then
-    --hs.eventtap.keyStroke({'cmd'}, '1', keyDelay)
-  --else
-    hs.application.launchOrFocus('Evernote')
-  --end
+  if fileExists('/Applications/Evernote.app') then
+    --app = hs.application.find('Evernote')
+    --if app ~= nil and app.isFrontmost ~= nil and app:isFrontmost() then
+      --hs.eventtap.keyStroke({'cmd'}, '1', keyDelay)
+    --else
+      hs.application.launchOrFocus('Evernote')
+    --end
+  else
+    os.execute('osascript "' .. os.getenv("DOTFILES") .. '/scripts/Activate Chrome for Evernote.scpt"')
+  end
 end)
 
--- Activate todo list in Google Docs
+-- Activate Trello
 hs.hotkey.bind(hyper, 'u', function()
-  --os.execute('osascript "' .. os.getenv("HOME") .. '/dotfiles/scripts/Activate Chrome for Google Docs todo.scpt"')
   os.execute('osascript "' .. os.getenv("DOTFILES") .. '/scripts/Activate Chrome for Trello.scpt"')
 end)
 
@@ -737,15 +746,59 @@ bindapp("Microsoft Excel", {"cmd"}, 'l', function()
     hs.eventtap.keyStroke({"ctrl"}, 'u', keyDelay) 
 end)
 
--- Fill down to the end of the adjacent column (to left) in Excel
+-- Click smart fill down in Excel
 bindapp("Microsoft Excel", {"cmd", "shift"}, 'd', function() 
-    keyDelay = 400000
-    hs.alert.show("Here")
-    hs.eventtap.keyStroke({}, 'left', keyDelay) 
-    hs.eventtap.keyStroke({"cmd"}, 'down', keyDelay) 
-    hs.eventtap.keyStroke({}, 'right', keyDelay) 
-    hs.eventtap.keyStroke({"cmd", "shift"}, 'up', keyDelay) 
-    hs.eventtap.keyStroke({"cmd"}, 'd', 400000) 
+  os.execute('osascript "' .. os.getenv("DOTFILES") .. '/scripts/Excel/Excel click buttons.scpt" smart_fill_down')
+end)
+
+-- Click smart fill right in Excel
+bindapp("Microsoft Excel", {"cmd", "shift"}, 'r', function() 
+  os.execute('osascript "' .. os.getenv("DOTFILES") .. '/scripts/Excel/Excel click buttons.scpt" smart_fill_right')
+end)
+
+-- Click fill right in Excel
+bindapp("Microsoft Excel", {"cmd"}, "'", function() 
+  os.execute('osascript "' .. os.getenv("DOTFILES") .. '/scripts/Excel/Excel click buttons.scpt" copy_right')
+end)
+
+-- Click label style in Excel
+bindapp("Microsoft Excel", {"cmd", "shift"}, "l", function() 
+  os.execute('osascript "' .. os.getenv("DOTFILES") .. '/scripts/Excel/Excel click buttons.scpt" label')
+end)
+
+-- Click calc style in Excel
+bindapp("Microsoft Excel", {"cmd", "shift"}, "c", function() 
+  os.execute('osascript "' .. os.getenv("DOTFILES") .. '/scripts/Excel/Excel click buttons.scpt" calc')
+end)
+
+-- Click header style in Excel
+bindapp("Microsoft Excel", {"cmd", "shift"}, "h", function() 
+  os.execute('osascript "' .. os.getenv("DOTFILES") .. '/scripts/Excel/Excel click buttons.scpt" header')
+end)
+
+-- Click input style in Excel
+bindapp("Microsoft Excel", {"cmd", "shift"}, "i", function() 
+  os.execute('osascript "' .. os.getenv("DOTFILES") .. '/scripts/Excel/Excel click buttons.scpt" input')
+end)
+
+-- Click output style in Excel
+bindapp("Microsoft Excel", {"cmd", "shift"}, "o", function() 
+  os.execute('osascript "' .. os.getenv("DOTFILES") .. '/scripts/Excel/Excel click buttons.scpt" output')
+end)
+
+-- Click plain style in Excel
+bindapp("Microsoft Excel", {"cmd", "shift"}, "x", function() 
+  os.execute('osascript "' .. os.getenv("DOTFILES") .. '/scripts/Excel/Excel click buttons.scpt" plain')
+end)
+
+-- Click general style in Excel
+bindapp("Microsoft Excel", {"cmd", "shift"}, "g", function() 
+  os.execute('osascript "' .. os.getenv("DOTFILES") .. '/scripts/Excel/Excel click buttons.scpt" general')
+end)
+
+-- Click percent style in Excel
+bindapp("Microsoft Excel", {"cmd", "shift"}, "5", function() 
+  os.execute('osascript "' .. os.getenv("DOTFILES") .. '/scripts/Excel/Excel click buttons.scpt" percent')
 end)
 
 -- Get moving to beginning and end of line to work as normal in iTerm and Excel

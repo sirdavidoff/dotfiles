@@ -45,6 +45,7 @@ chpwd() {
 
 # Customize to your needs...
 export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/opt/ruby/bin:$PATH"
 export PATH="$PATH:/Applications/MAMP/Library/bin"
 export PATH="$PATH:$HOME/tuxebo/svn/cake/console"
 export PATH="$PATH:/Library/PostgreSQL/bin"

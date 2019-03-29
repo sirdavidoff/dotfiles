@@ -504,13 +504,13 @@ def main():
             subtitle = card_details_string(data)
             
         wf.add_item(
-            title="Add '{}' to Trello".format(data['name']),
+            title=u"Add '{}' to Trello".format(data['name']),
             subtitle=subtitle,
-            arg='{} {} {} "{}"'.format(
+            arg=u'{} {} {} "{}"'.format(
                 args.trello_key, 
                 args.trello_token, 
                 args.board_id, 
-                args.card_details
+                wf.decode(args.card_details)
             ),
             uid="a",
             valid=True
