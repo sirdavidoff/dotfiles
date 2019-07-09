@@ -3,14 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string></string>
+	<string>com.actsofdavid.wgetdir</string>
 	<key>connections</key>
 	<dict>
-		<key>45324958-BBBE-4145-A42B-49CB80219E47</key>
+		<key>67884E1D-CE2B-4BA0-813B-79636FFA9006</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>135421A8-B623-4562-93A3-8044E22231E6</string>
+				<string>15048994-C241-427F-9BB4-71E78F7502CA</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -21,71 +21,69 @@
 		</array>
 	</dict>
 	<key>createdby</key>
-	<string>David Roberts</string>
+	<string></string>
 	<key>description</key>
 	<string></string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>Paste JIRA link</string>
+	<string>Wget directory</string>
 	<key>objects</key>
 	<array>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argumenttype</key>
+				<key>escaping</key>
 				<integer>0</integer>
-				<key>keyword</key>
-				<string>pl</string>
-				<key>subtext</key>
-				<string></string>
-				<key>text</key>
-				<string>Paste JIRA link</string>
-				<key>withspace</key>
-				<true/>
+				<key>script</key>
+				<string>cd Downloads; wget -c -r {query}</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
+			<string>alfred.workflow.action.terminalcommand</string>
 			<key>uid</key>
-			<string>45324958-BBBE-4145-A42B-49CB80219E47</string>
+			<string>15048994-C241-427F-9BB4-71E78F7502CA</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>autopaste</key>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>wget</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>Wget directory</string>
+				<key>withspace</key>
 				<true/>
-				<key>clipboardtext</key>
-				<string>https://pointwise.atlassian.net/browse/PW-{query}</string>
-				<key>transient</key>
-				<false/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
+			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
-			<string>135421A8-B623-4562-93A3-8044E22231E6</string>
+			<string>67884E1D-CE2B-4BA0-813B-79636FFA9006</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>1</integer>
 		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
 	<key>uidata</key>
 	<dict>
-		<key>135421A8-B623-4562-93A3-8044E22231E6</key>
+		<key>15048994-C241-427F-9BB4-71E78F7502CA</key>
 		<dict>
 			<key>xpos</key>
-			<integer>700</integer>
+			<integer>380</integer>
 			<key>ypos</key>
-			<real>10</real>
+			<integer>100</integer>
 		</dict>
-		<key>45324958-BBBE-4145-A42B-49CB80219E47</key>
+		<key>67884E1D-CE2B-4BA0-813B-79636FFA9006</key>
 		<dict>
 			<key>xpos</key>
-			<integer>300</integer>
+			<integer>150</integer>
 			<key>ypos</key>
-			<real>10</real>
+			<integer>100</integer>
 		</dict>
 	</dict>
 	<key>webaddress</key>

@@ -51,6 +51,7 @@ export PATH="$PATH:$HOME/tuxebo/svn/cake/console"
 export PATH="$PATH:/Library/PostgreSQL/bin"
 export PATH="$PATH:/Developer/SDKs/flex_sdk_4.6/bin"
 export PATH="$PATH:$HOME/Library/Python/2.7/bin"
+export PATH="$PATH:$HOME/Library/python/3.7/bin"
 
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home"
 

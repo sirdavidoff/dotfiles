@@ -4,5 +4,7 @@
 <dict>
 	<key>hidepreviewpanel</key>
 	<true/>
+	<key>sortkey</key>
+	<string>NSURLContentModificationDateKey</string>
 </dict>
 </plist>

@@ -6,11 +6,37 @@
 	<string></string>
 	<key>connections</key>
 	<dict>
+		<key>41FD7C94-448A-47A1-8A10-412DDEC4AE5A</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>C85DDDFA-B932-417B-AABD-BF592C0AA82B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>45324958-BBBE-4145-A42B-49CB80219E47</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>1E63D7AA-B51A-464B-966A-BCC59E8E48B2</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>5C7AA75D-681E-4EF5-852F-732C7C75CCC1</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>60C7BF36-9C32-4D40-83C2-9524AC3E442D</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -27,30 +53,9 @@
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>Open JIRA ticket</string>
+	<string>Locarta JIRA</string>
 	<key>objects</key>
 	<array>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>keyword</key>
-				<string>pw</string>
-				<key>subtext</key>
-				<string></string>
-				<key>text</key>
-				<string>Open JIRA ticket</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>45324958-BBBE-4145-A42B-49CB80219E47</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -70,6 +75,105 @@
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>pw</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>View JIRA ticket</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>45324958-BBBE-4145-A42B-49CB80219E47</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>pl</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>Paste JIRA ticket link</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>41FD7C94-448A-47A1-8A10-412DDEC4AE5A</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
+				<string>https://pointwise.atlassian.net/browse/PW-{query}</string>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>C85DDDFA-B932-417B-AABD-BF592C0AA82B</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>jc</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>Create JIRA ticket</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>5C7AA75D-681E-4EF5-852F-732C7C75CCC1</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>https://pointwise.atlassian.net/secure/CreateIssueDetails!init.jspa?pid=10000&amp;issuetype=3&amp;reporter=david.roberts%40pointwise.co</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>60C7BF36-9C32-4D40-83C2-9524AC3E442D</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
@@ -78,16 +182,44 @@
 		<key>1E63D7AA-B51A-464B-966A-BCC59E8E48B2</key>
 		<dict>
 			<key>xpos</key>
-			<integer>500</integer>
+			<integer>350</integer>
 			<key>ypos</key>
-			<real>10</real>
+			<integer>50</integer>
+		</dict>
+		<key>41FD7C94-448A-47A1-8A10-412DDEC4AE5A</key>
+		<dict>
+			<key>xpos</key>
+			<integer>90</integer>
+			<key>ypos</key>
+			<integer>215</integer>
 		</dict>
 		<key>45324958-BBBE-4145-A42B-49CB80219E47</key>
 		<dict>
 			<key>xpos</key>
-			<integer>300</integer>
+			<integer>95</integer>
 			<key>ypos</key>
-			<real>10</real>
+			<integer>50</integer>
+		</dict>
+		<key>5C7AA75D-681E-4EF5-852F-732C7C75CCC1</key>
+		<dict>
+			<key>xpos</key>
+			<integer>90</integer>
+			<key>ypos</key>
+			<integer>380</integer>
+		</dict>
+		<key>60C7BF36-9C32-4D40-83C2-9524AC3E442D</key>
+		<dict>
+			<key>xpos</key>
+			<integer>350</integer>
+			<key>ypos</key>
+			<integer>380</integer>
+		</dict>
+		<key>C85DDDFA-B932-417B-AABD-BF592C0AA82B</key>
+		<dict>
+			<key>xpos</key>
+			<integer>350</integer>
+			<key>ypos</key>
+			<integer>215</integer>
 		</dict>
 	</dict>
 	<key>webaddress</key>

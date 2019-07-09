@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "Hey {{applicant.first_name}}, good talking to you the other day.\n\nI enjoyed our conversation and would love to invite you to our offices in Berlin for the next phase. \n\nThe idea is to give you the opportunity to meet everyone else at Locarta and get a feel for what it would be like to work with us. We'll also do a few more questions like the ones we discussed on the phone, and you'll have the opportunity to meet Jan, our CEO. The whole thing shouldn't take longer than 2.5 hours.\n\nCould you let me know some dates (ideally in the next few days) when you'd be available to do this?\n\nThanks, and looking forward to taking this further,\n\n{{hiring_manager.name}}",
+    "uid" : "3BCCF365-8C2A-4B4F-A1AE-15BCDD705C72",
+    "name" : "Locarta office visit mail",
+    "keyword" : ""
+  }
+}

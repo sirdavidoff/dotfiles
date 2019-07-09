@@ -10,7 +10,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>2D1BFC03-8738-4481-80C0-6A1372604830</string>
+				<string>D02F953A-625C-433C-998D-A952CB47C69D</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -68,6 +68,29 @@ end alfred_script</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>osascript "$DOTFILES/scripts/Open frontmost in Windows.scpt" "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>D02F953A-625C-433C-998D-A952CB47C69D</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
@@ -86,6 +109,13 @@ end alfred_script</string>
 			<integer>300</integer>
 			<key>ypos</key>
 			<real>10</real>
+		</dict>
+		<key>D02F953A-625C-433C-998D-A952CB47C69D</key>
+		<dict>
+			<key>xpos</key>
+			<integer>510</integer>
+			<key>ypos</key>
+			<integer>140</integer>
 		</dict>
 	</dict>
 	<key>webaddress</key>

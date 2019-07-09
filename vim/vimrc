@@ -252,7 +252,8 @@ nnoremap t :CtrlP<CR>
 
 set encoding=utf-8
 
-"" Directories for swp files
+"" Directories for swp files - create first if it doesn't exist
+silent !mkdir ~/.vim/backup > /dev/null 2>&1
 set backupdir=~/.vim/backup
 set directory=~/.vim/backup
 

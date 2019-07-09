@@ -144,9 +144,10 @@ def match_keywords(keywords):
     matches = []
     for keyword in keywords:
         for board_id, board in boards.iteritems():
-            matches += match_details(board_id, 'board', keyword, {board['name']: board_id})
-            matches += match_details(board_id, 'list', keyword, board['lists'])
-            matches += match_details(board_id, 'label', keyword, board['labels'])
+            if 'lists' in board:
+                matches += match_details(board_id, 'board', keyword, {board['name']: board_id})
+                matches += match_details(board_id, 'list', keyword, board['lists'])
+                matches += match_details(board_id, 'label', keyword, board['labels'])
 
     # Sort the keywords
     # TODO: Is this sorting the right way?

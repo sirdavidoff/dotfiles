@@ -78,6 +78,8 @@ end)
 
 
 
+
+
 -- Define some keyboard modifier variables
 -- (Note: Capslock bound to cmd+alt+ctrl+shift via Seil and Karabiner)
 local hyper = {'cmd', 'alt', 'ctrl', 'shift'}
@@ -191,6 +193,28 @@ screenWatcher = hs.screen.watcher.new(screensChangedCallback)
 screenWatcher:start()
 updateWindows()
 
+
+-- Sets the dimensions of all Finder windows to a pre-defined size
+-- Called every time the Finder gets focus
+function resizeFinderWins(app_name, event, app)
+
+  if app_name ~= 'Finder' or event ~= hs.application.watcher.activated then 
+    return 
+  end
+
+  width = 1000
+  height = 700
+
+  wins = app:visibleWindows()
+  for i = 1, #wins do
+    win = wins[i]
+    win:setFrame(hs.geometry.rect(win:frame().x, win:frame().y, width, height))
+  end
+
+end
+
+finderWatcher = hs.application.watcher.new(resizeFinderWins)
+finderWatcher:start()
 
 
 hs.urlevent.bind('invalid_key', function() 
@@ -401,28 +425,40 @@ hs.urlevent.bind('hyperaltj', function()
   -- Excel: Move selection right to end of data
   -- Other: move down five lines
   -- For some reason calling hs.application() when Excel isn't running is really slow
+
+  if appRunning("Notion") and hs.application("Notion"):isFrontmost() then
+    -- Notion is a bit too slow, so we need to space out the keystrokes more
+    keyDelay = 30 * 1000 -- 30 ms
+  end
+
   if appRunning("Microsoft Excel") and hs.application("Microsoft Excel"):isFrontmost() then
     hs.eventtap.keyStroke({'cmd', 'shift'}, 'down', keyDelay)
   else
-    hs.eventtap.keyStroke({}, 'down', 0) 
-    hs.eventtap.keyStroke({}, 'down', 0) 
-    hs.eventtap.keyStroke({}, 'down', 0) 
-    hs.eventtap.keyStroke({}, 'down', 0) 
-    hs.eventtap.keyStroke({}, 'down', 0) 
+    hs.eventtap.keyStroke({}, 'down', keyDelay) 
+    hs.eventtap.keyStroke({}, 'down', keyDelay) 
+    hs.eventtap.keyStroke({}, 'down', keyDelay) 
+    hs.eventtap.keyStroke({}, 'down', keyDelay) 
+    hs.eventtap.keyStroke({}, 'down', keyDelay) 
   end
 end)
 hs.urlevent.bind('hyperaltk', function() 
   -- Excel: Move selection left to end of data
   -- Other: move up five lines
   -- For some reason calling hs.application() when Excel isn't running is really slow
+
+  if appRunning("Notion") and hs.application("Notion"):isFrontmost() then
+    -- Notion is a bit too slow, so we need to space out the keystrokes more
+    keyDelay = 30 * 1000 -- 30 ms
+  end
+
   if appRunning("Microsoft Excel") and hs.application("Microsoft Excel"):isFrontmost() then
     hs.eventtap.keyStroke({'cmd', 'shift'}, 'up', keyDelay)
   else
-    hs.eventtap.keyStroke({}, 'up', 0) 
-    hs.eventtap.keyStroke({}, 'up', 0) 
-    hs.eventtap.keyStroke({}, 'up', 0) 
-    hs.eventtap.keyStroke({}, 'up', 0) 
-    hs.eventtap.keyStroke({}, 'up', 0) 
+    hs.eventtap.keyStroke({}, 'up', keyDelay) 
+    hs.eventtap.keyStroke({}, 'up', keyDelay) 
+    hs.eventtap.keyStroke({}, 'up', keyDelay) 
+    hs.eventtap.keyStroke({}, 'up', keyDelay) 
+    hs.eventtap.keyStroke({}, 'up', keyDelay) 
   end
 end)
 hs.urlevent.bind('hyperalth', function() 
@@ -691,9 +727,15 @@ hs.hotkey.bind(hyper, '2', function() insertText('davewroberts@yahoo.com') end)
 hs.hotkey.bind(hyper, '3', function() insertText(os.date("%Y%m%d")) end)
 hs.hotkey.bind(hyper, '4', function() insertText('david.roberts@locarta.co') end)
 hs.hotkey.bind(hyper, '9', function() insertText('+4915753632560') end)
--- Insert the euro sign
+
+-- Insert closing wrap at end of current word
+-- (Copy the character to the left of the cursor, move to the end of
+--  the current word and paste it in)
 hs.urlevent.bind('hypercmde', function()
-  hs.eventtap.keyStroke({}, '€', keyDelay) 
+  hs.eventtap.keyStroke({'shift'}, 'left', keyDelay) 
+  hs.eventtap.keyStroke({'cmd'}, 'c', keyDelay) 
+  hs.eventtap.keyStroke({'alt'}, 'right', keyDelay) 
+  hs.eventtap.keyStroke({'cmd'}, 'v', keyDelay) 
 end)
 
 ---------------------------------------------
@@ -822,19 +864,6 @@ bindapp("Tableau", {"cmd"}, 'e', function()
   end)
 end)
 
--- When closing Private Internet Access, kill some other applications (pia_tray)
--- FIXME: Application watchers don't currently work for some processes (like pia_tray).
--- Need to wait for a version in which this is fixed
-function piaWatch(appName, eventType, appObject)
-    if (eventType == hs.application.watcher.launched) then
-        --if (appName == "pia_tray") then
-          --hs.alert.show(appName .. " opened")
-        --end
-    end
-end
-local piaWatcher = hs.application.watcher.new(piaWatch)
-piaWatcher:start()
-
 -- Maximise the window
 hs.hotkey.bind(hyper, 'up', function() 
   local win = hs.window.focusedWindow()
@@ -882,11 +911,11 @@ local lastSSID = hs.wifi.currentNetwork()
 function ssidChangedCallback()
     newSSID = hs.wifi.currentNetwork()
 
-    if newSSID == homeSSID and lastSSID ~= homeSSID then
+    if newSSID == homeSSID then
         -- We just joined our home WiFi network
-        hs.audiodevice.defaultOutputDevice():setVolume(50)
-    elseif newSSID ~= homeSSID and lastSSID == homeSSID then
-        -- We just departed our home WiFi network
+        hs.audiodevice.defaultOutputDevice():setVolume(70)
+    elseif newSSID ~= homeSSID then
+        -- We just joined a non-home WiFi network
         hs.audiodevice.defaultOutputDevice():setVolume(0)
     end
 

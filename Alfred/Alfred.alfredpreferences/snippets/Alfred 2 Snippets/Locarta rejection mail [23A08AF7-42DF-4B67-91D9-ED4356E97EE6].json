@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "Dear {{applicant.name}},\n\nThanks again for taking the time to chat with us about the {{rejected_jobs}} position. I’m sorry to say that we won't be moving forward with your application at this time.\n\nUnfortunately,...\n\nNevertheless I wish you all the best in your job search! Good luck with your future endeavours.\n\nYours,",
+    "uid" : "23A08AF7-42DF-4B67-91D9-ED4356E97EE6",
+    "name" : "Locarta rejection mail",
+    "keyword" : ""
+  }
+}

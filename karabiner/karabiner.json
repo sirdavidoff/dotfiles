@@ -1,23 +1,23 @@
 {
     "global": {
         "check_for_updates_on_startup": true,
-        "show_in_menu_bar": true,
+        "show_in_menu_bar": false,
         "show_profile_name_in_menu_bar": false
     },
     "profiles": [
         {
             "complex_modifications": {
                 "parameters": {
-                    "basic.simultaneous_threshold_milliseconds": 50,
+                    "basic.simultaneous_threshold_milliseconds": 250,
                     "basic.to_delayed_action_delay_milliseconds": 500,
                     "basic.to_if_alone_timeout_milliseconds": 1000,
-                    "basic.to_if_held_down_threshold_milliseconds": 500
+                    "basic.to_if_held_down_threshold_milliseconds": 500,
+                    "mouse_motion_to_scroll.speed": 100
                 },
                 "rules": [
                     {
                         "description": "Hyper-cmd combinations to Hammerspoon events",
                         "manipulators": [
-
                             {
                                 "from": {
                                     "simultaneous": [
@@ -66,7 +66,6 @@
                                 ],
                                 "type": "basic"
                             },
-
                             {
                                 "from": {
                                     "simultaneous": [
@@ -115,7 +114,6 @@
                                 ],
                                 "type": "basic"
                             },
-
                             {
                                 "from": {
                                     "simultaneous": [
@@ -164,7 +162,6 @@
                                 ],
                                 "type": "basic"
                             },
-
                             {
                                 "from": {
                                     "simultaneous": [
@@ -213,7 +210,6 @@
                                 ],
                                 "type": "basic"
                             },
-
                             {
                                 "from": {
                                     "simultaneous": [
@@ -262,7 +258,6 @@
                                 ],
                                 "type": "basic"
                             },
-
                             {
                                 "from": {
                                     "simultaneous": [
@@ -311,7 +306,6 @@
                                 ],
                                 "type": "basic"
                             },
-
                             {
                                 "from": {
                                     "simultaneous": [
@@ -360,7 +354,6 @@
                                 ],
                                 "type": "basic"
                             },
-
                             {
                                 "from": {
                                     "simultaneous": [
@@ -409,7 +402,6 @@
                                 ],
                                 "type": "basic"
                             },
-
                             {
                                 "from": {
                                     "simultaneous": [
@@ -458,7 +450,6 @@
                                 ],
                                 "type": "basic"
                             },
-
                             {
                                 "from": {
                                     "simultaneous": [
@@ -507,7 +498,6 @@
                                 ],
                                 "type": "basic"
                             },
-
                             {
                                 "from": {
                                     "simultaneous": [
@@ -556,7 +546,6 @@
                                 ],
                                 "type": "basic"
                             },
-
                             {
                                 "from": {
                                     "simultaneous": [
@@ -605,7 +594,6 @@
                                 ],
                                 "type": "basic"
                             },
-
                             {
                                 "from": {
                                     "simultaneous": [
@@ -654,7 +642,6 @@
                                 ],
                                 "type": "basic"
                             },
-
                             {
                                 "from": {
                                     "simultaneous": [
@@ -703,7 +690,6 @@
                                 ],
                                 "type": "basic"
                             },
-
                             {
                                 "from": {
                                     "simultaneous": [
@@ -752,7 +738,6 @@
                                 ],
                                 "type": "basic"
                             },
-
                             {
                                 "from": {
                                     "simultaneous": [
@@ -801,7 +786,6 @@
                                 ],
                                 "type": "basic"
                             },
-
                             {
                                 "from": {
                                     "simultaneous": [
@@ -850,7 +834,6 @@
                                 ],
                                 "type": "basic"
                             },
-
                             {
                                 "from": {
                                     "simultaneous": [
@@ -899,14 +882,11 @@
                                 ],
                                 "type": "basic"
                             }
-
                         ]
                     },
-
                     {
                         "description": "Hyper-option combinations to Hammerspoon events",
                         "manipulators": [
-
                             {
                                 "from": {
                                     "simultaneous": [
@@ -955,7 +935,6 @@
                                 ],
                                 "type": "basic"
                             },
-
                             {
                                 "from": {
                                     "simultaneous": [
@@ -1004,7 +983,6 @@
                                 ],
                                 "type": "basic"
                             },
-
                             {
                                 "from": {
                                     "simultaneous": [
@@ -1053,7 +1031,6 @@
                                 ],
                                 "type": "basic"
                             },
-
                             {
                                 "from": {
                                     "simultaneous": [
@@ -1102,7 +1079,6 @@
                                 ],
                                 "type": "basic"
                             },
-
                             {
                                 "from": {
                                     "simultaneous": [
@@ -1151,7 +1127,6 @@
                                 ],
                                 "type": "basic"
                             },
-
                             {
                                 "from": {
                                     "simultaneous": [
@@ -1200,7 +1175,6 @@
                                 ],
                                 "type": "basic"
                             },
-
                             {
                                 "from": {
                                     "simultaneous": [
@@ -1249,14 +1223,11 @@
                                 ],
                                 "type": "basic"
                             }
-
                         ]
                     },
-
                     {
                         "description": "Hyper-shift combinations to Hammerspoon events",
                         "manipulators": [
-
                             {
                                 "from": {
                                     "simultaneous": [
@@ -1305,7 +1276,6 @@
                                 ],
                                 "type": "basic"
                             },
-
                             {
                                 "from": {
                                     "simultaneous": [
@@ -1354,7 +1324,6 @@
                                 ],
                                 "type": "basic"
                             },
-
                             {
                                 "from": {
                                     "simultaneous": [
@@ -1403,7 +1372,6 @@
                                 ],
                                 "type": "basic"
                             },
-
                             {
                                 "from": {
                                     "simultaneous": [
@@ -1452,10 +1420,8 @@
                                 ],
                                 "type": "basic"
                             }
-
                         ]
                     },
-
                     {
                         "description": "Caps lock to hyper (right command+control+option+shift) or esc when pressed alone",
                         "manipulators": [
@@ -1520,7 +1486,7 @@
                         "key_code": "f4"
                     },
                     "to": {
-                        "key_code": "launchpad"
+                        "key_code": "dashboard"
                     }
                 },
                 {
@@ -1589,10 +1555,14 @@
                 }
             ],
             "name": "Default profile",
+            "parameters": {
+                "delay_milliseconds_before_open_device": 1000
+            },
             "selected": true,
             "simple_modifications": [],
             "virtual_hid_keyboard": {
-                "country_code": 0
+                "country_code": 0,
+                "mouse_key_xy_scale": 100
             }
         }
     ]

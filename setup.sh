@@ -23,9 +23,13 @@ echo "Setting up Vim..."
 removeExisting ~/.vimrc
 ln -s "$SCRIPTPATH/vim/vimrc" ~/.vimrc
 
-removeExisting ~/.vim
-ln -s "$SCRIPTPATH/vim" ~/.vim
-
+# Remove links vim folder in dotfiles that may have been created
+# by earlier version of this script
+if [ -L ~/.vim ]; then
+  rm ~/.vim
+fi
+# Create the .vim dir if it doesn't exist already
+mkdir .vim > /dev/null 2>&1
 
 
 

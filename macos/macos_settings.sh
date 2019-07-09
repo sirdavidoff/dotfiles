@@ -558,3 +558,12 @@ for app in "Activity Monitor" \
 	killall "${app}" &> /dev/null
 done
 echo "Done. Note that some of these changes require a logout/restart to take effect."
+
+# Show the debug menu in Reminders.app
+defaults write com.apple.reminders RemindersDebugMenu -boolean true
+
+# Make the menu bar dark (but nothing else)
+defaults write -g NSRequiresAquaSystemAppearance -bool Yes
+
+# Show the dashboard as an overlay
+defaults write com.apple.dock dashboard-in-overlay -bool true

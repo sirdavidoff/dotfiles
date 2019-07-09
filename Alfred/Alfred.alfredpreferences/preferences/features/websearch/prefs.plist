@@ -4,6 +4,21 @@
 <dict>
 	<key>customSites</key>
 	<dict>
+		<key>43F3F7FC-A83F-4927-A664-DEBAE40C0C53</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>gif</string>
+			<key>spaces</key>
+			<string>-</string>
+			<key>text</key>
+			<string>Giphy search</string>
+			<key>url</key>
+			<string>https://giphy.com/search/{query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
 		<key>88FF99C7-FFC0-44A1-A547-65F28195597B</key>
 		<dict>
 			<key>enabled</key>
