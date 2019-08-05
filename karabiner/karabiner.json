@@ -8,7 +8,7 @@
         {
             "complex_modifications": {
                 "parameters": {
-                    "basic.simultaneous_threshold_milliseconds": 250,
+                    "basic.simultaneous_threshold_milliseconds": 800,
                     "basic.to_delayed_action_delay_milliseconds": 500,
                     "basic.to_if_alone_timeout_milliseconds": 1000,
                     "basic.to_if_held_down_threshold_milliseconds": 500,
@@ -446,6 +446,54 @@
                                 "to": [
                                     {
                                         "shell_command": "open -g hammerspoon://hypercmdm"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "simultaneous": [
+                                        {
+                                            "key_code": "left_command"
+                                        },
+                                        {
+                                            "key_code": "caps_lock"
+                                        },
+                                        {
+                                            "key_code": "n"
+                                        }
+                                    ],
+                                    "simultaneous_options": {
+                                        "key_down_order": "strict"
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "shell_command": "open -g hammerspoon://hypercmdn"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "simultaneous": [
+                                        {
+                                            "key_code": "caps_lock"
+                                        },
+                                        {
+                                            "key_code": "left_command"
+                                        },
+                                        {
+                                            "key_code": "n"
+                                        }
+                                    ],
+                                    "simultaneous_options": {
+                                        "key_down_order": "strict"
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "shell_command": "open -g hammerspoon://hypercmdn"
                                     }
                                 ],
                                 "type": "basic"

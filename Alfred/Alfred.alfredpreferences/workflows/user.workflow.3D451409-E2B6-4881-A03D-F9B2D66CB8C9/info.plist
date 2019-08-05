@@ -155,6 +155,8 @@
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
@@ -177,7 +179,7 @@
 				<string># Fill these in yourself
 KEY='2a3af0cbdc9f6e22a9b5ac8f5637ce38'
 TOKEN='2f11dc1f29a54ca673a3ebf9eaeb6b677c23da2157b37ebbd9f3455391ae798c'
-DEFAULT_BOARD_ID='5b56eb587d141d9fd06d8bfc'
+DEFAULT_BOARD_ID='5d3b1b7f557ad38ec4dc0ad6'
 
 /usr/local/bin/python trello_add.py -s $KEY $TOKEN $DEFAULT_BOARD_ID "{query}"
 # echo trello_add.py $KEY $TOKEN $DEFAULT_BOARD_ID "{query}"</string>
@@ -199,7 +201,7 @@ DEFAULT_BOARD_ID='5b56eb587d141d9fd06d8bfc'
 			<key>uid</key>
 			<string>76568C83-0C36-4082-9D66-4397C6AAFDC3</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>

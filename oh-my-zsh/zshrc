@@ -52,6 +52,7 @@ export PATH="$PATH:/Library/PostgreSQL/bin"
 export PATH="$PATH:/Developer/SDKs/flex_sdk_4.6/bin"
 export PATH="$PATH:$HOME/Library/Python/2.7/bin"
 export PATH="$PATH:$HOME/Library/python/3.7/bin"
+export PATH="$PATH:$HOME/miniconda3/bin"
 
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home"
 
@@ -89,3 +90,19 @@ alias gmb="ssh david@vpn.loki256.xyz"
 alias gmbd="sftp david@vpn.loki256.xyz:/home/deluge"
 alias is="/Users/david/Google\ Drive/Analysis/Server\ data\ processing/import.sh server"
 alias il="/Users/david/Google\ Drive/Analysis/Server\ data\ processing/import.sh local"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/david/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/david/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/david/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/david/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+

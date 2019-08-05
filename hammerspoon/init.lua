@@ -87,17 +87,19 @@ local hyper = {'cmd', 'alt', 'ctrl', 'shift'}
 -- We use this to keep track of whether the first (main) screen has changed
 local firstScreenName = ""
 
-local workScreenName = "DELL U2414H"
+local workScreenName = "BenQ GL2760"
 local workScreenLayout = {
   {"MacVim", nil, workScreenName, {x=0, y=0, w=0.5, h=1}, nil, nil, nil},
   {"Google Chrome", nil, workScreenName, {x=0, y=0, w=0.8, h=1}, nil, nil, nil},
   {"Firefox", nil, workScreenName, {x=0, y=0, w=0.8, h=1}, nil, nil, nil},
   {"Evernote", nil, workScreenName, {x=0, y=0, w=0.8, h=1}, nil, nil, nil},
+  {"Notion", nil, workScreenName, {x=0, y=0, w=0.8, h=1}, nil, nil, nil},
   {"Spotify", nil, workScreenName, {x=0, y=0, w=0.8, h=1}, nil, nil, nil},
   {"VMware Fusion", nil, workScreenName, {x=0, y=0, w=1, h=1}, nil, nil, nil},
   {"Adobe Illustrator", nil, workScreenName, {x=0, y=0, w=1, h=1}, nil, nil, nil},
   {"Adobe Photoshop CS6", nil, workScreenName, {x=0, y=0, w=1, h=1}, nil, nil, nil},
-  {"Slack", nil, workScreenName, {x=0, y=0, w=0.5, h=1}, nil, nil, nil},
+  {"Slack", nil, workScreenName, {x=0, y=0, w=0.8, h=1}, nil, nil, nil},
+  {"Telegram", nil, workScreenName, {x=0, y=0, w=0.5, h=1}, nil, nil, nil},
   {"Skype", nil, workScreenName, {x=0, y=0, w=0.5, h=1}, nil, nil, nil},
   {"Microsoft Excel", nil, workScreenName, {x=0, y=0, w=1, h=1}, nil, nil, nil},
   {"Microsoft Powerpoint", nil, workScreenName, {x=0, y=0, w=1, h=1}, nil, nil, nil},
@@ -113,11 +115,13 @@ local laptopScreenLayout = {
   {"Google Chrome", nil, laptopScreenName, {x=0, y=0, w=1, h=1}, nil, nil, nil},
   {"Firefox", nil, laptopScreenName, {x=0, y=0, w=1, h=1}, nil, nil, nil},
   {"Evernote", nil, laptopScreenName, {x=0, y=0, w=0.9, h=1}, nil, nil, nil},
+  {"Notion", nil, laptopScreenName, {x=0, y=0, w=0.9, h=1}, nil, nil, nil},
   {"Spotify", nil, laptopScreenName, {x=0, y=0, w=0.9, h=1}, nil, nil, nil},
   {"VMware Fusion", nil, laptopScreenName, {x=0, y=0, w=1, h=1}, nil, nil, nil},
   {"Adobe Illustrator", nil, laptopScreenName, {x=0, y=0, w=1, h=1}, nil, nil, nil},
   {"Adobe Photoshop CS6", nil, laptopScreenName, {x=0, y=0, w=1, h=1}, nil, nil, nil},
   {"Slack", nil, workScreenName, {x=0, y=0, w=0.7, h=1}, nil, nil, nil},
+  {"Telegram", nil, workScreenName, {x=0, y=0, w=0.7, h=1}, nil, nil, nil},
   {"Skype", nil, workScreenName, {x=0, y=0, w=0.7, h=1}, nil, nil, nil},
   {"Microsoft Excel", nil, workScreenName, {x=0, y=0, w=1, h=1}, nil, nil, nil},
   {"Microsoft Powerpoint", nil, workScreenName, {x=0, y=0, w=1, h=1}, nil, nil, nil},
@@ -314,11 +318,6 @@ hs.hotkey.bind(hyper, 'd', nil, function()
     hs.eventtap.keyStroke({'cmd'}, 'x', 500000)
     hs.eventtap.keyStroke({}, 'delete', keyDelay)
   end
-end)
--- multiple instances for some reason
-hs.urlevent.bind('hypercmdm', function()
-
-  --apps = hs.application.runningApplications()
 end)
 
 -- Open line below/above
@@ -517,6 +516,11 @@ hs.hotkey.bind(hyper, 'n', function()
   end
 end)
 
+-- Activate Notion
+hs.urlevent.bind('hypercmdn', function()
+  hs.application.launchOrFocus("Notion")
+end)
+
 -- Activate Trello
 hs.hotkey.bind(hyper, 'u', function()
   os.execute('osascript "' .. os.getenv("DOTFILES") .. '/scripts/Activate Chrome for Trello.scpt"')
@@ -595,15 +599,15 @@ end)
 
 -- Open Google Drive folder
 hs.urlevent.bind('hypercmds', function()
-  os.execute('open \"' .. os.getenv("HOME") .. '/Google Drive\"')
+  os.execute('open \"' .. os.getenv("HOME") .. '/Canotic Drive\"')
 end)
 
--- Activate Slack
+-- Activate Telegram
 hs.hotkey.bind(hyper, 's', function()
-  os.execute('osascript "' .. os.getenv("DOTFILES") .. '/scripts/Activate Chrome for Slack.scpt"')
+  --os.execute('osascript "' .. os.getenv("DOTFILES") .. '/scripts/Activate Chrome for Slack.scpt"')
   -- For some reason applescript is faster than launchOrFocus
   --hs.osascript.applescript("tell application \"Slack\" to activate")
-  --hs.application.launchOrFocus("Slack")
+  hs.application.launchOrFocus("Telegram")
 end)
 
 -- Activate iTerm

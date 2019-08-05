@@ -21,7 +21,7 @@
             "Backend": "5c3c631f9b5c624d881456c5"
         }, 
         "name": "Dev", 
-        "lastUpdated": "2019-08-04 21:03:49.400803"
+        "lastUpdated": "2019-07-18 15:56:02.601917"
     }, 
     "5b5b1e4bfd0be36b044d7072": {
         "first_list_id": "5b5b1e61a7d19114d1c97452", 
@@ -47,52 +47,33 @@
             "Queued": "5b61bcadef276427afe9d254"
         }, 
         "name": "Locarta Reports", 
-        "lastUpdated": "2019-08-04 21:03:49.400817"
+        "lastUpdated": "2019-07-18 15:56:02.601929"
     }, 
-    "5d3b1b7f557ad38ec4dc0ad6": {
-        "first_list_id": "5d3b1b88cf72fd65d172575b", 
+    "5b56eb587d141d9fd06d8bfc": {
+        "first_list_id": "5b5740a8146858ac55539823", 
         "labels": {
-            "blue": "5d3b1b7faf988c41f21cd383", 
-            "purple": "5d3b1b7faf988c41f21cd384", 
-            "yellow": "5d3b1b7faf988c41f21cd37e", 
-            "green": "5d3b1b7faf988c41f21cd37d", 
-            "orange": "5d3b1b7faf988c41f21cd37f", 
-            "red": "5d3b1b7faf988c41f21cd380"
+            "blue": "5b56eb589c16fb124aa41344", 
+            "purple": "5b56eb589c16fb124aa41343", 
+            "Big": "5b56eb589c16fb124aa41343", 
+            "Quite big": "5b56eb589c16fb124aa41344", 
+            "yellow": "5b56eb589c16fb124aa4133c", 
+            "green": "5b56eb589c16fb124aa4133d", 
+            "orange": "5b56eb589c16fb124aa4133e", 
+            "Snoozed": "5b56eb589c16fb124aa4133c", 
+            "red": "5b56eb589c16fb124aa41340"
         }, 
         "lists": {
-            "Unprocessed": "5d3b1b88cf72fd65d172575b", 
-            "Later": "5d3b1b90c1f9c63d4c5cb61e", 
-            "Projects": "5d3b1b8c361b465841ba5189", 
-            "Recurring": "5d3b1ba6737be76687e8978f", 
-            "Today": "5d3b1b8e1f582b479c0d097d", 
-            "Blocked": "5d3b1b923046bd2e30073d77"
+            "Later": "5b574f20e90c734e513b4918", 
+            "Jan": "5bec244f4a54c13c38dd5713", 
+            "Daniel": "5d00c4311c931b8009222782", 
+            "Inbox": "5b5740a8146858ac55539823", 
+            "Blocked": "5b574fb9a618bca5a964db94", 
+            "Recurring": "5b59c823226eeeb3d24ca4da", 
+            "Today": "5b574f1cd74cfa9746c4e7a7", 
+            "Projects": "5b5740af14ef6c15086da35b"
         }, 
         "name": "Work", 
-        "lastUpdated": "2019-08-04 21:03:49.400820"
-    }, 
-    "5b59c0ec7365694784898cd8": {
-        "first_list_id": "5b59c0fb91c5e74a79435282", 
-        "labels": {
-            "blue": "5b59c0ec9c16fb124ac7b82e", 
-            "purple": "5b59c0ec9c16fb124ac7b82f", 
-            "yellow": "5b59c0ec9c16fb124ac7b828", 
-            "green": "5b59c0ec9c16fb124ac7b829", 
-            "orange": "5b59c0ec9c16fb124ac7b82a", 
-            "red": "5b59c0ec9c16fb124ac7b82b"
-        }, 
-        "lists": {
-            "Buy": "5b59c10675d144c4790cce66", 
-            "Mila present ideas": "5be1b65cb98723768d7e9bea", 
-            "Recurring": "5d3ebe5ff7280d33a8958a5b", 
-            "Job": "5d25acb18cf48871fef4aa52", 
-            "Inbox": "5b59c0fb91c5e74a79435282", 
-            "Blocked": "5d3ebe5c02ec6a0b60eb900c", 
-            "Todo": "5b59c100c8b03334e3930153", 
-            "Projects": "5b59c0ff002fdaeb33c8a1da", 
-            "Some day": "5b59c1ed5a42529035afd563"
-        }, 
-        "name": "Personal", 
-        "lastUpdated": "2019-08-04 21:03:49.400819"
+        "lastUpdated": "2019-07-18 15:56:02.601932"
     }, 
     "5cff77f435ef578d0ef08105": {
         "first_list_id": "5d00c8600c5a338b33b63717", 
@@ -111,13 +92,12 @@
             "Later": "5cff77f435ef578d0ef08106", 
             "Doing Today": "5cff77f435ef578d0ef08107", 
             "Unprocessed/to be sorted": "5d00c8600c5a338b33b63717", 
-            "Potential Projects": "5d4449500e91e90981541e18", 
-            "Much Later": "5d19d50630641860d32fdb48", 
             "Pending/Awaiting Response": "5cffb759728e6a439694d75b", 
+            "Much Later": "5d19d50630641860d32fdb48", 
             "Projects": "5d020b6600818070d957dbc5"
         }, 
         "name": "Daniel's Board", 
-        "lastUpdated": "2019-08-04 21:03:49.400793"
+        "lastUpdated": "2019-07-18 15:56:02.601908"
     }, 
     "5cd2ac4b6fe9fd5adcf02125": {
         "first_list_id": "5cd2ac56b5800728a024657f", 
@@ -142,7 +122,7 @@
             "Offer made": "5cd2ac6b0dc99d6db08e3078"
         }, 
         "name": "HR Tech TL", 
-        "lastUpdated": "2019-08-04 21:03:49.400810"
+        "lastUpdated": "2019-07-18 15:56:02.601925"
     }, 
     "5cd2ab55c6c4e42a51f003b9": {
         "first_list_id": "5cd2ab5a1dd24887b06b15a9", 
@@ -168,7 +148,7 @@
             "Offer made": "5cd2ab6c3d850c8ea3e6b62e"
         }, 
         "name": "HR Android Developer", 
-        "lastUpdated": "2019-08-04 21:03:49.400805"
+        "lastUpdated": "2019-07-18 15:56:02.601920"
     }, 
     "5b5b1de27cb0bf2776fb376e": {
         "first_list_id": "5b68702525ee497288c78b26", 
@@ -189,33 +169,29 @@
             "Projects": "5b68706e0fe0627aaea378c8"
         }, 
         "name": "Holger To Do", 
-        "lastUpdated": "2019-08-04 21:03:49.400812"
+        "lastUpdated": "2019-07-18 15:56:02.601927"
     }, 
-    "5b56eb587d141d9fd06d8bfc": {
-        "first_list_id": "5b5740a8146858ac55539823", 
+    "5b59c0ec7365694784898cd8": {
+        "first_list_id": "5b59c0fb91c5e74a79435282", 
         "labels": {
-            "blue": "5b56eb589c16fb124aa41344", 
-            "purple": "5b56eb589c16fb124aa41343", 
-            "Big": "5b56eb589c16fb124aa41343", 
-            "Quite big": "5b56eb589c16fb124aa41344", 
-            "yellow": "5b56eb589c16fb124aa4133c", 
-            "green": "5b56eb589c16fb124aa4133d", 
-            "orange": "5b56eb589c16fb124aa4133e", 
-            "Snoozed": "5b56eb589c16fb124aa4133c", 
-            "red": "5b56eb589c16fb124aa41340"
+            "blue": "5b59c0ec9c16fb124ac7b82e", 
+            "purple": "5b59c0ec9c16fb124ac7b82f", 
+            "yellow": "5b59c0ec9c16fb124ac7b828", 
+            "green": "5b59c0ec9c16fb124ac7b829", 
+            "orange": "5b59c0ec9c16fb124ac7b82a", 
+            "red": "5b59c0ec9c16fb124ac7b82b"
         }, 
         "lists": {
-            "Danny": "5d00c4311c931b8009222782", 
-            "Later": "5b574f20e90c734e513b4918", 
-            "Jan": "5bec244f4a54c13c38dd5713", 
-            "Inbox": "5b5740a8146858ac55539823", 
-            "Blocked": "5b574fb9a618bca5a964db94", 
-            "Recurring": "5b59c823226eeeb3d24ca4da", 
-            "Today": "5b574f1cd74cfa9746c4e7a7", 
-            "Projects": "5b5740af14ef6c15086da35b"
+            "Buy": "5b59c10675d144c4790cce66", 
+            "Mila present ideas": "5be1b65cb98723768d7e9bea", 
+            "Job": "5d25acb18cf48871fef4aa52", 
+            "Inbox": "5b59c0fb91c5e74a79435282", 
+            "Todo": "5b59c100c8b03334e3930153", 
+            "Projects": "5b59c0ff002fdaeb33c8a1da", 
+            "Some day": "5b59c1ed5a42529035afd563"
         }, 
-        "name": "Locarta", 
-        "lastUpdated": "2019-08-04 21:03:49.400813"
+        "name": "Personal", 
+        "lastUpdated": "2019-07-18 15:56:02.601931"
     }, 
     "5bd99c8bd768850228f6dcda": {
         "first_list_id": "5bd99d50b013b32002390c4a", 
@@ -241,7 +217,7 @@
             "Offer made": "5bd99d70533fb384c332be71"
         }, 
         "name": "HR Backend Engineer", 
-        "lastUpdated": "2019-08-04 21:03:49.400806"
+        "lastUpdated": "2019-07-18 15:56:02.601922"
     }, 
     "5c99e442add3be18c0fd9381": {
         "first_list_id": "5c99e446a0649032cef57747", 
@@ -267,6 +243,6 @@
             "Offer made": "5c99e4669457fa5fa8faa215"
         }, 
         "name": "HR COO", 
-        "lastUpdated": "2019-08-04 21:03:49.400808"
+        "lastUpdated": "2019-07-18 15:56:02.601924"
     }
 }

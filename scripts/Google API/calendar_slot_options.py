@@ -1,6 +1,8 @@
 # To set up:
-#  - Turn on Google Caldendar API and download client secret .json (as client_secret_calendar.json) by visiting:
+#  - Turn on Google Caldendar API and download client secret .json (as 
+#    client_secret_calendar.json) by visiting:
 #    https://console.developers.google.com/start/api?id=calendar
+#  - If you already have run this script with a different account, delete ~.credentials/calendar.json
 #  - Install pip if not already (sudo easy_install pip)
 #  - pip install --upgrade google-api-python-client --user
 #  - pip install pyperclip --user

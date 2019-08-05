@@ -1,0 +1,146 @@
+{
+    "5c18efa6f9a3fd88f0731bad": {
+        "first_list_id": "5c50830efdf58325f5c9ddef", 
+        "labels": {
+            "blue": "5c18efa6c8388fca220175b1", 
+            "purple": "5c18efa6c8388fca220175af", 
+            "yellow": "5c18efa6c8388fca220175a8", 
+            "green": "5c18efa6c8388fca220175a7", 
+            "orange": "5c18efa6c8388fca220175aa", 
+            "red": "5c18efa6c8388fca220175a5"
+        }, 
+        "lists": {
+            "Other later": "5c18efe922e3ad3a98fe899f", 
+            "Mobile": "5c18efaa268d2a1d73baef2e", 
+            "Data science later": "5c18efe00eaf4f3d9c56c280", 
+            "Backend backend later": "5c18efe50be59d52ce3b7775", 
+            "To groom": "5c50830efdf58325f5c9ddef", 
+            "Other": "5c18efe70df41e2d33057bd5", 
+            "Mobile later": "5c18efb377b6465fc6a2c5fe", 
+            "Data science": "5c18efdc2686b962e31a3722", 
+            "Backend": "5c3c631f9b5c624d881456c5"
+        }, 
+        "name": "Dev", 
+        "lastUpdated": "2019-03-21 09:30:58.999295"
+    }, 
+    "5b5b1e4bfd0be36b044d7072": {
+        "first_list_id": "5b5b1e61a7d19114d1c97452", 
+        "labels": {
+            "blue": "5b5b1e4b9c16fb124a9e142f", 
+            "Confirmed": "5b5b20eae12c4a162f9eeb23", 
+            "purple": "5b5b1e4b9c16fb124a9e1430", 
+            "sky": "5b5b1e4b9c16fb124a9e141e", 
+            "yellow": "5b618675776b8bfbc6e934a4", 
+            "Verbally confirmed": "5b61be4bd7b5211ac9701799", 
+            "green": "5b5b20eae12c4a162f9eeb23", 
+            "Paid": "5b5b1e4b9c16fb124a9e1430", 
+            "red": "5b61be4bd7b5211ac9701799", 
+            "Invoiced": "5b618675776b8bfbc6e934a4"
+        }, 
+        "lists": {
+            "Setting up (Geofences, Pixel etc.)": "5b5b1eaf488a77d27d0657dc", 
+            "Lost or Cancelled": "5b618617ba81b654bee420fa", 
+            "Gathering Details": "5b5b1e61a7d19114d1c97452", 
+            "Finished": "5b5b1f0ea7ba48be23dec7f8", 
+            "Validating impression data": "5b5b1efe486e191da50280ba", 
+            "Generating Report": "5b5b1f06d2450c9305a7256c", 
+            "Queued": "5b61bcadef276427afe9d254"
+        }, 
+        "name": "Locarta Reports", 
+        "lastUpdated": "2019-03-21 09:30:58.999306"
+    }, 
+    "5b5b1de27cb0bf2776fb376e": {
+        "first_list_id": "5b68702525ee497288c78b26", 
+        "labels": {
+            "blue": "5b5b1de29c16fb124a976d04", 
+            "purple": "5b5b1de29c16fb124a976d01", 
+            "yellow": "5b5b1de29c16fb124a976cfc", 
+            "green": "5b5b1de29c16fb124a976cf9", 
+            "orange": "5b5b1de29c16fb124a976cfd", 
+            "red": "5b5b1de29c16fb124a976cfb"
+        }, 
+        "lists": {
+            "Waiting for Feedback": "5b686d317592296a45e0fb81", 
+            "To Do": "5b5b1de27cb0bf2776fb376f", 
+            "Done": "5b5b1de27cb0bf2776fb3771", 
+            "Inbox": "5b68702525ee497288c78b26", 
+            "To do today": "5b686cda78cffb54bf3f8291", 
+            "Projects": "5b68706e0fe0627aaea378c8"
+        }, 
+        "name": "Holger To Do", 
+        "lastUpdated": "2019-03-21 09:30:58.999304"
+    }, 
+    "5b56eb587d141d9fd06d8bfc": {
+        "first_list_id": "5b5740a8146858ac55539823", 
+        "labels": {
+            "blue": "5b56eb589c16fb124aa41344", 
+            "purple": "5b56eb589c16fb124aa41343", 
+            "Big": "5b56eb589c16fb124aa41343", 
+            "Quite big": "5b56eb589c16fb124aa41344", 
+            "yellow": "5b56eb589c16fb124aa4133c", 
+            "green": "5b56eb589c16fb124aa4133d", 
+            "orange": "5b56eb589c16fb124aa4133e", 
+            "Snoozed": "5b56eb589c16fb124aa4133c", 
+            "red": "5b56eb589c16fb124aa41340"
+        }, 
+        "lists": {
+            "Holgs": "5b755cdb1eb69b48390cbce3", 
+            "Later": "5b574f20e90c734e513b4918", 
+            "Jan": "5bec244f4a54c13c38dd5713", 
+            "Inbox": "5b5740a8146858ac55539823", 
+            "Blocked": "5b574fb9a618bca5a964db94", 
+            "Recurring": "5b59c823226eeeb3d24ca4da", 
+            "Today": "5b574f1cd74cfa9746c4e7a7", 
+            "Projects": "5b5740af14ef6c15086da35b"
+        }, 
+        "name": "Work", 
+        "lastUpdated": "2019-03-21 09:30:58.999310"
+    }, 
+    "5bd99c8bd768850228f6dcda": {
+        "first_list_id": "5bd99d50b013b32002390c4a", 
+        "labels": {
+            "blue": "5bd99c8ba724a908c0dff5a6", 
+            "Waiting for Vlad's Decision": "5bd99c8ba724a908c0dff59f", 
+            "purple": "5bd99c8ba724a908c0dff5a7", 
+            "yellow": "5bd99c8ba724a908c0dff59e", 
+            "green": "5bd99c8ba724a908c0dff5a0", 
+            "orange": "5bd99c8ba724a908c0dff59f", 
+            "to schedule tech interview": "5bd99c8ba724a908c0dff5a6", 
+            "red": "5bd99c8ba724a908c0dff5a1"
+        }, 
+        "lists": {
+            "Future Pool": "5c138d32a1bdf50ac5e5cfe3", 
+            "Waiting for tech interview": "5bd99d6293ab264c6c73c7b7", 
+            "Inbound": "5bd99d50b013b32002390c4a", 
+            "Making final decision": "5bd9af6fec4a25228f187aa6", 
+            "Rejected": "5bd99d6a9e433d2cdcf22b99", 
+            "Processed": "5bfe6dee24e90167be339bbe", 
+            "Waiting for phone interview": "5bd99d5ea5ec3821ef9d8ada", 
+            "fac": "5bd99d5732cc635640aead55", 
+            "Offer made": "5bd99d70533fb384c332be71"
+        }, 
+        "name": "HR Backend Engineer", 
+        "lastUpdated": "2019-03-21 09:30:58.999302"
+    }, 
+    "5b59c0ec7365694784898cd8": {
+        "first_list_id": "5b59c0fb91c5e74a79435282", 
+        "labels": {
+            "blue": "5b59c0ec9c16fb124ac7b82e", 
+            "purple": "5b59c0ec9c16fb124ac7b82f", 
+            "yellow": "5b59c0ec9c16fb124ac7b828", 
+            "green": "5b59c0ec9c16fb124ac7b829", 
+            "orange": "5b59c0ec9c16fb124ac7b82a", 
+            "red": "5b59c0ec9c16fb124ac7b82b"
+        }, 
+        "lists": {
+            "Buy": "5b59c10675d144c4790cce66", 
+            "Mila present ideas": "5be1b65cb98723768d7e9bea", 
+            "Inbox": "5b59c0fb91c5e74a79435282", 
+            "Todo": "5b59c100c8b03334e3930153", 
+            "Some day": "5b59c1ed5a42529035afd563", 
+            "Projects": "5b59c0ff002fdaeb33c8a1da"
+        }, 
+        "name": "Personal", 
+        "lastUpdated": "2019-03-21 09:30:58.999308"
+    }
+}

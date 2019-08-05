@@ -33,6 +33,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'valloric/youcompleteme'
 Plugin 'pangloss/vim-javascript'
 Plugin 'easymotion/vim-easymotion'
+Plugin 'dyng/ctrlsf.vim'
 
 " If we've just installed Vundle, fetch the plugins above.
 " To update in the future, run :PluginUpdate from Vim
@@ -244,6 +245,9 @@ noremap <Leader>n :NERDTreeToggle<CR>
 
 " Ctrl-P
 nnoremap t :CtrlP<CR>
+
+" CtrlSF for searching within project
+nnoremap T :CtrlSF 
 
 
 "**********************************************************
