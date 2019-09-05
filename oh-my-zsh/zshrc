@@ -75,6 +75,7 @@ alias ga="git add .;git status"
 alias gc="git commit -m"
 alias gp="git push"
 alias sl="sudo !!"
+alias canoticenv="source activate canotic-py3"
 
 alias tr="ssh tandr@tandr.webfactional.com"
 alias s="ssh sirdavidoff@sirdavidoff.webfactional.com"

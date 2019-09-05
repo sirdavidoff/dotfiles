@@ -13,6 +13,11 @@
 -- .
 -- /
 
+-- Name active application
+hs.urlevent.bind('hypercmd5', function()
+  hs.alert.show("Here!")
+end)
+
 function fileExists(name)
     if type(name)~="string" then return false end
     return os.rename(name,name) and true or false
@@ -548,17 +553,18 @@ end)
 
 -- Activate JIRA
 hs.hotkey.bind(hyper, 'q', function()
-  os.execute('osascript "' .. os.getenv("DOTFILES") .. '/scripts/Activate Pointwise Jira.scpt"')
+  os.execute('osascript "' .. os.getenv("DOTFILES") .. '/scripts/Activate Chrome for Canotic Jira.scpt"')
 end)
 
 -- Activate VMware
 hs.hotkey.bind(hyper, 'z', function()
-  local appName = "VMware Fusion"
-  if not appRunning(appName) then
-    local bool, obj, descriptor = hs.osascript.applescript("set result to (display dialog \"Really launch ".. appName .."?\")\n return the button returned of result")
-    if obj ~= "OK" then return end
-  end
-  hs.application.launchOrFocus(appName)
+  --local appName = "VMware Fusion"
+  --if not appRunning(appName) then
+    --local bool, obj, descriptor = hs.osascript.applescript("set result to (display dialog \"Really launch ".. appName .."?\")\n return the button returned of result")
+    --if obj ~= "OK" then return end
+  --end
+  --hs.application.launchOrFocus(appName)
+  hs.application.launchOrFocus("zoom.us")
 end)
 
 -- Activate Excel
@@ -624,7 +630,7 @@ end)
 -- Activate MacVim - if we use launchOrFocus() we end up launching
 -- multiple instances for some reason
 hs.urlevent.bind('hypercmdm', function()
-  app = hs.application.find('macVim')
+  app = hs.application.find('MacVim')
   if app ~= nil and app:isRunning() then
     app:activate(true)
   else
@@ -632,6 +638,10 @@ hs.urlevent.bind('hypercmdm', function()
   end
 
   --apps = hs.application.runningApplications()
+end)
+
+hs.urlevent.bind('hypercmdx', function()
+  hs.application.launchOrFocus('Sketch')
 end)
 
 -- Display current track in spotify
@@ -729,7 +739,7 @@ end
 hs.hotkey.bind(hyper, '1', function() insertText('6kk81Cug2GnUZYjzk33dL87K3JIK95yu') end)
 hs.hotkey.bind(hyper, '2', function() insertText('davewroberts@yahoo.com') end)
 hs.hotkey.bind(hyper, '3', function() insertText(os.date("%Y%m%d")) end)
-hs.hotkey.bind(hyper, '4', function() insertText('david.roberts@locarta.co') end)
+hs.hotkey.bind(hyper, '4', function() insertText('david@canotic.com') end)
 hs.hotkey.bind(hyper, '9', function() insertText('+4915753632560') end)
 
 -- Insert closing wrap at end of current word

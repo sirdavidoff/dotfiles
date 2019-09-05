@@ -37,8 +37,8 @@ defaults write NSGlobalDomain AppleHighlightColor -string "1.0 0.815686275 0.658
 # Set sidebar icon size to medium
 defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
 
-# Always show scrollbars
-defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
+# Show scrollbars when scrolling
+defaults write NSGlobalDomain AppleShowScrollBars -string "WhenScrolling"
 # Possible values: `WhenScrolling`, `Automatic` and `Always`
 
 # Disable the over-the-top focus ring animation
@@ -158,8 +158,8 @@ defaults write -g NSNavRecentPlacesLimit -int 10
 #defaults -currentHost write NSGlobalDomain com.apple.trackpad.trackpadCornerClickBehavior -int 1
 #defaults -currentHost write NSGlobalDomain com.apple.trackpad.enableSecondaryClick -bool true
 
-# Disable “natural” (Lion-style) scrolling
-defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
+# Enable “natural” (Lion-style) scrolling
+defaults write NSGlobalDomain com.apple.swipescrolldirection -bool true
 
 # Increase sound quality for Bluetooth headphones/headsets
 defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
@@ -177,9 +177,9 @@ defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
 # Disable press-and-hold for keys in favor of key repeat
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
-# Set a blazingly fast keyboard repeat rate
-defaults write NSGlobalDomain KeyRepeat -int 1
-defaults write NSGlobalDomain InitialKeyRepeat -int 10
+# Set key repeat speed
+defaults write -g InitialKeyRepeat -int 20 # normal minimum is 15 (225 ms)
+defaults write -g KeyRepeat -int 8 # normal minimum is 2 (30 ms)
 
 # Set language and text formats
 # Note: if you’re in the US, replace `EUR` with `USD`, `Centimeters` with
@@ -250,10 +250,7 @@ defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
 # Finder: show status bar
-defaults write com.apple.finder ShowStatusBar -bool true
-
-# Finder: show path bar
-defaults write com.apple.finder ShowPathbar -bool true
+defaults write com.apple.finder ShowStatusBar -bool false
 
 # Display full POSIX path as Finder window title
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
@@ -341,11 +338,14 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
 # Dock, Dashboard, and hot corners                                            #
 ###############################################################################
 
+# Auto-hide the dock
+defaults write com.apple.Dock autohide -bool true
+
 # Enable highlight hover effect for the grid view of a stack (Dock)
 defaults write com.apple.dock mouse-over-hilite-stack -bool true
 
 # Set the icon size of Dock items to 36 pixels
-#defaults write com.apple.dock tilesize -int 36
+defaults write com.apple.dock tilesize -int 36
 
 # Change minimize/maximize window effect
 #defaults write com.apple.dock mineffect -string "scale"
@@ -377,8 +377,8 @@ defaults write com.apple.dock expose-animation-duration -float 0.1
 # (i.e. use the old Exposé behavior instead)
 #defaults write com.apple.dock expose-group-by-app -bool false
 
-# Disable Dashboard
-defaults write com.apple.dashboard mcx-disabled -bool true
+# Enable Dashboard, and show it as an overlay
+defaults write com.apple.dashboard mcx-disabled -bool false
 
 # Don’t show Dashboard as a Space
 defaults write com.apple.dock dashboard-in-overlay -bool true
@@ -448,8 +448,8 @@ defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 # Prevent Time Machine from prompting to use new hard drives as backup volume
 defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 
-# Disable local Time Machine backups
-hash tmutil &> /dev/null && sudo tmutil disablelocal
+# Disable local Time Machine backups - doesn't seem to work
+#hash tmutil &> /dev/null && sudo tmutil disablelocal
 
 ###############################################################################
 # Address Book, Dashboard, iCal, TextEdit, and Disk Utility                   #
@@ -513,18 +513,6 @@ defaults write com.apple.messageshelper.MessageController SOInputLineSettings -d
 # Disable continuous spell checking
 defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "continuousSpellCheckingEnabled" -bool false
 
-###############################################################################
-# Google Chrome & Google Chrome Canary                                        #
-###############################################################################
-
-# Disable the all too sensitive backswipe on trackpads
-defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
-defaults write com.google.Chrome.canary AppleEnableSwipeNavigateWithScrolls -bool false
-
-# Disable the all too sensitive backswipe on Magic Mouse
-defaults write com.google.Chrome AppleEnableMouseSwipeNavigateWithScrolls -bool false
-defaults write com.google.Chrome.canary AppleEnableMouseSwipeNavigateWithScrolls -bool false
-
 # Use the system-native print preview dialog
 #defaults write com.google.Chrome DisablePrintPreview -bool true
 #defaults write com.google.Chrome.canary DisablePrintPreview -bool true
@@ -532,6 +520,9 @@ defaults write com.google.Chrome.canary AppleEnableMouseSwipeNavigateWithScrolls
 # Expand the print dialog by default
 defaults write com.google.Chrome PMPrintingExpandedStateForPrint2 -bool true
 defaults write com.google.Chrome.canary PMPrintingExpandedStateForPrint2 -bool true
+
+defaults write com.apple.systemuiserver menuExtras -array "/System/Library/CoreServices/Menu Extras/Bluetooth.menu" "/System/Library/CoreServices/Menu Extras/Clock.menu" "/System/Library/CoreServices/Menu Extras/Volume.menu"
+
 
 for app in "Activity Monitor" \
 	"Address Book" \
@@ -559,11 +550,3 @@ for app in "Activity Monitor" \
 done
 echo "Done. Note that some of these changes require a logout/restart to take effect."
 
-# Show the debug menu in Reminders.app
-defaults write com.apple.reminders RemindersDebugMenu -boolean true
-
-# Make the menu bar dark (but nothing else)
-defaults write -g NSRequiresAquaSystemAppearance -bool Yes
-
-# Show the dashboard as an overlay
-defaults write com.apple.dock dashboard-in-overlay -bool true

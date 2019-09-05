@@ -8,8 +8,8 @@
         {
             "complex_modifications": {
                 "parameters": {
-                    "basic.simultaneous_threshold_milliseconds": 800,
-                    "basic.to_delayed_action_delay_milliseconds": 500,
+                    "basic.simultaneous_threshold_milliseconds": 300,
+                    "basic.to_delayed_action_delay_milliseconds": 100,
                     "basic.to_if_alone_timeout_milliseconds": 1000,
                     "basic.to_if_held_down_threshold_milliseconds": 500,
                     "mouse_motion_to_scroll.speed": 100
@@ -19,1257 +19,208 @@
                         "description": "Hyper-cmd combinations to Hammerspoon events",
                         "manipulators": [
                             {
+                                "type": "basic",
                                 "from": {
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "left_command"
-                                        },
-                                        {
-                                            "key_code": "caps_lock"
-                                        },
-                                        {
-                                            "key_code": "a"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict"
+                                  "simultaneous": [
+                                    {
+                                      "key_code": "caps_lock"
+                                    },
+                                    {
+                                      "key_code": "left_command"
                                     }
+                                  ],
+                                  "simultaneous_options": {
+                                    "key_down_order": "insensitive",
+                                    "key_up_when": "any",
+                                    "to_after_key_up": [
+                                      {
+                                        "set_variable": {
+                                          "name": "mode_hypercmd",
+                                          "value": 0
+                                        }
+                                      }
+                                    ]
+                                  }
                                 },
                                 "to": [
-                                    {
-                                        "shell_command": "open -g hammerspoon://hypercmda"
+                                  {
+                                    "set_variable": {
+                                      "name": "mode_hypercmd",
+                                      "value": 1
                                     }
+                                  }
                                 ],
-                                "type": "basic"
+                                "parameters": {
+                                  "basic.simultaneous_threshold_milliseconds": 500
+                                }
                             },
                             {
-                                "from": {
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "caps_lock"
-                                        },
-                                        {
-                                            "key_code": "left_command"
-                                        },
-                                        {
-                                            "key_code": "a"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict"
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -g hammerspoon://hypercmda"
-                                    }
-                                ],
-                                "type": "basic"
+                                "type": "basic",
+                                "from": {"key_code": "a", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hypercmda"}],
+                                "conditions": [{"type": "variable_if", "name": "mode_hypercmd", "value": 1}]
                             },
                             {
-                                "from": {
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "left_command"
-                                        },
-                                        {
-                                            "key_code": "caps_lock"
-                                        },
-                                        {
-                                            "key_code": "b"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict"
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -g hammerspoon://hypercmdb"
-                                    }
-                                ],
-                                "type": "basic"
+                                "type": "basic",
+                                "from": {"key_code": "b", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hypercmdb"}],
+                                "conditions": [{"type": "variable_if", "name": "mode_hypercmd", "value": 1}]
                             },
                             {
-                                "from": {
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "caps_lock"
-                                        },
-                                        {
-                                            "key_code": "left_command"
-                                        },
-                                        {
-                                            "key_code": "b"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict"
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -g hammerspoon://hypercmdb"
-                                    }
-                                ],
-                                "type": "basic"
+                                "type": "basic",
+                                "from": {"key_code": "c", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hypercmdc"}],
+                                "conditions": [{"type": "variable_if", "name": "mode_hypercmd", "value": 1}]
                             },
                             {
-                                "from": {
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "left_command"
-                                        },
-                                        {
-                                            "key_code": "caps_lock"
-                                        },
-                                        {
-                                            "key_code": "d"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict"
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -g hammerspoon://hypercmdd"
-                                    }
-                                ],
-                                "type": "basic"
+                                "type": "basic",
+                                "from": {"key_code": "d", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hypercmdd"}],
+                                "conditions": [{"type": "variable_if", "name": "mode_hypercmd", "value": 1}]
                             },
                             {
-                                "from": {
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "caps_lock"
-                                        },
-                                        {
-                                            "key_code": "left_command"
-                                        },
-                                        {
-                                            "key_code": "d"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict"
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -g hammerspoon://hypercmdd"
-                                    }
-                                ],
-                                "type": "basic"
+                                "type": "basic",
+                                "from": {"key_code": "e", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hypercmde"}],
+                                "conditions": [{"type": "variable_if", "name": "mode_hypercmd", "value": 1}]
                             },
                             {
-                                "from": {
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "left_command"
-                                        },
-                                        {
-                                            "key_code": "caps_lock"
-                                        },
-                                        {
-                                            "key_code": "e"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict"
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -g hammerspoon://hypercmde"
-                                    }
-                                ],
-                                "type": "basic"
+                                "type": "basic",
+                                "from": {"key_code": "f", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hypercmdf"}],
+                                "conditions": [{"type": "variable_if", "name": "mode_hypercmd", "value": 1}]
                             },
                             {
-                                "from": {
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "caps_lock"
-                                        },
-                                        {
-                                            "key_code": "left_command"
-                                        },
-                                        {
-                                            "key_code": "e"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict"
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -g hammerspoon://hypercmde"
-                                    }
-                                ],
-                                "type": "basic"
+                                "type": "basic",
+                                "from": {"key_code": "g", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hypercmdg"}],
+                                "conditions": [{"type": "variable_if", "name": "mode_hypercmd", "value": 1}]
                             },
                             {
-                                "from": {
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "left_command"
-                                        },
-                                        {
-                                            "key_code": "caps_lock"
-                                        },
-                                        {
-                                            "key_code": "h"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict"
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -g hammerspoon://hypercmdh"
-                                    }
-                                ],
-                                "type": "basic"
+                                "type": "basic",
+                                "from": {"key_code": "h", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hypercmdh"}],
+                                "conditions": [{"type": "variable_if", "name": "mode_hypercmd", "value": 1}]
                             },
                             {
-                                "from": {
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "caps_lock"
-                                        },
-                                        {
-                                            "key_code": "left_command"
-                                        },
-                                        {
-                                            "key_code": "h"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict"
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -g hammerspoon://hypercmdh"
-                                    }
-                                ],
-                                "type": "basic"
+                                "type": "basic",
+                                "from": {"key_code": "i", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hypercmdi"}],
+                                "conditions": [{"type": "variable_if", "name": "mode_hypercmd", "value": 1}]
                             },
                             {
-                                "from": {
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "left_command"
-                                        },
-                                        {
-                                            "key_code": "caps_lock"
-                                        },
-                                        {
-                                            "key_code": "j"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict"
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -g hammerspoon://hypercmdj"
-                                    }
-                                ],
-                                "type": "basic"
+                                "type": "basic",
+                                "from": {"key_code": "j", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hypercmdj"}],
+                                "conditions": [{"type": "variable_if", "name": "mode_hypercmd", "value": 1}]
                             },
                             {
-                                "from": {
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "caps_lock"
-                                        },
-                                        {
-                                            "key_code": "left_command"
-                                        },
-                                        {
-                                            "key_code": "j"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict"
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -g hammerspoon://hypercmdj"
-                                    }
-                                ],
-                                "type": "basic"
+                                "type": "basic",
+                                "from": {"key_code": "k", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hypercmdk"}],
+                                "conditions": [{"type": "variable_if", "name": "mode_hypercmd", "value": 1}]
                             },
                             {
-                                "from": {
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "left_command"
-                                        },
-                                        {
-                                            "key_code": "caps_lock"
-                                        },
-                                        {
-                                            "key_code": "k"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict"
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -g hammerspoon://hypercmdk"
-                                    }
-                                ],
-                                "type": "basic"
+                                "type": "basic",
+                                "from": {"key_code": "l", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hypercmdl"}],
+                                "conditions": [{"type": "variable_if", "name": "mode_hypercmd", "value": 1}]
                             },
                             {
-                                "from": {
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "caps_lock"
-                                        },
-                                        {
-                                            "key_code": "left_command"
-                                        },
-                                        {
-                                            "key_code": "k"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict"
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -g hammerspoon://hypercmdk"
-                                    }
-                                ],
-                                "type": "basic"
+                                "type": "basic",
+                                "from": {"key_code": "m", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hypercmdm"}],
+                                "conditions": [{"type": "variable_if", "name": "mode_hypercmd", "value": 1}]
                             },
                             {
-                                "from": {
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "left_command"
-                                        },
-                                        {
-                                            "key_code": "caps_lock"
-                                        },
-                                        {
-                                            "key_code": "l"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict"
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -g hammerspoon://hypercmdl"
-                                    }
-                                ],
-                                "type": "basic"
+                                "type": "basic",
+                                "from": {"key_code": "n", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hypercmdn"}],
+                                "conditions": [{"type": "variable_if", "name": "mode_hypercmd", "value": 1}]
                             },
                             {
-                                "from": {
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "caps_lock"
-                                        },
-                                        {
-                                            "key_code": "left_command"
-                                        },
-                                        {
-                                            "key_code": "l"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict"
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -g hammerspoon://hypercmdl"
-                                    }
-                                ],
-                                "type": "basic"
+                                "type": "basic",
+                                "from": {"key_code": "o", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hypercmdo"}],
+                                "conditions": [{"type": "variable_if", "name": "mode_hypercmd", "value": 1}]
                             },
                             {
-                                "from": {
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "left_command"
-                                        },
-                                        {
-                                            "key_code": "caps_lock"
-                                        },
-                                        {
-                                            "key_code": "m"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict"
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -g hammerspoon://hypercmdm"
-                                    }
-                                ],
-                                "type": "basic"
+                                "type": "basic",
+                                "from": {"key_code": "p", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hypercmdp"}],
+                                "conditions": [{"type": "variable_if", "name": "mode_hypercmd", "value": 1}]
                             },
                             {
-                                "from": {
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "caps_lock"
-                                        },
-                                        {
-                                            "key_code": "left_command"
-                                        },
-                                        {
-                                            "key_code": "m"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict"
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -g hammerspoon://hypercmdm"
-                                    }
-                                ],
-                                "type": "basic"
+                                "type": "basic",
+                                "from": {"key_code": "q", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hypercmdq"}],
+                                "conditions": [{"type": "variable_if", "name": "mode_hypercmd", "value": 1}]
                             },
                             {
-                                "from": {
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "left_command"
-                                        },
-                                        {
-                                            "key_code": "caps_lock"
-                                        },
-                                        {
-                                            "key_code": "n"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict"
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -g hammerspoon://hypercmdn"
-                                    }
-                                ],
-                                "type": "basic"
+                                "type": "basic",
+                                "from": {"key_code": "r", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hypercmdr"}],
+                                "conditions": [{"type": "variable_if", "name": "mode_hypercmd", "value": 1}]
                             },
                             {
-                                "from": {
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "caps_lock"
-                                        },
-                                        {
-                                            "key_code": "left_command"
-                                        },
-                                        {
-                                            "key_code": "n"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict"
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -g hammerspoon://hypercmdn"
-                                    }
-                                ],
-                                "type": "basic"
+                                "type": "basic",
+                                "from": {"key_code": "s", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hypercmds"}],
+                                "conditions": [{"type": "variable_if", "name": "mode_hypercmd", "value": 1}]
                             },
                             {
-                                "from": {
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "left_command"
-                                        },
-                                        {
-                                            "key_code": "caps_lock"
-                                        },
-                                        {
-                                            "key_code": "o"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict"
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -g hammerspoon://hypercmdo"
-                                    }
-                                ],
-                                "type": "basic"
+                                "type": "basic",
+                                "from": {"key_code": "t", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hypercmdt"}],
+                                "conditions": [{"type": "variable_if", "name": "mode_hypercmd", "value": 1}]
                             },
                             {
-                                "from": {
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "caps_lock"
-                                        },
-                                        {
-                                            "key_code": "left_command"
-                                        },
-                                        {
-                                            "key_code": "o"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict"
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -g hammerspoon://hypercmdo"
-                                    }
-                                ],
-                                "type": "basic"
+                                "type": "basic",
+                                "from": {"key_code": "u", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hypercmdu"}],
+                                "conditions": [{"type": "variable_if","name": "mode_hypercmd","value": 1}]
                             },
                             {
-                                "from": {
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "left_command"
-                                        },
-                                        {
-                                            "key_code": "caps_lock"
-                                        },
-                                        {
-                                            "key_code": "p"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict"
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -g hammerspoon://hypercmdp"
-                                    }
-                                ],
-                                "type": "basic"
+                                "type": "basic",
+                                "from": {"key_code": "v", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hypercmdv"}],
+                                "conditions": [{"type": "variable_if","name": "mode_hypercmd","value": 1}]
                             },
                             {
-                                "from": {
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "caps_lock"
-                                        },
-                                        {
-                                            "key_code": "left_command"
-                                        },
-                                        {
-                                            "key_code": "p"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict"
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -g hammerspoon://hypercmdp"
-                                    }
-                                ],
-                                "type": "basic"
+                                "type": "basic",
+                                "from": {"key_code": "w", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hypercmdw"}],
+                                "conditions": [{"type": "variable_if","name": "mode_hypercmd","value": 1}]
                             },
                             {
-                                "from": {
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "left_command"
-                                        },
-                                        {
-                                            "key_code": "caps_lock"
-                                        },
-                                        {
-                                            "key_code": "s"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict"
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -g hammerspoon://hypercmds"
-                                    }
-                                ],
-                                "type": "basic"
+                                "type": "basic",
+                                "from": {"key_code": "x", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hypercmdx"}],
+                                "conditions": [{"type": "variable_if","name": "mode_hypercmd","value": 1}]
                             },
                             {
-                                "from": {
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "caps_lock"
-                                        },
-                                        {
-                                            "key_code": "left_command"
-                                        },
-                                        {
-                                            "key_code": "s"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict"
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -g hammerspoon://hypercmds"
-                                    }
-                                ],
-                                "type": "basic"
+                                "type": "basic",
+                                "from": {"key_code": "y", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hypercmdy"}],
+                                "conditions": [{"type": "variable_if","name": "mode_hypercmd","value": 1}]
                             },
                             {
-                                "from": {
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "left_command"
-                                        },
-                                        {
-                                            "key_code": "caps_lock"
-                                        },
-                                        {
-                                            "key_code": "t"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict"
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -g hammerspoon://hypercmdt"
-                                    }
-                                ],
-                                "type": "basic"
+                                "type": "basic",
+                                "from": {"key_code": "z", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hypercmdz"}],
+                                "conditions": [{"type": "variable_if","name": "mode_hypercmd","value": 1}]
                             },
                             {
-                                "from": {
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "caps_lock"
-                                        },
-                                        {
-                                            "key_code": "left_command"
-                                        },
-                                        {
-                                            "key_code": "t"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict"
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -g hammerspoon://hypercmdt"
-                                    }
-                                ],
-                                "type": "basic"
+                                "type": "basic",
+                                "from": {"key_code": "return_or_enter", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hypercmdreturn"}],
+                                "conditions": [{"type": "variable_if","name": "mode_hypercmd","value": 1}]
                             },
                             {
-                                "from": {
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "left_command"
-                                        },
-                                        {
-                                            "key_code": "caps_lock"
-                                        },
-                                        {
-                                            "key_code": "u"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict"
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -g hammerspoon://hypercmdu"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "caps_lock"
-                                        },
-                                        {
-                                            "key_code": "left_command"
-                                        },
-                                        {
-                                            "key_code": "u"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict"
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -g hammerspoon://hypercmdu"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "left_command"
-                                        },
-                                        {
-                                            "key_code": "caps_lock"
-                                        },
-                                        {
-                                            "key_code": "v"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict"
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -g hammerspoon://hypercmdv"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "caps_lock"
-                                        },
-                                        {
-                                            "key_code": "left_command"
-                                        },
-                                        {
-                                            "key_code": "v"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict"
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -g hammerspoon://hypercmdv"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "left_command"
-                                        },
-                                        {
-                                            "key_code": "caps_lock"
-                                        },
-                                        {
-                                            "key_code": "w"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict"
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -g hammerspoon://hypercmdw"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "caps_lock"
-                                        },
-                                        {
-                                            "key_code": "left_command"
-                                        },
-                                        {
-                                            "key_code": "w"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict"
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -g hammerspoon://hypercmdw"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "left_command"
-                                        },
-                                        {
-                                            "key_code": "caps_lock"
-                                        },
-                                        {
-                                            "key_code": "return_or_enter"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict"
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -g hammerspoon://hypercmdreturn"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "caps_lock"
-                                        },
-                                        {
-                                            "key_code": "left_command"
-                                        },
-                                        {
-                                            "key_code": "return_or_enter"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict"
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -g hammerspoon://hypercmdreturn"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "left_command"
-                                        },
-                                        {
-                                            "key_code": "caps_lock"
-                                        },
-                                        {
-                                            "key_code": "spacebar"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict"
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -g hammerspoon://hypercmdspace"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "caps_lock"
-                                        },
-                                        {
-                                            "key_code": "left_command"
-                                        },
-                                        {
-                                            "key_code": "spacebar"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict"
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -g hammerspoon://hypercmdspace"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Hyper-option combinations to Hammerspoon events",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "left_option"
-                                        },
-                                        {
-                                            "key_code": "caps_lock"
-                                        },
-                                        {
-                                            "key_code": "h"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict"
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -g hammerspoon://hyperalth"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "caps_lock"
-                                        },
-                                        {
-                                            "key_code": "left_option"
-                                        },
-                                        {
-                                            "key_code": "h"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict"
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -g hammerspoon://hyperalth"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "left_option"
-                                        },
-                                        {
-                                            "key_code": "caps_lock"
-                                        },
-                                        {
-                                            "key_code": "j"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict"
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -g hammerspoon://hyperaltj"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "caps_lock"
-                                        },
-                                        {
-                                            "key_code": "left_option"
-                                        },
-                                        {
-                                            "key_code": "j"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict"
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -g hammerspoon://hyperaltj"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "left_option"
-                                        },
-                                        {
-                                            "key_code": "caps_lock"
-                                        },
-                                        {
-                                            "key_code": "k"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict"
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -g hammerspoon://hyperaltk"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "caps_lock"
-                                        },
-                                        {
-                                            "key_code": "left_option"
-                                        },
-                                        {
-                                            "key_code": "k"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict"
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -g hammerspoon://hyperaltk"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "left_option"
-                                        },
-                                        {
-                                            "key_code": "caps_lock"
-                                        },
-                                        {
-                                            "key_code": "l"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict"
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -g hammerspoon://hyperaltl"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "caps_lock"
-                                        },
-                                        {
-                                            "key_code": "left_option"
-                                        },
-                                        {
-                                            "key_code": "l"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict"
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -g hammerspoon://hyperaltl"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "left_option"
-                                        },
-                                        {
-                                            "key_code": "caps_lock"
-                                        },
-                                        {
-                                            "key_code": "o"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict"
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -g hammerspoon://hyperalto"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "caps_lock"
-                                        },
-                                        {
-                                            "key_code": "left_option"
-                                        },
-                                        {
-                                            "key_code": "o"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict"
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -g hammerspoon://hyperalto"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "left_option"
-                                        },
-                                        {
-                                            "key_code": "caps_lock"
-                                        },
-                                        {
-                                            "key_code": "p"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict"
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -g hammerspoon://hyperaltp"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "caps_lock"
-                                        },
-                                        {
-                                            "key_code": "left_option"
-                                        },
-                                        {
-                                            "key_code": "p"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict"
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -g hammerspoon://hyperaltp"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "left_option"
-                                        },
-                                        {
-                                            "key_code": "caps_lock"
-                                        },
-                                        {
-                                            "key_code": "return_or_enter"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict"
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -g hammerspoon://hyperaltreturn"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "caps_lock"
-                                        },
-                                        {
-                                            "key_code": "left_option"
-                                        },
-                                        {
-                                            "key_code": "return_or_enter"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict"
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -g hammerspoon://hyperaltreturn"
-                                    }
-                                ],
-                                "type": "basic"
+                                "type": "basic",
+                                "from": {"key_code": "spacebar", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hypercmdspace"}],
+                                "conditions": [{"type": "variable_if","name": "mode_hypercmd","value": 1}]
                             }
                         ]
                     },
@@ -1277,196 +228,417 @@
                         "description": "Hyper-shift combinations to Hammerspoon events",
                         "manipulators": [
                             {
+                                "type": "basic",
                                 "from": {
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "left_shift"
-                                        },
-                                        {
-                                            "key_code": "caps_lock"
-                                        },
-                                        {
-                                            "key_code": "h"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict"
+                                  "simultaneous": [
+                                    {
+                                      "key_code": "caps_lock"
+                                    },
+                                    {
+                                      "key_code": "left_option"
                                     }
+                                  ],
+                                  "simultaneous_options": {
+                                    "key_down_order": "insensitive",
+                                    "key_up_when": "any",
+                                    "to_after_key_up": [
+                                      {
+                                        "set_variable": {
+                                          "name": "mode_hyperalt",
+                                          "value": 0
+                                        }
+                                      }
+                                    ]
+                                  }
                                 },
                                 "to": [
-                                    {
-                                        "shell_command": "open -g hammerspoon://hypershifth"
+                                  {
+                                    "set_variable": {
+                                      "name": "mode_hyperalt",
+                                      "value": 1
                                     }
+                                  }
                                 ],
-                                "type": "basic"
+                                "parameters": {
+                                  "basic.simultaneous_threshold_milliseconds": 500
+                                }
                             },
                             {
-                                "from": {
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "caps_lock"
-                                        },
-                                        {
-                                            "key_code": "left_shift"
-                                        },
-                                        {
-                                            "key_code": "h"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict"
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -g hammerspoon://hypershifth"
-                                    }
-                                ],
-                                "type": "basic"
+                                "type": "basic",
+                                "from": {"key_code": "a", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hyperalta"}],
+                                "conditions": [{"type": "variable_if", "name": "mode_hyperalt", "value": 1}]
                             },
                             {
-                                "from": {
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "left_shift"
-                                        },
-                                        {
-                                            "key_code": "caps_lock"
-                                        },
-                                        {
-                                            "key_code": "j"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict"
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -g hammerspoon://hypershiftj"
-                                    }
-                                ],
-                                "type": "basic"
+                                "type": "basic",
+                                "from": {"key_code": "b", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hyperaltb"}],
+                                "conditions": [{"type": "variable_if", "name": "mode_hyperalt", "value": 1}]
                             },
                             {
-                                "from": {
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "caps_lock"
-                                        },
-                                        {
-                                            "key_code": "left_shift"
-                                        },
-                                        {
-                                            "key_code": "j"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict"
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -g hammerspoon://hypershiftj"
-                                    }
-                                ],
-                                "type": "basic"
+                                "type": "basic",
+                                "from": {"key_code": "c", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hyperaltc"}],
+                                "conditions": [{"type": "variable_if", "name": "mode_hyperalt", "value": 1}]
                             },
                             {
-                                "from": {
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "left_shift"
-                                        },
-                                        {
-                                            "key_code": "caps_lock"
-                                        },
-                                        {
-                                            "key_code": "k"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict"
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -g hammerspoon://hypershiftk"
-                                    }
-                                ],
-                                "type": "basic"
+                                "type": "basic",
+                                "from": {"key_code": "d", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hyperaltd"}],
+                                "conditions": [{"type": "variable_if", "name": "mode_hyperalt", "value": 1}]
                             },
                             {
-                                "from": {
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "caps_lock"
-                                        },
-                                        {
-                                            "key_code": "left_shift"
-                                        },
-                                        {
-                                            "key_code": "k"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict"
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -g hammerspoon://hypershiftk"
-                                    }
-                                ],
-                                "type": "basic"
+                                "type": "basic",
+                                "from": {"key_code": "e", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hyperalte"}],
+                                "conditions": [{"type": "variable_if", "name": "mode_hyperalt", "value": 1}]
                             },
                             {
-                                "from": {
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "left_shift"
-                                        },
-                                        {
-                                            "key_code": "caps_lock"
-                                        },
-                                        {
-                                            "key_code": "l"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict"
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -g hammerspoon://hypershiftl"
-                                    }
-                                ],
-                                "type": "basic"
+                                "type": "basic",
+                                "from": {"key_code": "f", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hyperaltf"}],
+                                "conditions": [{"type": "variable_if", "name": "mode_hyperalt", "value": 1}]
                             },
                             {
+                                "type": "basic",
+                                "from": {"key_code": "g", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hyperaltg"}],
+                                "conditions": [{"type": "variable_if", "name": "mode_hyperalt", "value": 1}]
+                            },
+                            {
+                                "type": "basic",
+                                "from": {"key_code": "h", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hyperalth"}],
+                                "conditions": [{"type": "variable_if", "name": "mode_hyperalt", "value": 1}]
+                            },
+                            {
+                                "type": "basic",
+                                "from": {"key_code": "i", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hyperalti"}],
+                                "conditions": [{"type": "variable_if", "name": "mode_hyperalt", "value": 1}]
+                            },
+                            {
+                                "type": "basic",
+                                "from": {"key_code": "j", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hyperaltj"}],
+                                "conditions": [{"type": "variable_if", "name": "mode_hyperalt", "value": 1}]
+                            },
+                            {
+                                "type": "basic",
+                                "from": {"key_code": "k", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hyperaltk"}],
+                                "conditions": [{"type": "variable_if", "name": "mode_hyperalt", "value": 1}]
+                            },
+                            {
+                                "type": "basic",
+                                "from": {"key_code": "l", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hyperaltl"}],
+                                "conditions": [{"type": "variable_if", "name": "mode_hyperalt", "value": 1}]
+                            },
+                            {
+                                "type": "basic",
+                                "from": {"key_code": "m", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hyperaltm"}],
+                                "conditions": [{"type": "variable_if", "name": "mode_hyperalt", "value": 1}]
+                            },
+                            {
+                                "type": "basic",
+                                "from": {"key_code": "n", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hyperaltn"}],
+                                "conditions": [{"type": "variable_if", "name": "mode_hyperalt", "value": 1}]
+                            },
+                            {
+                                "type": "basic",
+                                "from": {"key_code": "o", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hyperalto"}],
+                                "conditions": [{"type": "variable_if", "name": "mode_hyperalt", "value": 1}]
+                            },
+                            {
+                                "type": "basic",
+                                "from": {"key_code": "p", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hyperaltp"}],
+                                "conditions": [{"type": "variable_if", "name": "mode_hyperalt", "value": 1}]
+                            },
+                            {
+                                "type": "basic",
+                                "from": {"key_code": "q", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hyperaltq"}],
+                                "conditions": [{"type": "variable_if", "name": "mode_hyperalt", "value": 1}]
+                            },
+                            {
+                                "type": "basic",
+                                "from": {"key_code": "r", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hyperaltr"}],
+                                "conditions": [{"type": "variable_if", "name": "mode_hyperalt", "value": 1}]
+                            },
+                            {
+                                "type": "basic",
+                                "from": {"key_code": "s", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hyperalts"}],
+                                "conditions": [{"type": "variable_if", "name": "mode_hyperalt", "value": 1}]
+                            },
+                            {
+                                "type": "basic",
+                                "from": {"key_code": "t", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hyperaltt"}],
+                                "conditions": [{"type": "variable_if", "name": "mode_hyperalt", "value": 1}]
+                            },
+                            {
+                                "type": "basic",
+                                "from": {"key_code": "u", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hyperaltu"}],
+                                "conditions": [{"type": "variable_if","name": "mode_hyperalt","value": 1}]
+                            },
+                            {
+                                "type": "basic",
+                                "from": {"key_code": "v", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hyperaltv"}],
+                                "conditions": [{"type": "variable_if","name": "mode_hyperalt","value": 1}]
+                            },
+                            {
+                                "type": "basic",
+                                "from": {"key_code": "w", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hyperaltw"}],
+                                "conditions": [{"type": "variable_if","name": "mode_hyperalt","value": 1}]
+                            },
+                            {
+                                "type": "basic",
+                                "from": {"key_code": "x", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hyperaltx"}],
+                                "conditions": [{"type": "variable_if","name": "mode_hyperalt","value": 1}]
+                            },
+                            {
+                                "type": "basic",
+                                "from": {"key_code": "y", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hyperalty"}],
+                                "conditions": [{"type": "variable_if","name": "mode_hyperalt","value": 1}]
+                            },
+                            {
+                                "type": "basic",
+                                "from": {"key_code": "z", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hyperaltz"}],
+                                "conditions": [{"type": "variable_if","name": "mode_hyperalt","value": 1}]
+                            },
+                            {
+                                "type": "basic",
+                                "from": {"key_code": "return_or_enter", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hyperaltreturn"}],
+                                "conditions": [{"type": "variable_if","name": "mode_hyperalt","value": 1}]
+                            },
+                            {
+                                "type": "basic",
+                                "from": {"key_code": "spacebar", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hyperaltspace"}],
+                                "conditions": [{"type": "variable_if","name": "mode_hyperalt","value": 1}]
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Hyper-shift combinations to Hammerspoon events",
+                        "manipulators": [
+                            {
+                                "type": "basic",
                                 "from": {
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "caps_lock"
-                                        },
-                                        {
-                                            "key_code": "left_shift"
-                                        },
-                                        {
-                                            "key_code": "l"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict"
+                                  "simultaneous": [
+                                    {
+                                      "key_code": "caps_lock"
+                                    },
+                                    {
+                                      "key_code": "left_option"
                                     }
+                                  ],
+                                  "simultaneous_options": {
+                                    "key_down_order": "insensitive",
+                                    "key_up_when": "any",
+                                    "to_after_key_up": [
+                                      {
+                                        "set_variable": {
+                                          "name": "mode_hypershift",
+                                          "value": 0
+                                        }
+                                      }
+                                    ]
+                                  }
                                 },
                                 "to": [
-                                    {
-                                        "shell_command": "open -g hammerspoon://hypershiftl"
+                                  {
+                                    "set_variable": {
+                                      "name": "mode_hypershift",
+                                      "value": 1
                                     }
+                                  }
                                 ],
-                                "type": "basic"
+                                "parameters": {
+                                  "basic.simultaneous_threshold_milliseconds": 500
+                                }
+                            },
+                            {
+                                "type": "basic",
+                                "from": {"key_code": "a", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hypershifta"}],
+                                "conditions": [{"type": "variable_if", "name": "mode_hypershift", "value": 1}]
+                            },
+                            {
+                                "type": "basic",
+                                "from": {"key_code": "b", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hypershiftb"}],
+                                "conditions": [{"type": "variable_if", "name": "mode_hypershift", "value": 1}]
+                            },
+                            {
+                                "type": "basic",
+                                "from": {"key_code": "c", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hypershiftc"}],
+                                "conditions": [{"type": "variable_if", "name": "mode_hypershift", "value": 1}]
+                            },
+                            {
+                                "type": "basic",
+                                "from": {"key_code": "d", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hypershiftd"}],
+                                "conditions": [{"type": "variable_if", "name": "mode_hypershift", "value": 1}]
+                            },
+                            {
+                                "type": "basic",
+                                "from": {"key_code": "e", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hypershifte"}],
+                                "conditions": [{"type": "variable_if", "name": "mode_hypershift", "value": 1}]
+                            },
+                            {
+                                "type": "basic",
+                                "from": {"key_code": "f", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hypershiftf"}],
+                                "conditions": [{"type": "variable_if", "name": "mode_hypershift", "value": 1}]
+                            },
+                            {
+                                "type": "basic",
+                                "from": {"key_code": "g", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hypershiftg"}],
+                                "conditions": [{"type": "variable_if", "name": "mode_hypershift", "value": 1}]
+                            },
+                            {
+                                "type": "basic",
+                                "from": {"key_code": "h", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hypershifth"}],
+                                "conditions": [{"type": "variable_if", "name": "mode_hypershift", "value": 1}]
+                            },
+                            {
+                                "type": "basic",
+                                "from": {"key_code": "i", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hypershifti"}],
+                                "conditions": [{"type": "variable_if", "name": "mode_hypershift", "value": 1}]
+                            },
+                            {
+                                "type": "basic",
+                                "from": {"key_code": "j", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hypershiftj"}],
+                                "conditions": [{"type": "variable_if", "name": "mode_hypershift", "value": 1}]
+                            },
+                            {
+                                "type": "basic",
+                                "from": {"key_code": "k", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hypershiftk"}],
+                                "conditions": [{"type": "variable_if", "name": "mode_hypershift", "value": 1}]
+                            },
+                            {
+                                "type": "basic",
+                                "from": {"key_code": "l", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hypershiftl"}],
+                                "conditions": [{"type": "variable_if", "name": "mode_hypershift", "value": 1}]
+                            },
+                            {
+                                "type": "basic",
+                                "from": {"key_code": "m", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hypershiftm"}],
+                                "conditions": [{"type": "variable_if", "name": "mode_hypershift", "value": 1}]
+                            },
+                            {
+                                "type": "basic",
+                                "from": {"key_code": "n", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hypershiftn"}],
+                                "conditions": [{"type": "variable_if", "name": "mode_hypershift", "value": 1}]
+                            },
+                            {
+                                "type": "basic",
+                                "from": {"key_code": "o", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hypershifto"}],
+                                "conditions": [{"type": "variable_if", "name": "mode_hypershift", "value": 1}]
+                            },
+                            {
+                                "type": "basic",
+                                "from": {"key_code": "p", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hypershiftp"}],
+                                "conditions": [{"type": "variable_if", "name": "mode_hypershift", "value": 1}]
+                            },
+                            {
+                                "type": "basic",
+                                "from": {"key_code": "q", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hypershiftq"}],
+                                "conditions": [{"type": "variable_if", "name": "mode_hypershift", "value": 1}]
+                            },
+                            {
+                                "type": "basic",
+                                "from": {"key_code": "r", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hypershiftr"}],
+                                "conditions": [{"type": "variable_if", "name": "mode_hypershift", "value": 1}]
+                            },
+                            {
+                                "type": "basic",
+                                "from": {"key_code": "s", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hypershifts"}],
+                                "conditions": [{"type": "variable_if", "name": "mode_hypershift", "value": 1}]
+                            },
+                            {
+                                "type": "basic",
+                                "from": {"key_code": "t", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hypershiftt"}],
+                                "conditions": [{"type": "variable_if", "name": "mode_hypershift", "value": 1}]
+                            },
+                            {
+                                "type": "basic",
+                                "from": {"key_code": "u", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hypershiftu"}],
+                                "conditions": [{"type": "variable_if","name": "mode_hypershift","value": 1}]
+                            },
+                            {
+                                "type": "basic",
+                                "from": {"key_code": "v", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hypershiftv"}],
+                                "conditions": [{"type": "variable_if","name": "mode_hypershift","value": 1}]
+                            },
+                            {
+                                "type": "basic",
+                                "from": {"key_code": "w", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hypershiftw"}],
+                                "conditions": [{"type": "variable_if","name": "mode_hypershift","value": 1}]
+                            },
+                            {
+                                "type": "basic",
+                                "from": {"key_code": "x", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hypershiftx"}],
+                                "conditions": [{"type": "variable_if","name": "mode_hypershift","value": 1}]
+                            },
+                            {
+                                "type": "basic",
+                                "from": {"key_code": "y", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hypershifty"}],
+                                "conditions": [{"type": "variable_if","name": "mode_hypershift","value": 1}]
+                            },
+                            {
+                                "type": "basic",
+                                "from": {"key_code": "z", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hypershiftz"}],
+                                "conditions": [{"type": "variable_if","name": "mode_hypershift","value": 1}]
+                            },
+                            {
+                                "type": "basic",
+                                "from": {"key_code": "return_or_enter", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hypershiftreturn"}],
+                                "conditions": [{"type": "variable_if","name": "mode_hypershift","value": 1}]
+                            },
+                            {
+                                "type": "basic",
+                                "from": {"key_code": "spacebar", "modifiers": {"optional": ["any"]}},
+                                "to": [{"shell_command": "open -g hammerspoon://hypershiftspace"}],
+                                "conditions": [{"type": "variable_if","name": "mode_hypershift","value": 1}]
                             }
                         ]
                     },
